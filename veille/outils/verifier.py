@@ -73,7 +73,7 @@ def main(num):
     if len(n.get("chiffres", [])) != 4:
         err("Il faut exactement 4 chiffres clés")
     for i, k in enumerate(n.get("chiffres", [])):
-        exige(k, "chiffres[%d]" % i, ["rubrique", "valeur", "texte", "source"])
+        exige(k, "chiffres[%d]" % i, ["rubrique", "valeur", "texte", "source", "source_url"])
     if brut.count("**") % 2:
         err("Un passage en gras (**...**) n'est pas refermé")
 
@@ -116,6 +116,33 @@ def main(num):
 
     l = n.get("legal", {})
     exige(l, "legal", ["pays", "titre", "articles", "impact", "sources"])
+
+    # Tout ce qui est cité a sa source, avec un lien externe
+    def liens(lst, chemin):
+        if not isinstance(lst, list) or not lst:
+            err("Sources manquantes ou sans lien : %s (liste de {titre, url} attendue)" % chemin)
+            return
+        for j, x in enumerate(lst):
+            if not isinstance(x, dict) or not str(x.get("url", "")).startswith("http") or not x.get("titre"):
+                err("Source sans lien externe : %s[%d]" % (chemin, j))
+    liens(n.get("fil_rouge", {}).get("sources"), "fil_rouge.sources")
+    liens(t.get("sources"), "tendance.sources")
+    for k in ("couleur", "matiere", "forme", "citation"):
+        liens([t.get(k, {}).get("source")] if t.get(k, {}).get("source") else None, "tendance.%s.source" % k)
+    for i, s in enumerate(signaux):
+        liens(s.get("sources"), "signaux[%d].sources" % i)
+    liens(ins.get("signal_faible", {}).get("sources"), "signal_faible.sources")
+    liens(m.get("sources"), "marche.sources")
+    liens(l.get("sources"), "legal.sources")
+    for i, a in enumerate(l.get("articles", [])):
+        if not str(a.get("url", "")).startswith("http"):
+            err("Article de loi sans lien (Légifrance, EUR-Lex...) : legal.articles[%d]" % i)
+    sp = n.get("note_spirituelle", {}).get("source", {})
+    if not str(sp.get("url", "")).startswith("http"):
+        err("La note spirituelle doit avoir un lien vers sa source")
+    for u in re.findall(r'"(?:url|source_url)": "([^"]*)"', brut):
+        if not u.startswith("http"):
+            err("Lien invalide : %s" % u)
 
     idx = json.load(open(os.path.join(SITE, "numeros", "index.json"), encoding="utf-8"))
     if not any(e.get("numero") == num and e.get("fichier") == "numeros/n%02d.json" % num for e in idx.get("numeros", [])):

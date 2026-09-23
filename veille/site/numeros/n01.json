@@ -17,25 +17,29 @@
       "rubrique": "Marché",
       "valeur": "1 300+",
       "texte": "agences OGF après le rachat de Pompes Funèbres de France, finalisé en mai",
-      "source": "OGF, communiqué de mai 2026"
+      "source": "Gramond Avocats, cession de PFF à OGF (2026)",
+      "source_url": "https://gramond-avocats.com/gramond-accompagne-la-cession-des-pompes-funebres-de-france-a-ogf/"
     },
     {
       "rubrique": "Société",
       "valeur": "29 %",
       "texte": "des Français ne veulent aucune cérémonie pour leurs obsèques, contre 19 % en 2008 (Ifop)",
-      "source": "Ifop, 2023"
+      "source": "Ifop, 2023",
+      "source_url": "https://www.ifopgroup.com/article/le-rapport-des-francais-a-la-mort-et-aux-obseques-au-travers-de-leurs-croyances/"
     },
     {
       "rubrique": "Inspiration",
       "valeur": "2,1 M€",
       "texte": "levés par Solace Care, plus gros pre-seed européen sur la fin de vie",
-      "source": "EU-Startups, août 2026"
+      "source": "ArcticStartup, août 2026",
+      "source_url": "https://arcticstartup.com/solace-care-raises-e2-1m-pre-seed/"
     },
     {
       "rubrique": "Juridique",
       "valeur": "0",
       "texte": "gramme de cendres qu'on peut partager ou garder chez soi en France",
-      "source": "Code civil, art. 16-1-1 et CGCT"
+      "source": "Légifrance, CGCT, destination des cendres",
+      "source_url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000019983178"
     }
   ],
   "fil_rouge": {
@@ -75,6 +79,10 @@
           "src": "numeros/n01/q-couleur.jpg",
           "alt": "Lumière chaude à travers une urne ajourée en forme de chat",
           "credit": "Photo : Amara"
+        },
+        "source": {
+          "titre": "Amara",
+          "url": "https://www.amara-urne.com/"
         }
       },
       "matiere": {
@@ -84,6 +92,10 @@
           "src": "numeros/n01/q-matiere.jpg",
           "alt": "Gros plan sur les coulures d'émail d'une urne en céramique",
           "credit": "PK Ceramics pour Urn Studios · via Wallpaper*"
+        },
+        "source": {
+          "titre": "Wallpaper*, collection américaine d'Urn Studios",
+          "url": "https://www.wallpaper.com/design-interiors/urn-studios-us-collection"
         }
       },
       "forme": {
@@ -93,6 +105,10 @@
           "src": "numeros/n01/q-forme.jpg",
           "alt": "Urne noire ajourée en forme de chat enroulé, tenue dans une main",
           "credit": "Photo : Amara"
+        },
+        "source": {
+          "titre": "Amara",
+          "url": "https://www.amara-urne.com/"
         }
       },
       "citation": {
@@ -102,6 +118,10 @@
           "src": "numeros/n01/q-citation.jpg",
           "alt": "Urne graffiti portant l'inscription sche woa's",
           "credit": "Photo : Bestattung Wien · via Wiener Bezirksblatt"
+        },
+        "source": {
+          "titre": "Wiener Bezirksblatt, défi des urnes graffiti",
+          "url": "https://wienerbezirksblatt.at/graffiti-urnen-challenge/"
         }
       },
       "mots_cles": [
@@ -110,6 +130,16 @@
         "pièce d'auteur",
         "humour tendre",
         "commande"
+      ],
+      "sources": [
+        {
+          "titre": "Ifop, Le rapport des Français à la mort et aux obsèques (2023)",
+          "url": "https://www.ifopgroup.com/article/le-rapport-des-francais-a-la-mort-et-aux-obseques-au-travers-de-leurs-croyances/"
+        },
+        {
+          "titre": "Klass, Silverman et Nickman, Continuing Bonds (1996)",
+          "url": "https://www.taylorfrancis.com/books/edit/10.4324/9781315800790/continuing-bonds-dennis-klass-phyllis-silverman-steven-nickman"
+        }
       ]
     },
     "signaux": [
@@ -124,7 +154,20 @@
         "titre": "L'urne passe en galerie",
         "texte": "Et si l'urne devenait la dernière pièce de design qu'on achète pour quelqu'un ? Urn Studios est né d'un deuil vécu comme « daté et impersonnel » : Jonathan Hancock cherche une urne pour sa grand-mère et ne trouve rien qui lui ressemble. Avec Merel Swart, il invite des céramistes et plasticiens qui n'avaient jamais fait d'urne, et vend leurs pièces comme des œuvres. Celle de Milo Gibson intègre une coupelle pour un bijou ou une photo. En août, première collection américaine, avec sept artistes. Le déplacement est net : **l'urne n'est plus un contenant qu'on cache, c'est un objet qu'on assume au salon**, au rang d'une céramique de galerie. Le deuil entre dans le registre du goût.",
         "pour_funfun": "**Le modèle éditeur** : une plaque pensée en collection d'auteurs invités (céramistes, typographes), un récit par pièce. Et l'idée de la coupelle : l'objet de mémoire accueille des choses, il ne se contente pas de porter un nom.",
-        "sources": "Wallpaper*, Elle Decoration UK",
+        "sources": [
+          {
+            "titre": "Wallpaper*",
+            "url": "https://www.wallpaper.com/design-interiors/urn-studios-us-collection"
+          },
+          {
+            "titre": "Elle Decoration UK",
+            "url": "https://www.elledecoration.co.uk/design/a69095980/urn-modern-funeral-design-trend/"
+          },
+          {
+            "titre": "Urn Studios",
+            "url": "https://urnstudios.com/our-story/"
+          }
+        ],
         "image": {
           "src": "numeros/n01/urn-studios.jpg",
           "alt": "Urne blanche surmontée d'une bougie, posée sur un livre, collection américaine d'Urn Studios",
@@ -142,7 +185,20 @@
         "titre": "Laisser une lumière allumée",
         "texte": "On laisse une lumière allumée pour ceux qu'on attend. Dans le Burgenland, Markus Bareuther en a fait un produit : des urnes sculptures, animales et humaines, qui s'éclairent de l'intérieur, faites à la main en céramique et en pièces imprimées en 3D. L'idée est née devant une urne « très triste » posée sur une table ; la société a été fondée en septembre 2025, avec une pompe funèbre locale pour premier client. Deux signaux en un. **La veilleuse remplace la bougie de la Toussaint : un rituel quotidien plutôt qu'annuel**. Et l'animal de compagnie ouvre la voie : longtemps moqué, le deuil animal sert de laboratoire à des formes plus libres, loin des conventions du cimetière.",
         "pour_funfun": "**La lumière comme matière** : une plaque qui capte ou restitue la lumière (verre coulé, émail translucide) change la visite du soir. Et l'animal comme terrain d'essai : un marché moins encadré pour prototyper vite.",
-        "sources": "Brutkasten, BVZ, meinbezirk.at",
+        "sources": [
+          {
+            "titre": "Brutkasten",
+            "url": "https://brutkasten.com/artikel/amara-burgenlaendisches-urnen-startup-bringt-licht-zur-ruhestaette"
+          },
+          {
+            "titre": "BVZ",
+            "url": "https://www.bvz.at/mattersburg/licht-fuer-die-erinnerung-poettsching-wirtschaftskammer-auf-betriebsbesuch-bei-markus-bareuther-520590916"
+          },
+          {
+            "titre": "meinbezirk.at",
+            "url": "https://www.meinbezirk.at/mattersburg/c-wirtschaft/so-koennen-individuelle-urnen-beim-abschied-licht-und-trost-spenden_a8615540"
+          }
+        ],
         "image": {
           "src": "numeros/n01/amara.jpg",
           "alt": "Urne ajourée couleur cuivre en forme de chat endormi, éclairée de l'intérieur",
@@ -160,7 +216,20 @@
         "titre": "Vienne graffe ses urnes, et c'est le service public",
         "texte": "Vienne a toujours eu un rapport singulier à la mort : c'est la ville de la « schöne Leich », les belles funérailles, et de son propre musée funéraire. Son opérateur municipal, Bestattung Wien, va plus loin. Après des cercueils graffés, il a lancé un défi à cinq artistes : dessiner une urne. Le jury mêle l'institution, les cimetières de la ville, l'Université des arts appliqués et un graffeur. Lauréates ex aequo : Manuela Hageneder et Luky Vete ; la première a peint « Sche woa's », « c'était beau » en viennois. Les cinq artistes rejoignent un pool pour des commandes sur mesure. Quand c'est le service public qui ose la couleur et l'humour, **le décalage cesse d'être une provocation : il devient une offre**.",
         "pour_funfun": "Quand une institution publique ose la couleur et l'humour, le décalage devient légitime : **un précédent à citer pour défendre le nom FunFun**. Le pool d'artistes est aussi un format de service : la commande personnalisée sans atelier en propre.",
-        "sources": "ORF Wien, Vienna.at, Wiener Bezirksblatt",
+        "sources": [
+          {
+            "titre": "ORF Wien",
+            "url": "https://wien.orf.at/tv/stories/3360751/"
+          },
+          {
+            "titre": "Vienna.at",
+            "url": "https://www.vienna.at/graffiti-auf-urnen-die-bestattung-wien-macht-es-moeglich/10286042"
+          },
+          {
+            "titre": "Wiener Bezirksblatt",
+            "url": "https://wienerbezirksblatt.at/graffiti-urnen-challenge/"
+          }
+        ],
         "image": {
           "src": "numeros/n01/bestattung-wien.jpg",
           "alt": "Manuela Hageneder tient son urne graffiti où l'on lit « sche woa's »",
@@ -178,7 +247,20 @@
         "titre": "Le deuil a désormais un parcours client",
         "texte": "À Stockholm, Solace Care propose de mettre ses affaires en ordre de son vivant, puis de guider les proches, dans le pratique comme dans l'émotionnel, après le décès. Ses fondateurs viennent de Mindler, la santé mentale en ligne ; ils ont levé 2,1 M€ en août, le plus gros pre-seed européen du secteur, auprès de Spintop Ventures, Plug and Play et de dirigeants de l'assurance nordique. Le signal est moins technologique que culturel : **la fin de vie quitte le registre du rite pour celui du soin**, et trouve un financeur naturel, l'assureur. Reste une question que personne ne tranche encore : peut-on designer un deuil comme on designe une application de méditation ?",
         "pour_funfun": "**Les assureurs financent l'anticipation.** Un contrat obsèques qui inclurait « concevoir son objet de mémoire » serait un canal pour la piste Anticipation du projet, sans passer par la pompe funèbre.",
-        "sources": "EU-Startups, ArcticStartup, Fintech Global",
+        "sources": [
+          {
+            "titre": "EU-Startups",
+            "url": "https://www.eu-startups.com/2026/08/europe-is-aging-rapidly-solace-care-raises-e2-1-million-in-largest-pre-seed-round-to-date-for-a-european-end-of-life-platform"
+          },
+          {
+            "titre": "ArcticStartup",
+            "url": "https://arcticstartup.com/solace-care-raises-e2-1m-pre-seed/"
+          },
+          {
+            "titre": "Fintech Global",
+            "url": "https://fintech.global/2026/08/25/solace-care-nets-e2-1m-to-redefine-end-of-life-care/"
+          }
+        ],
         "image": {
           "src": "numeros/n01/solace-care.jpg",
           "alt": "Un couple assis de dos regarde un ciel nuageux",
@@ -314,11 +396,13 @@
     "articles": [
       {
         "ref": "Code civil, art. 16-1-1 · loi n° 2008-1350 du 19 décembre 2008",
-        "citation": "Le respect dû au corps humain ne cesse pas avec la mort. Les restes des personnes décédées, y compris les cendres de celles dont le corps a donné lieu à crémation, doivent être traités avec respect, dignité et décence."
+        "citation": "Le respect dû au corps humain ne cesse pas avec la mort. Les restes des personnes décédées, y compris les cendres de celles dont le corps a donné lieu à crémation, doivent être traités avec respect, dignité et décence.",
+        "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019983158"
       },
       {
         "ref": "CGCT, art. L. 2223-18-1 à L. 2223-18-3",
-        "texte": "Les cendres sont traitées **en leur totalité** : conservées dans l'urne, dans une sépulture, une case de columbarium ou scellée sur un monument, à l'intérieur d'un cimetière ou d'un site cinéraire ; ou dispersées dans un jardin du souvenir ou en pleine nature, hors voies publiques, avec déclaration à la mairie du lieu de naissance du défunt. En attendant la décision, l'urne peut rester au crématorium un an au plus."
+        "texte": "Les cendres sont traitées **en leur totalité** : conservées dans l'urne, dans une sépulture, une case de columbarium ou scellée sur un monument, à l'intérieur d'un cimetière ou d'un site cinéraire ; ou dispersées dans un jardin du souvenir ou en pleine nature, hors voies publiques, avec déclaration à la mairie du lieu de naissance du défunt. En attendant la décision, l'urne peut rester au crématorium un an au plus.",
+        "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000019983178"
       }
     ],
     "listes": [
@@ -344,6 +428,14 @@
     ],
     "impact": "L'objet double du projet (une pièce sur la sépulture, sa jumelle à la maison) est légal en France à une condition : **la pièce domestique ne contient aucune cendre**. C'est un objet de mémoire, pas un reliquaire. La contrainte crée même le besoin : la loi retire l'urne du salon, il faut un objet pour y ramener la personne. Une offre européenne devra prévoir deux versions, puisque la Rhénanie-Palatinat autorise désormais le partage des cendres. Au fond, le droit protège les morts de l'appropriation privée quand les familles, elles, cherchent à se les réapproprier : **l'écart entre la loi et les usages** (dispersions non déclarées, urnes gardées « le temps de décider ») est un espace de design.",
     "sources": [
+      {
+        "titre": "Légifrance, Code civil, article 16-1-1",
+        "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019983158"
+      },
+      {
+        "titre": "Légifrance, CGCT, destination des cendres (L. 2223-18-1 à L. 2223-18-4)",
+        "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000019983178"
+      },
       {
         "titre": "Assemblée nationale, question n° 14816 : conservation des cendres des défunts",
         "url": "https://questions.assemblee-nationale.fr/q15/15-14816QE.htm"

@@ -286,6 +286,9 @@
   .takeaway .label { color: var(--accent-ink); }
   .takeaway p { color: var(--ink); }
   .src { font-size: 12px; color: var(--muted); }
+  .src a, .kpi-src a, .q-credit a, .article .label a { color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+  .src a:hover, .kpi-src a:hover, .q-credit a:hover, .article .label a:hover { text-decoration-thickness: 2px; }
+  .trend-src { margin-top: -6px; }
   @media (max-width: 820px) {
     .feature { grid-template-columns: 1fr; min-height: 0; }
     .feature.flip .fimg { order: 0; }
@@ -501,6 +504,9 @@
   var rich = function (s) { return esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"); };
   var url = function (u) { return /^(https?:)?\/\//.test(u) || /^[\w./-]+$/.test(u) ? esc(u) : "#"; };
   var pad = function (v) { var x = String(parseInt(v, 10) || 0); return x.length < 2 ? "0" + x : x; };
+  var links = function (list) {
+    return (list || []).map(function (x) { return x && x.url ? '<a href="' + url(x.url) + '" target="_blank" rel="noopener">' + esc(x.titre) + "</a>" : esc(x && x.titre || x); }).join(" · ");
+  };
   var join = function (arr, fn) { return (arr || []).map(fn).join(""); };
 
   var ICONS = {
@@ -564,7 +570,7 @@
   function kpis(list) {
     return '<div class="kpis panel" aria-label="L\'essentiel en quatre chiffres">' +
       join(list, function (k, i) {
-        return '<div class="kpi k' + ((i % 4) + 1) + '"><span class="label">' + ico(k.rubrique) + esc(k.rubrique) + '</span><span class="kpi-value">' + esc(k.valeur) + '</span><span class="kpi-text">' + esc(k.texte) + "</span>" + (k.source ? '<span class="kpi-src">Source : ' + esc(k.source) + "</span>" : "") + "</div>";
+        return '<div class="kpi k' + ((i % 4) + 1) + '"><span class="label">' + ico(k.rubrique) + esc(k.rubrique) + '</span><span class="kpi-value">' + esc(k.valeur) + '</span><span class="kpi-text">' + esc(k.texte) + "</span>" + (k.source ? '<span class="kpi-src">Source : ' + (k.source_url ? '<a href="' + url(k.source_url) + '" target="_blank" rel="noopener">' + esc(k.source) + "</a>" : esc(k.source)) + "</span>" : "") + "</div>";
       }) + "</div>";
   }
 
@@ -623,7 +629,10 @@
       if (!im.src) return "";
       return '<div class="q-img"><img src="' + url(im.src) + '" alt="' + esc(im.alt) + '" loading="lazy">' + (extra || "") + "</div>";
     };
-    var qcredit = function (o) { return o && o.image && o.image.credit ? '<span class="q-credit">' + esc(o.image.credit) + "</span>" : ""; };
+    var qcredit = function (o) {
+      return (o && o.image && o.image.credit ? '<span class="q-credit">' + esc(o.image.credit) + "</span>" : "") +
+        (o && o.source ? '<span class="q-credit">Source : ' + links([o.source]) + "</span>" : "");
+    };
     var q = function (label, o, inner, extra) { return '<div class="q">' + qimg(o, extra) + '<span class="label">' + label + "</span>" + inner + qcredit(o) + "</div>"; };
     var quad = "";
     if (t.couleur) {
@@ -649,7 +658,7 @@
           "<h3>" + esc(s.titre) + "</h3>" +
           "<p>" + rich(s.texte) + "</p>" +
           '<div class="takeaway"><span class="label">Pour FunFun</span><p>' + rich(s.pour_funfun) + "</p></div>" +
-          (s.sources ? '<span class="src">Sources : ' + esc(s.sources) + "</span>" : "") +
+          (s.sources ? '<span class="src">Sources : ' + (Array.isArray(s.sources) ? links(s.sources) : esc(s.sources)) + "</span>" : "") +
         "</div>" +
       "</article>";
     });
@@ -669,6 +678,7 @@
         "</div>" : "") +
         (quad ? '<div class="quad">' + quad + "</div>" : "") +
         (t.mots_cles ? '<div class="mini"><span class="label">Mots-clés</span><div class="tags">' + join(t.mots_cles, function (m) { return '<span class="tag">' + esc(m) + "</span>"; }) + "</div></div>" : "") +
+        (t.sources ? '<p class="src trend-src">Sources : ' + links(t.sources) + "</p>" : "") +
       "</div>" +
       signals +
       signalFaible(ins.signal_faible) +
@@ -723,7 +733,7 @@
       '<span class="label">' + esc(l.pays) + "</span>" +
       "<h2>" + esc(l.titre) + "</h2>" +
       '<div class="legal-grid"><div class="articles">' + join(l.articles, function (a) {
-        return '<div class="article"><span class="label">' + esc(a.ref) + "</span>" +
+        return '<div class="article"><span class="label">' + (a.url ? '<a href="' + url(a.url) + '" target="_blank" rel="noopener">' + esc(a.ref) + " ↗</a>" : esc(a.ref)) + "</span>" +
           (a.citation ? "<blockquote>« " + esc(a.citation) + " »</blockquote>" : "") +
           (a.texte ? "<p>" + rich(a.texte) + "</p>" : "") + "</div>";
       }) + "</div>" +
