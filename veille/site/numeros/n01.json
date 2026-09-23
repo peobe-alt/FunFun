@@ -40,11 +40,6 @@
       "nom": "Présence",
       "accroche": "L'objet funéraire quitte le catalogue pour entrer dans la maison. On ne le range plus, on le montre.",
       "insight": "Avec la crémation, le souvenir n'a plus de lieu fixe. Les familles cherchent un objet qui tienne compagnie plutôt qu'un objet qui marque un emplacement.",
-      "image": {
-        "src": "numeros/n01/tendance-pk-ceramics.jpg",
-        "alt": "Urnes en céramique couvertes de coulures d'émail colorées, bleu, rose, jaune, vert et bleu nuit",
-        "credit": "Philip Kupferschmidt (PK Ceramics) pour Urn Studios · photo via Wallpaper*"
-      },
       "couleur": {
         "nom": "Lueur",
         "hex": "EBC696",

@@ -74,8 +74,7 @@ def main(num):
     ins = n.get("inspiration", {})
     exige(ins, "inspiration", ["tendance", "signaux"])
     t = ins.get("tendance", {})
-    exige(t, "tendance", ["nom", "accroche", "insight", "image", "couleur", "matiere", "forme", "citation", "mots_cles"])
-    image(t.get("image"), "tendance.image")
+    exige(t, "tendance", ["nom", "accroche", "insight", "couleur", "matiere", "forme", "citation", "mots_cles"])
     if not re.fullmatch(r"[0-9A-Fa-f]{6}", str(t.get("couleur", {}).get("hex", ""))):
         err("tendance.couleur.hex doit être un code HEX à 6 caractères")
     exige(t.get("citation", {}), "tendance.citation", ["texte", "auteur"])

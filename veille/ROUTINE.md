@@ -41,8 +41,7 @@ Créer `veille/site/numeros/nXX.json` (XX sur deux chiffres) en reprenant **exac
 
 ### Inspiration (lecture Nelly Rodi)
 - Une **tendance** nommée d'un mot ou deux, évocateur, jamais générique. `accroche` (une phrase forte), `insight` (le besoin humain derrière).
-- Une **image d'inspiration** forte et très inspirante, tirée des sources de la semaine : c'est l'image la plus frappante du numéro.
-- Quatre entrées, chacune avec **sa petite image** (`image` : `src`, `alt`, `credit`), souvent un détail recadré dans une photo de la semaine :
+- Quatre focus, chacun avec **sa propre image** forte et inspirante (`image` : `src`, `alt`, `credit`), souvent un détail recadré dans une photo de la semaine :
   - `couleur` : nom poétique, code HEX **relevé sur une image de la semaine** (pas inventé), une phrase ;
   - `matiere` : une matière précise vue cette semaine, une phrase sensorielle ;
   - `forme` : une forme précise vue cette semaine, une phrase ;
@@ -68,13 +67,13 @@ Créer `veille/site/numeros/nXX.json` (XX sur deux chiffres) en reprenant **exac
 
 ## 4. Images
 
-Chaque numéro a 10 images réelles : couverture, image d'inspiration, 4 petites images (couleur, matière, forme, citation), 4 signaux. Jamais d'image générée.
+Chaque numéro a 9 images réelles : couverture, 4 images des focus de tendance (couleur, matière, forme, citation), 4 signaux. Jamais d'image générée.
 
 1. Lister les images d'une page source : `python3 veille/outils/images.py candidats <url>`.
 2. Télécharger et alléger : `python3 veille/outils/images.py telecharger <url_image> veille/site/numeros/nXX/<nom>.jpg 1400`.
 3. **Ouvrir chaque image** pour vérifier qu'elle montre bien le sujet, qu'elle est nette et forte. Écarter logos, captures d'écran de site, bandeaux publicitaires.
 4. Crédit systématique : « Photo : Marque · via Média ».
-5. Petites images de la tendance : recadrer un détail parlant (la lumière, la texture, la silhouette, l'inscription) avec `python3 veille/outils/images.py recadrer <image> veille/site/numeros/nXX/q-<entrée>.jpg <gauche> <haut> <droite> <bas>`, après avoir ouvert l'image pour choisir le cadre.
+5. Images des focus de tendance : recadrer un détail parlant (la lumière, la texture, la silhouette, l'inscription) avec `python3 veille/outils/images.py recadrer <image> veille/site/numeros/nXX/q-<entrée>.jpg <gauche> <haut> <droite> <bas>`, après avoir ouvert l'image pour choisir le cadre.
 6. Si une image arrive dans un format illisible (SVG enveloppant une image, par exemple), extraire l'image intégrée avec Pillow.
 7. Relever le HEX de `couleur` sur l'une de ces images (moyenne d'une zone typique avec Pillow).
 
