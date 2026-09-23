@@ -136,8 +136,9 @@
   .kpi { padding: 22px 22px 24px; min-height: 200px; display: grid; grid-template-rows: auto 1fr auto; gap: 10px; }
   .kpi-value { font-family: var(--sans); font-weight: 600; font-size: 46px; line-height: 1; letter-spacing: -0.03em; align-self: end; }
   .kpi-text { font-size: 14px; line-height: 1.45; }
-  .k1 { background: var(--bx); color: var(--snow); }
-  .k2 { background: var(--coral); color: var(--bp); }
+  .k1 { background: var(--bp); color: var(--snow); }
+  .k1 .kpi-value { color: var(--coral); }
+  .k2 { background: var(--bx); color: var(--snow); }
   .k3 { background: var(--canard); color: var(--aqua); }
   .k4 { background: var(--aqua); color: var(--bp); }
   @media (max-width: 820px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } .kpi { min-height: 180px; padding: 18px; } .kpi-value { font-size: 38px; } }
@@ -161,6 +162,9 @@
   /* ---------- Inspiration : planche tendance ---------- */
   .trend { display: grid; grid-template-columns: 1fr 1.05fr; background: var(--panel); }
   .bands { display: grid; }
+  .bands-head { padding: 18px 26px 16px; background: var(--panel); display: grid; gap: 4px; border-bottom: 1px solid var(--line); }
+  .bands-head .label { color: var(--accent-ink); }
+  .bands-head p { font-size: 13.5px; line-height: 1.45; color: var(--ink-2); }
   .band { padding: 16px 26px 14px; min-height: 96px; display: grid; align-content: space-between; gap: 8px; }
   .band-name { font-family: var(--serif); font-size: 36px; line-height: 1; }
   .band-meta { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; display: flex; flex-wrap: wrap; gap: 4px 22px; }
@@ -247,10 +251,11 @@
   .finding p { font-size: 15px; color: var(--aqua); }
   @media (max-width: 820px) { .market { padding: 26px 22px; } }
 
-  .sowhat { background: var(--coral); color: var(--bp); border-radius: 16px; padding: 28px 30px; display: grid; gap: 14px; }
-  .sowhat h3 { font-family: var(--serif); font-size: clamp(30px, 3.4vw, 40px); line-height: 1; }
-  .sowhat ul { margin: 0; padding-left: 1.1em; display: grid; gap: 10px; }
-  .sowhat li { font-size: 16px; }
+  .sowhat { background: var(--snow); color: var(--bp); border-radius: 16px; padding: 28px 30px; display: grid; gap: 16px; border-top: 8px solid var(--coral); }
+  .sowhat h3 { font-family: var(--serif); font-size: clamp(30px, 3.4vw, 40px); line-height: 1; color: var(--bx); }
+  .sowhat ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .sowhat li { font-size: 16px; line-height: 1.55; display: grid; grid-template-columns: 18px 1fr; gap: 10px; }
+  .sowhat li::before { content: ""; width: 10px; height: 10px; margin-top: 0.5em; border-radius: 2px; background: var(--coral); }
   .watch { font-size: 15.5px; color: var(--aqua); max-width: 70ch; }
   .watch strong { color: var(--snow); font-weight: 600; }
   .sources { display: grid; gap: 6px; }
@@ -411,7 +416,7 @@
           (img.credit ? '<span class="img-note">' + esc(img.credit) + "</span>" : "") +
         "</figure>" +
         '<div class="ftext">' +
-          '<div class="fmeta"><span class="kind">' + esc(s.type) + '</span><span class="maturity">' + esc(maturityLabel[s.maturite] || "") + ' <span class="dots" aria-hidden="true">' + dots(s.maturite) + "</span></span></div>" +
+          '<div class="fmeta"><span class="kind">' + esc(s.type) + '</span><span class="maturity" title="Maturité du signal : 1 émergent, 2 en diffusion, 3 installé">Maturité <span class="dots" aria-hidden="true">' + dots(s.maturite) + "</span> " + esc(maturityLabel[s.maturite] || "") + "</span></div>" +
           "<h3>" + esc(s.titre) + "</h3>" +
           "<p>" + esc(s.texte) + "</p>" +
           '<div class="takeaway"><span class="label">Pour FunFun</span><p>' + esc(s.pour_funfun) + "</p></div>" +
@@ -420,9 +425,9 @@
       "</article>";
     });
     return '<section id="inspiration">' +
-      '<div class="shead"><span class="label">Inspiration · produits et services</span><h2 class="caps">Tendance<br>de la semaine</h2><p>Lecture cahier de tendances : un nom, un insight, une palette, des signaux classés par maturité, et ce que FunFun peut en faire.</p></div>' +
+      '<div class="shead"><span class="label">Inspiration · produits et services</span><h2 class="caps">Tendance<br>de la semaine</h2><p>Lecture cahier de tendances : un nom, un insight, une palette, puis les signaux repérés. Chaque signal porte sa maturité : un point, émergent (un acteur, peu de presse) ; deux, en diffusion (presse, premiers clients) ; trois, installé (marché établi).</p></div>' +
       '<div class="trend panel">' +
-        '<div class="bands" role="list" aria-label="Palette de la tendance">' + bands + "</div>" +
+        '<div class="bands"><div class="bands-head"><span class="label">Palette de la tendance</span><p>Les couleurs tirées des objets repérés cette semaine, avec leur code HEX pour les reprendre dans vos planches.</p></div><div role="list" aria-label="Palette de la tendance">' + bands + "</div></div>" +
         '<div class="trend-body">' +
           '<div class="trend-name">' + esc(t.nom) + "<sup>✳</sup></div>" +
           '<p class="trend-lede">' + esc(t.accroche) + "</p>" +
@@ -468,7 +473,7 @@
         return '<div class="finding"><span class="finding-fig">' + esc(c.chiffre) + "</span><h3>" + esc(c.titre) + "</h3><p>" + esc(c.texte) + "</p></div>";
       }) + "</div>" +
       '<div class="sowhat"><h3>Ce que ça veut dire pour FunFun</h3><ul>' + join(m.implications, function (x) {
-        return "<li><strong>" + esc(x.gras) + "</strong>" + esc(x.texte) + "</li>";
+        return "<li><span><strong>" + esc(x.gras) + "</strong>" + esc(x.texte) + "</span></li>";
       }) + "</ul></div>" +
       (m.a_suivre ? '<p class="watch"><strong>À suivre.</strong> ' + esc(m.a_suivre) + "</p>" : "") +
       sources(m.sources) +

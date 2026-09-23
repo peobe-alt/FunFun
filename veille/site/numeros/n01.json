@@ -13,10 +13,26 @@
     "ancre": "amara"
   },
   "chiffres": [
-    { "rubrique": "Marché", "valeur": "1 300+", "texte": "agences OGF après le rachat de Pompes Funèbres de France, finalisé en mai" },
-    { "rubrique": "Marché", "valeur": "130", "texte": "crématoriums exploités par Funecap en Europe et en Amérique du Nord" },
-    { "rubrique": "Inspiration", "valeur": "2,1 M€", "texte": "levés par Solace Care, plus gros pre-seed européen sur la fin de vie" },
-    { "rubrique": "Note légale", "valeur": "0", "texte": "gramme de cendres qu'on peut partager ou garder chez soi en France" }
+    {
+      "rubrique": "Marché",
+      "valeur": "1 300+",
+      "texte": "agences OGF après le rachat de Pompes Funèbres de France, finalisé en mai"
+    },
+    {
+      "rubrique": "Marché",
+      "valeur": "130",
+      "texte": "crématoriums exploités par Funecap en Europe et en Amérique du Nord"
+    },
+    {
+      "rubrique": "Inspiration",
+      "valeur": "2,1 M€",
+      "texte": "levés par Solace Care, plus gros pre-seed européen sur la fin de vie"
+    },
+    {
+      "rubrique": "Note légale",
+      "valeur": "0",
+      "texte": "gramme de cendres qu'on peut partager ou garder chez soi en France"
+    }
   ],
   "inspiration": {
     "sommaire": "Présence : l'objet funéraire sort du placard",
@@ -26,13 +42,39 @@
       "texte": "Il éclaire, il est signé par un artiste, il ose la couleur et même l'humour.",
       "insight": "Avec la crémation, le souvenir n'a plus de lieu fixe. Les familles cherchent un objet qui tienne compagnie plutôt qu'un objet qui marque un emplacement.",
       "matieres": "Grès moucheté, céramique translucide, résine imprimée en 3D, peinture aérosol sur surface lisse.",
-      "mots_cles": ["exposer plutôt que ranger", "lumière", "pièce d'auteur", "humour tendre", "commande"],
+      "mots_cles": [
+        "exposer plutôt que ranger",
+        "lumière",
+        "pièce d'auteur",
+        "humour tendre",
+        "commande"
+      ],
       "palette": [
-        { "nom": "Lueur", "hex": "F2B35B", "note": "Lumière intégrée" },
-        { "nom": "Grès", "hex": "B9A58C", "note": "Céramique d'atelier" },
-        { "nom": "Aérosol", "hex": "E0457B", "note": "Graffiti" },
-        { "nom": "Vert-de-gris", "hex": "3E8C7A", "note": "Patine" },
-        { "nom": "Nuit", "hex": "23292C", "note": "Veille du soir" }
+        {
+          "nom": "Lueur",
+          "hex": "F2B35B",
+          "note": "Lumière des urnes Amara"
+        },
+        {
+          "nom": "Grès",
+          "hex": "B9A58C",
+          "note": "Céramique d'Urn Studios"
+        },
+        {
+          "nom": "Aérosol",
+          "hex": "E0457B",
+          "note": "Graffitis de Bestattung Wien"
+        },
+        {
+          "nom": "Vert-de-gris",
+          "hex": "3E8C7A",
+          "note": "Patine du bronze, piste FunFun"
+        },
+        {
+          "nom": "Nuit",
+          "hex": "23292C",
+          "note": "La visite du soir"
+        }
       ]
     },
     "signaux": [
@@ -47,7 +89,11 @@
         "texte": "Fondée par Jonathan Hancock et Merel Swart après un deuil vécu comme « daté et impersonnel ». Le principe : inviter des céramistes et plasticiens qui n'avaient jamais fait d'urne, et vendre leurs pièces comme des œuvres à exposer. L'urne en grès de Milo Gibson intègre une coupelle pour un bijou ou une photo. Première collection américaine en août, avec sept artistes.",
         "pour_funfun": "Le modèle éditeur : une plaque pensée en collection d'auteurs invités (céramistes, typographes), un récit par pièce. Et l'idée de la coupelle : l'objet de mémoire accueille des choses, il ne se contente pas de porter un nom.",
         "sources": "Wallpaper*, Elle Decoration UK",
-        "image": { "src": "numeros/n01/urn-studios.svg", "alt": "Urne en grès aqua sur un socle, coupelle bordeaux avec une bague", "credit": "Illustration de maquette" }
+        "image": {
+          "src": "numeros/n01/urn-studios.svg",
+          "alt": "Urne en grès aqua sur un socle, coupelle bordeaux avec une bague",
+          "credit": "Illustration de maquette"
+        }
       },
       {
         "id": "amara",
@@ -60,7 +106,11 @@
         "texte": "Urnes sculptures à lumière intégrée, animales et humaines, faites à la main en Autriche à partir de céramique et de pièces imprimées en 3D. L'idée est née devant une urne « très triste » posée sur une table. Le fondateur, Markus Bareuther, a commencé par l'animal de compagnie ; premier client, une pompe funèbre du Burgenland.",
         "pour_funfun": "La lumière comme matière : une plaque qui capte ou restitue la lumière (verre coulé, émail translucide) change la visite du soir. Et l'animal comme terrain d'essai : un marché moins encadré pour prototyper vite.",
         "sources": "Brutkasten, BVZ, meinbezirk.at",
-        "image": { "src": "numeros/n01/amara.svg", "alt": "Gros plan sur une urne lumineuse en forme d'animal", "credit": "Illustration de maquette" }
+        "image": {
+          "src": "numeros/n01/amara.svg",
+          "alt": "Gros plan sur une urne lumineuse en forme d'animal",
+          "credit": "Illustration de maquette"
+        }
       },
       {
         "id": "bestattung-wien",
@@ -73,7 +123,11 @@
         "texte": "Après des cercueils graffés, l'opérateur funéraire de la Ville de Vienne a lancé un défi à cinq artistes : dessiner une urne. Jury mixte (Bestattung Wien, cimetières de Vienne, Université des arts appliqués, un graffeur). Lauréates ex aequo : Manuela Hageneder et Luky Vete. Une pièce porte « Sche woa's », « c'était beau » en viennois. Les cinq artistes rejoignent un pool pour des commandes sur mesure.",
         "pour_funfun": "Quand une institution publique ose la couleur et l'humour, le décalage devient légitime : un précédent à citer pour défendre le nom FunFun. Le pool d'artistes est aussi un format de service : la commande personnalisée sans atelier en propre.",
         "sources": "ORF Wien, Vienna.at, Wiener Bezirksblatt",
-        "image": { "src": "numeros/n01/bestattung-wien.svg", "alt": "Urne bordeaux couverte de graffitis devant un mur tagué", "credit": "Illustration de maquette" }
+        "image": {
+          "src": "numeros/n01/bestattung-wien.svg",
+          "alt": "Urne bordeaux couverte de graffitis devant un mur tagué",
+          "credit": "Illustration de maquette"
+        }
       },
       {
         "id": "solace-care",
@@ -86,7 +140,11 @@
         "texte": "Plateforme qui aide à mettre ses affaires en ordre de son vivant, puis guide les proches dans le pratique et l'émotionnel après le décès. 2,1 M€ levés auprès de Spintop Ventures, Plug and Play et de dirigeants de l'assurance nordique. Les fondateurs viennent de Mindler, la santé mentale en ligne.",
         "pour_funfun": "Les assureurs financent l'anticipation. Un contrat obsèques qui inclurait « concevoir son objet de mémoire » serait un canal pour la piste Anticipation du projet, sans passer par la pompe funèbre.",
         "sources": "EU-Startups, ArcticStartup, Fintech Global",
-        "image": { "src": "numeros/n01/solace-care.svg", "alt": "Deux téléphones affichant les étapes préparer et transmettre", "credit": "Illustration de maquette" }
+        "image": {
+          "src": "numeros/n01/solace-care.svg",
+          "alt": "Deux téléphones affichant les étapes préparer et transmettre",
+          "credit": "Illustration de maquette"
+        }
       }
     ]
   },
@@ -99,37 +157,100 @@
     "figure": {
       "titre": "Qui tient quoi dans la chaîne de valeur de la plaque, France 2026",
       "chaine": [
-        { "etiquette": "Fabrication", "nom": "Fabricants de plaques", "texte": "France Funéraire, Granimond, artisans. Fragmenté, pas de consolidateur." },
-        { "etiquette": "Point de vente", "nom": "Agences et funérariums", "chiffre": "1 300+", "legende": "agences OGF et 650 funérariums", "cle": true },
-        { "etiquette": "Lieu cinéraire", "nom": "Crématoriums et columbariums", "chiffre": "130", "legende": "crématoriums Funecap, plus 25 pour animaux", "cle": true },
-        { "etiquette": "Usage", "nom": "Familles", "texte": "650 000 familles accompagnées par an par Funecap, tous pays." }
+        {
+          "etiquette": "Fabrication",
+          "nom": "Fabricants de plaques",
+          "texte": "France Funéraire, Granimond, artisans. Fragmenté, pas de consolidateur."
+        },
+        {
+          "etiquette": "Point de vente",
+          "nom": "Agences et funérariums",
+          "chiffre": "1 300+",
+          "legende": "agences OGF et 650 funérariums",
+          "cle": true
+        },
+        {
+          "etiquette": "Lieu cinéraire",
+          "nom": "Crématoriums et columbariums",
+          "chiffre": "130",
+          "legende": "crématoriums Funecap, plus 25 pour animaux",
+          "cle": true
+        },
+        {
+          "etiquette": "Usage",
+          "nom": "Familles",
+          "texte": "650 000 familles accompagnées par an par Funecap, tous pays."
+        }
       ],
       "empile": {
         "titre": "Réseau OGF, en agences",
         "segments": [
-          { "label": "≈ 1 200 agences avant mai 2026", "part": 92 },
-          { "label": "≈ 100 agences Pompes Funèbres de France", "part": 8, "accent": true }
+          {
+            "label": "≈ 1 200 agences avant mai 2026",
+            "part": 92
+          },
+          {
+            "label": "≈ 100 agences Pompes Funèbres de France",
+            "part": 8,
+            "accent": true
+          }
         ]
       },
       "note": "Sources : OGF (communiqués avril et mai 2026), Funecap (chiffres clés, février 2026), Nova One Advisor. Le partage ≈ 1 200 / ≈ 100 est une estimation à partir du total annoncé."
     },
     "constats": [
-      { "chiffre": "+100", "titre": "OGF densifie l'aval", "texte": "Rachat de Pompes Funèbres de France, réseau d'une centaine d'agences en franchise, finalisé en mai, après la fusion d'Atger Pompes Funèbres à Anduze en mars. Le leader français dépasse 1 300 agences." },
-      { "chiffre": "≈ 1 Md€", "titre": "Funecap verrouille l'infrastructure", "texte": "Porté par Charterhouse, le groupe a investi environ un milliard d'euros en acquisitions. Il exploite 130 crématoriums dans six pays européens et en Amérique du Nord, et emploie plus de 5 000 personnes." },
-      { "chiffre": "15 M€", "titre": "Même le digital rachète du physique", "texte": "Mymoria, la pompe funèbre en ligne berlinoise, achète des maisons traditionnelles depuis 2021 avec 15 M€ de capital-risque. Le lieu reste l'actif qui capte la famille." }
+      {
+        "chiffre": "+100",
+        "titre": "OGF densifie l'aval",
+        "texte": "Rachat de Pompes Funèbres de France, réseau d'une centaine d'agences en franchise, finalisé en mai, après la fusion d'Atger Pompes Funèbres à Anduze en mars. Le leader français dépasse 1 300 agences."
+      },
+      {
+        "chiffre": "≈ 1 Md€",
+        "titre": "Funecap verrouille l'infrastructure",
+        "texte": "Porté par Charterhouse, le groupe a investi environ un milliard d'euros en acquisitions. Il exploite 130 crématoriums dans six pays européens et en Amérique du Nord, et emploie plus de 5 000 personnes."
+      },
+      {
+        "chiffre": "15 M€",
+        "titre": "Même le digital rachète du physique",
+        "texte": "Mymoria, la pompe funèbre en ligne berlinoise, achète des maisons traditionnelles depuis 2021 avec 15 M€ de capital-risque. Le lieu reste l'actif qui capte la famille."
+      }
     ],
     "implications": [
-      { "gras": "Le crématorium est la porte du cinéraire", "texte": ", le segment qui porte la plaque de columbarium. Un accord avec un exploitant ouvre des dizaines de sites d'un coup." },
-      { "gras": "Séquencer le référencement", "texte": " : prouver avec 5 à 10 indépendants qui cherchent à se distinguer des réseaux, puis arriver chez un groupe avec des chiffres de vente." },
-      { "gras": "Question à instruire", "texte": " : qui choisit les objets proposés dans un crématorium Funecap, le site, la région ou une centrale d'achat ?" }
+      {
+        "gras": "Le crématorium est la porte du cinéraire",
+        "texte": ", le segment qui porte la plaque de columbarium. Un accord avec un exploitant ouvre des dizaines de sites d'un coup."
+      },
+      {
+        "gras": "Séquencer le référencement",
+        "texte": " : prouver avec 5 à 10 indépendants qui cherchent à se distinguer des réseaux, puis arriver chez un groupe avec des chiffres de vente."
+      },
+      {
+        "gras": "Question à instruire",
+        "texte": " : qui choisit les objets proposés dans un crématorium Funecap, le site, la région ou une centrale d'achat ?"
+      }
     ],
     "a_suivre": "La question posée par The European Correspondent : quand le capital privé détient les crématoriums, qui finance les services non rentables ? Aucun gouvernement européen n'y a encore répondu clairement.",
     "sources": [
-      { "titre": "OGF, négociations exclusives pour Pompes Funèbres de France", "url": "https://fr.finance.yahoo.com/actualites/ogf-annonce-%C3%AAtre-entr%C3%A9-n%C3%A9gociations-090000645.html" },
-      { "titre": "Gramond Avocats, cession de Pompes Funèbres de France à OGF", "url": "https://gramond-avocats.com/gramond-accompagne-la-cession-des-pompes-funebres-de-france-a-ogf/" },
-      { "titre": "Funecap, chiffres clés", "url": "https://www.funecap.group/groupe/chiffres-cles" },
-      { "titre": "The European Correspondent, Who owns death?", "url": "https://europeancorrespondent.com/en/r/who-owns-death" },
-      { "titre": "Nova One Advisor, Europe Funeral Homes and Services Market", "url": "https://www.novaoneadvisor.com/report/europe-funeral-homes-and-services-market" }
+      {
+        "titre": "OGF, négociations exclusives pour Pompes Funèbres de France",
+        "url": "https://fr.finance.yahoo.com/actualites/ogf-annonce-%C3%AAtre-entr%C3%A9-n%C3%A9gociations-090000645.html"
+      },
+      {
+        "titre": "Gramond Avocats, cession de Pompes Funèbres de France à OGF",
+        "url": "https://gramond-avocats.com/gramond-accompagne-la-cession-des-pompes-funebres-de-france-a-ogf/"
+      },
+      {
+        "titre": "Funecap, chiffres clés",
+        "url": "https://www.funecap.group/groupe/chiffres-cles"
+      },
+      {
+        "titre": "The European Correspondent, Who owns death?",
+        "url": "https://europeancorrespondent.com/en/r/who-owns-death"
+      },
+      {
+        "titre": "Nova One Advisor, Europe Funeral Homes and Services Market",
+        "url": "https://www.novaoneadvisor.com/report/europe-funeral-homes-and-services-market"
+      }
     ]
   },
   "legal": {
@@ -137,23 +258,64 @@
     "pays": "France",
     "titre": "Les cendres ne se partagent pas, et ne restent pas à la maison",
     "articles": [
-      { "ref": "Code civil, art. 16-1-1 · loi n° 2008-1350 du 19 décembre 2008", "citation": "Le respect dû au corps humain ne cesse pas avec la mort. Les restes des personnes décédées, y compris les cendres de celles dont le corps a donné lieu à crémation, doivent être traités avec respect, dignité et décence." },
-      { "ref": "CGCT, art. L. 2223-18-1 à L. 2223-18-3", "texte": "Les cendres sont traitées en leur totalité : conservées dans l'urne, dans une sépulture, une case de columbarium ou scellée sur un monument, à l'intérieur d'un cimetière ou d'un site cinéraire ; ou dispersées dans un jardin du souvenir ou en pleine nature, hors voies publiques, avec déclaration à la mairie du lieu de naissance du défunt. En attendant la décision, l'urne peut rester au crématorium un an au plus." }
+      {
+        "ref": "Code civil, art. 16-1-1 · loi n° 2008-1350 du 19 décembre 2008",
+        "citation": "Le respect dû au corps humain ne cesse pas avec la mort. Les restes des personnes décédées, y compris les cendres de celles dont le corps a donné lieu à crémation, doivent être traités avec respect, dignité et décence."
+      },
+      {
+        "ref": "CGCT, art. L. 2223-18-1 à L. 2223-18-3",
+        "texte": "Les cendres sont traitées en leur totalité : conservées dans l'urne, dans une sépulture, une case de columbarium ou scellée sur un monument, à l'intérieur d'un cimetière ou d'un site cinéraire ; ou dispersées dans un jardin du souvenir ou en pleine nature, hors voies publiques, avec déclaration à la mairie du lieu de naissance du défunt. En attendant la décision, l'urne peut rester au crématorium un an au plus."
+      }
     ],
     "listes": [
-      { "titre": "Interdit", "type": "non", "items": ["Garder l'urne chez soi au-delà du temps de la décision", "Répartir les cendres entre plusieurs proches", "Bijou ou diamant fabriqué à partir de cendres", "Disperser dans son jardin, même avec l'accord du propriétaire"] },
-      { "titre": "Autorisé", "type": "oui", "items": ["Urne en sépulture, en columbarium, en cavurne ou scellée sur un monument", "Dispersion au jardin du souvenir ou en pleine nature déclarée", "Tout objet de mémoire qui ne contient pas de cendres"] }
+      {
+        "titre": "Interdit",
+        "type": "non",
+        "items": [
+          "Garder l'urne chez soi au-delà du temps de la décision",
+          "Répartir les cendres entre plusieurs proches",
+          "Bijou ou diamant fabriqué à partir de cendres",
+          "Disperser dans son jardin, même avec l'accord du propriétaire"
+        ]
+      },
+      {
+        "titre": "Autorisé",
+        "type": "oui",
+        "items": [
+          "Urne en sépulture, en columbarium, en cavurne ou scellée sur un monument",
+          "Dispersion au jardin du souvenir ou en pleine nature déclarée",
+          "Tout objet de mémoire qui ne contient pas de cendres"
+        ]
+      }
     ],
     "impact": "L'objet double du projet (une pièce sur la sépulture, sa jumelle à la maison) est légal en France à une condition : la pièce domestique ne contient aucune cendre. C'est un objet de mémoire, pas un reliquaire. La contrainte crée même le besoin : la loi retire l'urne du salon, il faut un objet pour y ramener la personne. Une offre européenne devra prévoir deux versions, puisque la Rhénanie-Palatinat autorise désormais le partage des cendres.",
     "sources": [
-      { "titre": "Assemblée nationale, question n° 14816 : conservation des cendres des défunts", "url": "https://questions.assemblee-nationale.fr/q15/15-14816QE.htm" },
-      { "titre": "Sublimatorium, Propriété des cendres funéraires : que dit la loi ?", "url": "https://www.sublimatorium-florian-leclerc.fr/2025/04/01/proprietes-des-cendres-funeraires-que-dit-la-loi/" },
-      { "titre": "Cabinet Antebi, L'urne, les cendres et les conflits entre héritiers", "url": "https://www.avocat-antebi.fr/urne-cendres-conflits-entre-heritiers-et-legislation-applicable/" }
+      {
+        "titre": "Assemblée nationale, question n° 14816 : conservation des cendres des défunts",
+        "url": "https://questions.assemblee-nationale.fr/q15/15-14816QE.htm"
+      },
+      {
+        "titre": "Sublimatorium, Propriété des cendres funéraires : que dit la loi ?",
+        "url": "https://www.sublimatorium-florian-leclerc.fr/2025/04/01/proprietes-des-cendres-funeraires-que-dit-la-loi/"
+      },
+      {
+        "titre": "Cabinet Antebi, L'urne, les cendres et les conflits entre héritiers",
+        "url": "https://www.avocat-antebi.fr/urne-cendres-conflits-entre-heritiers-et-legislation-applicable/"
+      }
     ]
   },
   "registre": [
-    { "rubrique": "Inspiration", "entrees": "Urn Studios, Amara, Bestattung Wien (urnes graffiti), Solace Care · tendance « Présence »" },
-    { "rubrique": "Marché", "entrees": "Rachat PFF par OGF, fusion Atger, Funecap 130 crématoriums, Mymoria rachats, marché Europe 2025 à 2035" },
-    { "rubrique": "Note légale", "entrees": "Code civil 16-1-1, CGCT L. 2223-18-1 à 18-3 (destination des cendres)" }
+    {
+      "rubrique": "Inspiration",
+      "entrees": "Urn Studios, Amara, Bestattung Wien (urnes graffiti), Solace Care · tendance « Présence »"
+    },
+    {
+      "rubrique": "Marché",
+      "entrees": "Rachat PFF par OGF, fusion Atger, Funecap 130 crématoriums, Mymoria rachats, marché Europe 2025 à 2035"
+    },
+    {
+      "rubrique": "Note légale",
+      "entrees": "Code civil 16-1-1, CGCT L. 2223-18-1 à 18-3 (destination des cendres)"
+    }
   ]
 }
