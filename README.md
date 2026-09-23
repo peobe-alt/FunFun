@@ -68,10 +68,12 @@ accompagnées. Extensions possibles :
 ## Documents
 
 - [Étude de marché et benchmark européen](docs/01-etude-de-marche-europe.md)
+- [Règlements de cimetières : ce que la plaque a le droit de faire](docs/02-reglements-cimetieres.md)
 
 ## Prochaines étapes
 
 - [x] Benchmark de l'offre actuelle et des initiatives de design funéraire existantes
+- [x] Relevé des règlements de cimetières (formats et contraintes)
 - [ ] Entretiens avec des familles, marbriers, pompes funèbres
 - [ ] Planche de tendances matières et formes
 - [ ] Trois premiers prototypes de plaques
