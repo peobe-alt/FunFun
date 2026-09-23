@@ -2,6 +2,8 @@
 
 Ce fichier est lu par la routine chaque lundi à 8 h 15 (heure de Paris). Il décrit, dans l'ordre, comment produire et publier un nouveau numéro. Le numéro 1 (`veille/site/numeros/n01.json`) sert de modèle de référence pour le ton, la longueur et la structure.
 
+**Important (depuis le 23 septembre 2026) :** la page publique est désormais https://veilleff.netlify.app/, mise à jour automatiquement par Netlify à chaque push. L'ancienne page claude.ai (https://claude.ai/artifact/GjJtYLJvA6AaNui3kNTVSK) n'est plus utilisée : ne la mets plus à jour, même si le message de la routine la mentionne encore. En revanche, l'envoi de l'e-mail aux lecteurs (étape 7, point 4) fait bien partie de chaque numéro : ne l'oublie pas.
+
 Règle d'écriture absolue : n'utiliser **jamais** le tiret cadratin (caractère Unicode U+2014) ni le tiret demi-cadratin (U+2013). Les remplacer par une virgule, deux-points ou des parenthèses. Le script de vérification les détecte.
 
 ## Repères
