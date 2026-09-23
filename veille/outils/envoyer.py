@@ -47,6 +47,16 @@ def label(txt, color=BX):
             % (SANS, color, e(txt)))
 
 
+def drapeaux(codes):
+    vus = []
+    for c in codes or []:
+        c = str(c).upper()
+        if c not in vus:
+            vus.append(c)
+    return " ".join("\U0001F30D" if c == "INT" else chr(0x1F1E6 + ord(c[0]) - 65) + chr(0x1F1E6 + ord(c[1]) - 65)
+                    for c in vus if c == "INT" or (len(c) == 2 and c.isalpha()))
+
+
 def construire(n):
     num = pad(n["numero"])
     lien = "%s#n%d" % (PAGE, int(n["numero"]))
@@ -58,15 +68,15 @@ def construire(n):
     sp = n.get("note_spirituelle", {})
     cov = n.get("couverture", {})
 
-    sujets = [("01", "Inspiration", ins.get("sommaire") or t.get("nom")),
-              ("02", "Marché", m.get("sommaire") or m.get("titre")),
-              ("03", "Juridique", l.get("sommaire") or l.get("titre"))]
+    sujets = [("01", "Inspiration", ins.get("sommaire") or t.get("nom"), [c for s in ins.get("signaux", []) for c in s.get("origine", [])]),
+              ("02", "Marché", m.get("sommaire") or m.get("titre"), m.get("origine")),
+              ("03", "Juridique", l.get("sommaire") or l.get("titre"), l.get("origine"))]
     au_sommaire = "".join(
         '<tr><td valign="top" style="padding:12px 14px 12px 0;border-top:1px solid %s;font-family:%s;font-size:12px;letter-spacing:1px;color:%s;white-space:nowrap;">%s</td>'
-        '<td style="padding:12px 0;border-top:1px solid %s;"><div style="font-family:%s;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:%s;">%s</div>'
+        '<td style="padding:12px 0;border-top:1px solid %s;"><div style="font-family:%s;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:%s;">%s<span style="letter-spacing:0;text-transform:none;font-size:14px;"> %s</span></div>'
         '<a href="%s" style="font-family:%s;font-size:18px;line-height:1.3;color:%s;text-decoration:none;">%s</a></td></tr>'
-        % (BX, SANS, CORAL, no, BX, SANS, AQUA, e(rub), e(lien), SERIF, SNOW, e(txt))
-        for no, rub, txt in sujets if txt)
+        % (BX, SANS, CORAL, no, BX, SANS, AQUA, e(rub), drapeaux(pays), e(lien), SERIF, SNOW, e(txt))
+        for no, rub, txt, pays in sujets if txt)
 
     sujet = "La FunVeille #%s · %s" % (num, ed.get("titre", t.get("nom", "")))
     accroche = ed.get("tension") or t.get("accroche", "")

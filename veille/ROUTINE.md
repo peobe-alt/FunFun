@@ -40,6 +40,8 @@ Règle d'écriture absolue : n'utiliser **jamais** le tiret cadratin (caractère
 
 ## 3. Écrire le numéro
 
+**Drapeau de chaque information (champ `origine`, obligatoire).** Le cadre légal diffère d'un pays à l'autre : le lecteur doit voir d'un coup d'œil d'où vient chaque information. Chaque chiffre clé, chaque signal, le signal faible, le marché et la note juridique portent un champ `origine` : la liste des pays concernés, en codes ISO à deux lettres et en majuscules (`["FR"]`, `["DE"]`, `["CH"]`, `["BE"]`, `["GB"]`, `["US"]`...). Utiliser `EU` pour une donnée européenne ou un texte de l'Union, `INT` pour une donnée mondiale, et plusieurs codes si l'information en couvre plusieurs (`["FR", "EU"]`). C'est le pays du fait (où se trouve l'entreprise, où s'applique la loi, où porte l'étude), pas celui du média qui le rapporte. La page affiche un drapeau et le nom du pays, l'e-mail affiche les drapeaux à côté des trois grands sujets, et `verifier.py` bloque tout élément sans `origine`. Quand une information vient d'un autre pays que la France, le rappeler dans `pour_funfun` si le cadre français change la donne.
+
 Créer `veille/site/numeros/nXX.json` (XX sur deux chiffres) en reprenant **exactement** la structure de `n01.json`.
 
 ### La posture : écrire comme un planneur stratégique

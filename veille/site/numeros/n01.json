@@ -18,28 +18,40 @@
       "valeur": "1 300+",
       "texte": "agences OGF après le rachat de Pompes Funèbres de France, finalisé en mai",
       "source": "Gramond Avocats, cession de PFF à OGF (2026)",
-      "source_url": "https://gramond-avocats.com/gramond-accompagne-la-cession-des-pompes-funebres-de-france-a-ogf/"
+      "source_url": "https://gramond-avocats.com/gramond-accompagne-la-cession-des-pompes-funebres-de-france-a-ogf/",
+      "origine": [
+        "FR"
+      ]
     },
     {
       "rubrique": "Société",
       "valeur": "29 %",
       "texte": "des Français ne veulent aucune cérémonie pour leurs obsèques, contre 19 % en 2008 (Ifop)",
       "source": "Ifop, 2023",
-      "source_url": "https://www.ifopgroup.com/article/le-rapport-des-francais-a-la-mort-et-aux-obseques-au-travers-de-leurs-croyances/"
+      "source_url": "https://www.ifopgroup.com/article/le-rapport-des-francais-a-la-mort-et-aux-obseques-au-travers-de-leurs-croyances/",
+      "origine": [
+        "FR"
+      ]
     },
     {
       "rubrique": "Inspiration",
       "valeur": "2,1 M€",
       "texte": "levés par Solace Care, plus gros pre-seed européen sur la fin de vie",
       "source": "ArcticStartup, août 2026",
-      "source_url": "https://arcticstartup.com/solace-care-raises-e2-1m-pre-seed/"
+      "source_url": "https://arcticstartup.com/solace-care-raises-e2-1m-pre-seed/",
+      "origine": [
+        "SE"
+      ]
     },
     {
       "rubrique": "Juridique",
       "valeur": "0",
       "texte": "gramme de cendres qu'on peut partager ou garder chez soi en France",
       "source": "Légifrance, CGCT, destination des cendres",
-      "source_url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000019983178"
+      "source_url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000019983178",
+      "origine": [
+        "FR"
+      ]
     }
   ],
   "fil_rouge": {
@@ -172,7 +184,10 @@
           "src": "numeros/n01/urn-studios.jpg",
           "alt": "Urne blanche surmontée d'une bougie, posée sur un livre, collection américaine d'Urn Studios",
           "credit": "Photo : Urn Studios · via Wallpaper*"
-        }
+        },
+        "origine": [
+          "GB"
+        ]
       },
       {
         "id": "amara",
@@ -203,7 +218,10 @@
           "src": "numeros/n01/amara.jpg",
           "alt": "Urne ajourée couleur cuivre en forme de chat endormi, éclairée de l'intérieur",
           "credit": "Photo : Amara"
-        }
+        },
+        "origine": [
+          "AT"
+        ]
       },
       {
         "id": "bestattung-wien",
@@ -234,7 +252,10 @@
           "src": "numeros/n01/bestattung-wien.jpg",
           "alt": "Manuela Hageneder tient son urne graffiti où l'on lit « sche woa's »",
           "credit": "Photo : Bestattung Wien · via Wiener Bezirksblatt"
-        }
+        },
+        "origine": [
+          "AT"
+        ]
       },
       {
         "id": "solace-care",
@@ -265,7 +286,10 @@
           "src": "numeros/n01/solace-care.jpg",
           "alt": "Un couple assis de dos regarde un ciel nuageux",
           "credit": "Photo : Solace Care"
-        }
+        },
+        "origine": [
+          "SE"
+        ]
       }
     ],
     "signal_faible": {
@@ -280,6 +304,9 @@
           "titre": "Bak et Thiollière, Imaginaires et gestes de la mort en cendres, Geographica Helvetica 81 (2026)",
           "url": "https://gh.copernicus.org/articles/81/35/2026/"
         }
+      ],
+      "origine": [
+        "FR"
       ]
     }
   },
@@ -387,6 +414,10 @@
         "titre": "Nova One Advisor, Europe Funeral Homes and Services Market",
         "url": "https://www.novaoneadvisor.com/report/europe-funeral-homes-and-services-market"
       }
+    ],
+    "origine": [
+      "FR",
+      "EU"
     ]
   },
   "legal": {
@@ -448,6 +479,9 @@
         "titre": "Cabinet Antebi, L'urne, les cendres et les conflits entre héritiers",
         "url": "https://www.avocat-antebi.fr/urne-cendres-conflits-entre-heritiers-et-legislation-applicable/"
       }
+    ],
+    "origine": [
+      "FR"
     ]
   },
   "registre": [

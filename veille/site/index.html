@@ -6,7 +6,7 @@
 <title>La FunVeille</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Noto+Color+Emoji&display=swap">
 <style>
   :root {
     /* Palette de marque */
@@ -298,6 +298,12 @@
 
   /* ---------- Signal faible : une note courte ---------- */
   .weak { margin-top: 40px; border-top: 1px solid var(--ink); padding-top: 18px; padding-bottom: 28px; display: grid; grid-template-columns: minmax(0, 190px) minmax(0, 1fr); gap: 10px 40px; }
+  /* Drapeaux : pays de la source */
+  .geo { display: inline-flex; flex-wrap: wrap; gap: 6px; vertical-align: middle; }
+  .geo-pill { display: inline-flex; align-items: center; gap: 6px; font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; padding: 4px 9px 4px 7px; border-radius: 999px; border: 1px solid currentColor; border-color: rgba(127, 127, 127, 0.45); white-space: nowrap; }
+  .geo-flag { font-family: "Apple Color Emoji", "Noto Color Emoji", sans-serif; font-size: 14px; letter-spacing: 0; text-transform: none; }
+  .geo-legend { font-size: 13px; line-height: 1.5; color: var(--muted); margin: 14px 2px 0; }
+  .kpi .geo { margin-bottom: 2px; }
   .weak-meta { display: grid; gap: 6px; align-content: start; }
   .weak-meta .label { color: var(--accent-ink); }
   .weak-where { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); line-height: 1.5; }
@@ -567,10 +573,25 @@
     "</header>";
   }
 
+  var paysNoms = { FR: "France", DE: "Allemagne", CH: "Suisse", BE: "Belgique", LU: "Luxembourg", MC: "Monaco", IT: "Italie", ES: "Espagne", PT: "Portugal", GB: "Royaume-Uni", IE: "Irlande", NL: "Pays-Bas", AT: "Autriche", SE: "Suède", NO: "Norvège", DK: "Danemark", FI: "Finlande", IS: "Islande", PL: "Pologne", CZ: "Tchéquie", HU: "Hongrie", GR: "Grèce", US: "États-Unis", CA: "Canada", MX: "Mexique", BR: "Brésil", JP: "Japon", KR: "Corée du Sud", CN: "Chine", TW: "Taïwan", SG: "Singapour", IN: "Inde", AU: "Australie", NZ: "Nouvelle-Zélande", ZA: "Afrique du Sud", EU: "Europe", INT: "International" };
+  function drapeau(code) {
+    if (code === "INT") return "🌍";
+    if (!/^[A-Z]{2}$/.test(code)) return "";
+    return String.fromCodePoint(0x1F1E6 + code.charCodeAt(0) - 65, 0x1F1E6 + code.charCodeAt(1) - 65);
+  }
+  function geo(list) {
+    list = (list || []).map(function (c) { return String(c).toUpperCase(); });
+    if (!list.length) return "";
+    return '<span class="geo">' + list.map(function (c) {
+      var nom = paysNoms[c] || c;
+      return '<span class="geo-pill" title="Source : ' + esc(nom) + '"><span class="geo-flag" aria-hidden="true">' + drapeau(c) + "</span>" + esc(nom) + "</span>";
+    }).join("") + "</span>";
+  }
+
   function kpis(list) {
     return '<div class="kpis panel" aria-label="L\'essentiel en quatre chiffres">' +
       join(list, function (k, i) {
-        return '<div class="kpi k' + ((i % 4) + 1) + '"><span class="label">' + ico(k.rubrique) + esc(k.rubrique) + '</span><span class="kpi-value">' + esc(k.valeur) + '</span><span class="kpi-text">' + esc(k.texte) + "</span>" + (k.source ? '<span class="kpi-src">Source : ' + (k.source_url ? '<a href="' + url(k.source_url) + '" target="_blank" rel="noopener">' + esc(k.source) + "</a>" : esc(k.source)) + "</span>" : "") + "</div>";
+        return '<div class="kpi k' + ((i % 4) + 1) + '"><span class="label">' + ico(k.rubrique) + esc(k.rubrique) + '</span><span class="kpi-value">' + esc(k.valeur) + '</span><span class="kpi-text">' + esc(k.texte) + "</span>" + geo(k.origine) + (k.source ? '<span class="kpi-src">Source : ' + (k.source_url ? '<a href="' + url(k.source_url) + '" target="_blank" rel="noopener">' + esc(k.source) + "</a>" : esc(k.source)) + "</span>" : "") + "</div>";
       }) + "</div>";
   }
 
@@ -587,7 +608,7 @@
     if (!w) return "";
     var src = (w.sources || []).map(function (x) { return '<a href="' + url(x.url) + '" target="_blank" rel="noopener">' + esc(x.titre) + "</a>"; }).join(" · ");
     return '<section id="signal-faible"><div class="weak">' +
-      '<div class="weak-meta"><span class="label">' + ico("signal") + "Signal faible</span>" + (w.lieu ? '<span class="weak-where">' + esc(w.lieu) + "</span>" : "") + "</div>" +
+      '<div class="weak-meta"><span class="label">' + ico("signal") + "Signal faible</span>" + (w.lieu ? '<span class="weak-where">' + esc(w.lieu) + "</span>" : "") + geo(w.origine) + "</div>" +
       '<div class="weak-note">' +
         (w.lien ? '<p class="weak-bridge">' + esc(w.lien) + "</p>" : "") +
         "<h3>" + esc(w.titre) + "</h3>" +
@@ -653,7 +674,7 @@
           (img.credit ? '<span class="img-note">' + esc(img.credit) + "</span>" : "") +
         "</figure>" +
         '<div class="ftext">' +
-          '<div class="fmeta"><span class="kind">' + esc(s.type) + '</span><span class="maturity">' + esc(maturityLabel[s.maturite] || "") + ' <span class="dots" aria-hidden="true">' + dots(s.maturite) + "</span></span></div>" +
+          '<div class="fmeta"><span class="kind">' + esc(s.type) + '</span><span class="maturity">' + esc(maturityLabel[s.maturite] || "") + ' <span class="dots" aria-hidden="true">' + dots(s.maturite) + "</span></span>" + geo(s.origine) + "</div>" +
           (s.rubrique ? '<span class="label kicker-rub">' + esc(s.rubrique) + "</span>" : "") +
           "<h3>" + esc(s.titre) + "</h3>" +
           "<p>" + rich(s.texte) + "</p>" +
@@ -712,7 +733,7 @@
   function marche(m) {
     return '<section id="marche">' + chapter("marche", "02", "Marché", "Le marché, chiffres en main") +
       '<div class="market panel">' +
-      '<div class="market-head"><span class="label">' + esc(m.zone || "Europe") + "</span><h2>" + esc(m.titre) + '</h2><p class="kicker">' + esc(m.accroche) + '</p><p class="market-lede">' + rich(m.chapo) + "</p></div>" +
+      '<div class="market-head"><span class="label">' + esc(m.zone || "Europe") + "</span> " + geo(m.origine) + "<h2>" + esc(m.titre) + '</h2><p class="kicker">' + esc(m.accroche) + '</p><p class="market-lede">' + rich(m.chapo) + "</p></div>" +
       figure(m.figure) +
       '<div class="findings">' + join(m.constats, function (c) {
         return '<div class="finding"><span class="finding-fig">' + esc(c.chiffre) + "</span><h3>" + esc(c.titre) + "</h3><p>" + rich(c.texte) + "</p></div>";
@@ -730,7 +751,7 @@
     var glyph = { non: "×", oui: "✓", info: "•" };
     return '<section id="legal">' + chapter("legal", "03", "Juridique", "La note juridique") +
       '<div class="legal panel">' +
-      '<span class="label">' + esc(l.pays) + "</span>" +
+      (l.origine && l.origine.length ? geo(l.origine) : '<span class="label">' + esc(l.pays) + "</span>") +
       "<h2>" + esc(l.titre) + "</h2>" +
       '<div class="legal-grid"><div class="articles">' + join(l.articles, function (a) {
         return '<div class="article"><span class="label">' + (a.url ? '<a href="' + url(a.url) + '" target="_blank" rel="noopener">' + esc(a.ref) + " ↗</a>" : esc(a.ref)) + "</span>" +
@@ -765,6 +786,7 @@
       hero(n) +
       (n.maquette ? '<p class="notice"><strong>Maquette de la routine.</strong> Les informations sont réelles et sourcées. Les visuels sont des illustrations de maquette : dans la version finale, ce sont les photos récupérées sur les sources.</p>' : "") +
       kpis(n.chiffres) +
+      '<p class="geo-legend">Le drapeau indique le pays de chaque information : le cadre légal peut y différer de la France.</p>' +
       filRouge(n.fil_rouge) +
       (n.inspiration ? inspiration(n.inspiration) : "") +
       (n.marche ? marche(n.marche) : "") +

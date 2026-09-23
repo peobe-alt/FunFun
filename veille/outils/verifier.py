@@ -37,6 +37,13 @@ def exige(obj, chemin, cles):
             err("Champ manquant : %s.%s" % (chemin, c))
 
 
+def origine(obj, chemin):
+    """Pays de l'information : liste de codes ISO à deux lettres (FR, DE, CH...), EU ou INT."""
+    o = obj.get("origine") if isinstance(obj, dict) else None
+    if not isinstance(o, list) or not o or not all(isinstance(c, str) and (re.fullmatch(r"[A-Z]{2}", c) or c == "INT") for c in o):
+        err("%s.origine manquant ou invalide : liste de codes pays en majuscules, par exemple [\"FR\"] ou [\"DE\", \"CH\"]" % chemin)
+
+
 def image(img, chemin):
     if not isinstance(img, dict):
         err("Image manquante : %s" % chemin)
@@ -74,6 +81,7 @@ def main(num):
         err("Il faut exactement 4 chiffres clés")
     for i, k in enumerate(n.get("chiffres", [])):
         exige(k, "chiffres[%d]" % i, ["rubrique", "valeur", "texte", "source", "source_url"])
+        origine(k, "chiffres[%d]" % i)
     if brut.count("**") % 2:
         err("Un passage en gras (**...**) n'est pas refermé")
 
@@ -100,8 +108,10 @@ def main(num):
         if s.get("maturite") not in (1, 2, 3):
             err("signaux[%d].maturite doit valoir 1, 2 ou 3" % i)
         image(s.get("image"), "signaux[%d].image" % i)
+        origine(s, "signaux[%d]" % i)
 
     exige(ins.get("signal_faible", {}), "signal_faible", ["lien", "titre", "lieu", "texte", "pourquoi", "pour_funfun", "sources"])
+    origine(ins.get("signal_faible", {}), "signal_faible")
     nb = len(ins.get("signal_faible", {}).get("texte", "").replace("**", "").split())
     if nb > 70:
         err("Le signal faible est une note : 40 à 60 mots (actuellement %d)" % nb)
@@ -111,11 +121,13 @@ def main(num):
     f = m.get("figure", {})
     if not any(k in f for k in ("chaine", "empile", "barres")):
         err("marche.figure doit contenir chaine, empile ou barres")
+    origine(m, "marche")
     if len(m.get("constats", [])) != 3:
         err("Il faut 3 constats de marché")
 
     l = n.get("legal", {})
     exige(l, "legal", ["pays", "titre", "articles", "impact", "sources"])
+    origine(l, "legal")
 
     # Tout ce qui est cité a sa source, avec un lien externe
     def liens(lst, chemin):
