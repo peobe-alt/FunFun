@@ -34,6 +34,7 @@ Règle d'écriture absolue : n'utiliser **jamais** le tiret cadratin (caractère
 - Langues : français, anglais, allemand, italien, espagnol, néerlandais.
 - Sources fiables : presse design (Dezeen, Wallpaper*, Designboom, Frame, AD), presse économique, presse funéraire (Résonance Funéraire, Funeral Service Times, Bestattungskultur), sites officiels (Légifrance, EUR-Lex, Eurostat, Insee, Destatis), sites des marques.
 - Chaque fait, chiffre ou citation doit être vérifié sur au moins une source consultée (pas seulement un résumé de recherche). Aucun chiffre ni citation inventé ou approximé sans le dire.
+- **Tout ce qui est cité a sa source avec un lien externe** vers la page d'origine : chiffres clés (`source` + `source_url`), édito, tendance (`sources`), chacun des quatre focus (`source`), signaux, signal faible, marché, articles de loi (`url` vers Légifrance ou EUR-Lex) et note spirituelle. Les listes de sources sont au format `[{"titre": "...", "url": "https://..."}]`. Préférer la page d'origine (article, rapport, texte officiel) à une reprise. La vérification bloque tout élément cité sans lien.
 
 ## 3. Écrire le numéro
 
