@@ -9,6 +9,11 @@
       Télécharge l'image, la convertit en JPEG léger (1600 px de large par
       défaut, qualité 82, sans métadonnées) et affiche son poids.
 
+  python3 veille/outils/images.py recadrer <image_source> <destination.jpg> <gauche> <haut> <droite> <bas> [largeur_max]
+      Recadre une image déjà téléchargée (coordonnées en pixels, comme Pillow)
+      pour en tirer un détail : une couleur, une matière, une forme, un texte.
+      800 px de large au maximum par défaut.
+
 Dépendance : Pillow (pip install pillow).
 """
 import html
@@ -88,11 +93,26 @@ def telecharger(url, dest, largeur=1600):
     print("%s  %dx%d  %d ko" % (dest, im.width, im.height, os.path.getsize(dest) // 1024))
 
 
+def recadrer(src, dest, box, largeur=800):
+    import os
+    from PIL import Image
+
+    im = Image.open(src).convert("RGB").crop(box)
+    if im.width > largeur:
+        im = im.resize((largeur, round(im.height * largeur / im.width)), Image.LANCZOS)
+    if os.path.dirname(dest):
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+    im.save(dest, "JPEG", quality=84, optimize=True, progressive=True)
+    print("%s  %dx%d  %d ko" % (dest, im.width, im.height, os.path.getsize(dest) // 1024))
+
+
 if __name__ == "__main__":
     if len(sys.argv) >= 3 and sys.argv[1] == "candidats":
         candidats(sys.argv[2])
     elif len(sys.argv) >= 4 and sys.argv[1] == "telecharger":
         telecharger(sys.argv[2], sys.argv[3], int(sys.argv[4]) if len(sys.argv) > 4 else 1600)
+    elif len(sys.argv) >= 8 and sys.argv[1] == "recadrer":
+        recadrer(sys.argv[2], sys.argv[3], tuple(int(v) for v in sys.argv[4:8]), int(sys.argv[8]) if len(sys.argv) > 8 else 800)
     else:
         print(__doc__)
         sys.exit(1)

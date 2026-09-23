@@ -48,19 +48,39 @@
       "couleur": {
         "nom": "Lueur",
         "hex": "EBC696",
-        "texte": "La lumière chaude qui sort des urnes Amara, relevée sur la photo : la couleur d'une veilleuse, pas d'un cierge."
+        "texte": "La lumière chaude qui sort des urnes Amara, relevée sur la photo : la couleur d'une veilleuse, pas d'un cierge.",
+        "image": {
+          "src": "numeros/n01/q-couleur.jpg",
+          "alt": "Lumière chaude à travers une urne ajourée en forme de chat",
+          "credit": "Photo : Amara"
+        }
       },
       "matiere": {
         "nom": "L'émail en coulures",
-        "texte": "Chez PK Ceramics, l'émail coule puis se fige en gouttes : la matière garde la trace du geste et du feu. L'inverse du granit poli, une surface qu'on a envie de toucher."
+        "texte": "Chez PK Ceramics, l'émail coule puis se fige en gouttes : la matière garde la trace du geste et du feu. L'inverse du granit poli, une surface qu'on a envie de toucher.",
+        "image": {
+          "src": "numeros/n01/q-matiere.jpg",
+          "alt": "Gros plan sur les coulures d'émail d'une urne en céramique",
+          "credit": "PK Ceramics pour Urn Studios · via Wallpaper*"
+        }
       },
       "forme": {
         "nom": "Le corps enroulé",
-        "texte": "Les urnes d'Amara prennent la forme d'un animal endormi, lové sur lui-même. Une forme qui dit le repos plutôt que la fin, et qui se pose au lieu de se fixer."
+        "texte": "Les urnes d'Amara prennent la forme d'un animal endormi, lové sur lui-même. Une forme qui dit le repos plutôt que la fin, et qui se pose au lieu de se fixer.",
+        "image": {
+          "src": "numeros/n01/q-forme.jpg",
+          "alt": "Urne noire ajourée en forme de chat enroulé, tenue dans une main",
+          "credit": "Photo : Amara"
+        }
       },
       "citation": {
         "texte": "Sche woa's",
-        "auteur": "Inscription peinte par Manuela Hageneder sur son urne, lauréate du défi graffiti de Bestattung Wien. En viennois : « c'était beau »."
+        "auteur": "Inscription peinte par Manuela Hageneder sur son urne, lauréate du défi graffiti de Bestattung Wien. En viennois : « c'était beau ».",
+        "image": {
+          "src": "numeros/n01/q-citation.jpg",
+          "alt": "Urne graffiti portant l'inscription sche woa's",
+          "credit": "Photo : Bestattung Wien · via Wiener Bezirksblatt"
+        }
       },
       "mots_cles": [
         "exposer plutôt que ranger",

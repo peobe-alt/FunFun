@@ -72,13 +72,15 @@ def main(num):
         err("Il faut exactement 4 chiffres clés")
 
     ins = n.get("inspiration", {})
-    exige(ins, "inspiration", ["sommaire", "tendance", "signaux"])
+    exige(ins, "inspiration", ["tendance", "signaux"])
     t = ins.get("tendance", {})
     exige(t, "tendance", ["nom", "accroche", "insight", "image", "couleur", "matiere", "forme", "citation", "mots_cles"])
     image(t.get("image"), "tendance.image")
     if not re.fullmatch(r"[0-9A-Fa-f]{6}", str(t.get("couleur", {}).get("hex", ""))):
         err("tendance.couleur.hex doit être un code HEX à 6 caractères")
     exige(t.get("citation", {}), "tendance.citation", ["texte", "auteur"])
+    for k in ("couleur", "matiere", "forme", "citation"):
+        image(t.get(k, {}).get("image"), "tendance.%s.image" % k)
     signaux = ins.get("signaux", [])
     if not 3 <= len(signaux) <= 5:
         err("Il faut 3 à 5 signaux d'inspiration (4 conseillés)")
@@ -95,7 +97,7 @@ def main(num):
         image(s.get("image"), "signaux[%d].image" % i)
 
     m = n.get("marche", {})
-    exige(m, "marche", ["sommaire", "titre", "accroche", "chapo", "figure", "constats", "implications", "sources"])
+    exige(m, "marche", ["titre", "accroche", "chapo", "figure", "constats", "implications", "sources"])
     f = m.get("figure", {})
     if not any(k in f for k in ("chaine", "empile", "barres")):
         err("marche.figure doit contenir chaine, empile ou barres")
@@ -103,7 +105,7 @@ def main(num):
         err("Il faut 3 constats de marché")
 
     l = n.get("legal", {})
-    exige(l, "legal", ["sommaire", "pays", "titre", "articles", "impact", "sources"])
+    exige(l, "legal", ["pays", "titre", "articles", "impact", "sources"])
 
     idx = json.load(open(os.path.join(SITE, "numeros", "index.json"), encoding="utf-8"))
     if not any(e.get("numero") == num and e.get("fichier") == "numeros/n%02d.json" % num for e in idx.get("numeros", [])):
