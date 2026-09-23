@@ -29,7 +29,7 @@
       "texte": "levés par Solace Care, plus gros pre-seed européen sur la fin de vie"
     },
     {
-      "rubrique": "Note légale",
+      "rubrique": "Juridique",
       "valeur": "0",
       "texte": "gramme de cendres qu'on peut partager ou garder chez soi en France"
     }
@@ -367,9 +367,19 @@
       "entrees": "Rachat PFF par OGF, fusion Atger, Funecap 130 crématoriums, Mymoria rachats, marché Europe 2025 à 2035"
     },
     {
-      "rubrique": "Note légale",
+      "rubrique": "Juridique",
       "entrees": "Code civil 16-1-1, CGCT L. 2223-18-1 à 18-3 (destination des cendres)"
     }
   ],
+  "note_spirituelle": {
+    "citation": "Il y a quelque chose de plus fort que la mort : c'est la présence des absents dans la mémoire des vivants.",
+    "auteur": "Jean d'Ormesson",
+    "contexte": "Discours de réception à l'Académie française, 6 juin 1974",
+    "reflexion": "Toute cette semaine tient dans cette phrase. Les urnes qui s'allument, les pièces d'artistes, les mots peints ne remplacent pas les absents : ils leur font une place parmi nous. Faire un objet de mémoire, au fond, c'est cela : fabriquer de la présence.",
+    "source": {
+      "titre": "Académie française, discours de réception de Jean d'Ormesson",
+      "url": "https://www.academie-francaise.fr/discours-de-reception-de-jean-dormesson"
+    }
+  },
   "mot_de_la_fin": "C'est tout pour cette semaine. Rendez-vous lundi, même heure, même lueur."
 }

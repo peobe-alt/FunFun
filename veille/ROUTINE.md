@@ -83,10 +83,15 @@ Règles de ton :
 - Un seul point de droit utile à FunFun, absent du registre et des documents de `docs/`. France en priorité, sinon un autre pays européen ou l'UE, avec la comparaison France si pertinent.
 - `articles` : références exactes, citations mot pour mot. `listes` facultatives (`type` : `non`, `oui` ou `info`). `impact` : ce que ça change pour FunFun, et ce que ce droit dit de notre rapport aux morts. Sources officielles.
 
+### Pour finir (note spirituelle)
+- `note_spirituelle` : le numéro se termine par une note plus profonde sur le deuil, hors menu. Une citation **réelle, vérifiée sur la source d'origine** (texte, discours, livre, entretien), qui résonne avec le fil rouge de la semaine.
+- Varier les horizons d'une semaine à l'autre : littérature, poésie, philosophie, anthropologie, psychologie du deuil, sagesses et spiritualités du monde entier, sans prosélytisme. Jamais deux fois le même auteur à moins de dix numéros d'écart (vérifier dans le registre).
+- Champs : `citation` (sans guillemets, extrait exact ; signaler une coupe par « […] »), `auteur`, `contexte` (œuvre, date), `reflexion` (2 à 3 phrases de la rédaction qui relient la citation à la semaine et au projet FunFun), `source` (`titre`, `url`).
+
 ### Le reste
-- `chiffres` : exactement 4 chiffres clés tirés du numéro, dont un chiffre de société (rubriques possibles : Marché, Société, Inspiration, Note légale).
+- `chiffres` : exactement 4 chiffres clés tirés du numéro, dont un chiffre de société (rubriques possibles : Marché, Société, Inspiration, Juridique).
 - `couverture` : l'image la plus forte des signaux, avec `titre` et `ancre` (= `id` du signal).
-- `mot_de_la_fin` : une phrase de clôture, légère, différente chaque semaine.
+- `mot_de_la_fin` : une phrase de clôture, légère, différente chaque semaine, affichée après la note spirituelle.
 - `registre` : résumé par rubrique des sujets ajoutés.
 - `maquette` : `false`.
 
