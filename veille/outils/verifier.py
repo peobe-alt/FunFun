@@ -97,7 +97,7 @@ def main(num):
             err("signaux[%d].maturite doit valoir 1, 2 ou 3" % i)
         image(s.get("image"), "signaux[%d].image" % i)
 
-    exige(ins.get("signal_faible", {}), "signal_faible", ["titre", "lieu", "texte", "pourquoi", "pour_funfun", "sources"])
+    exige(ins.get("signal_faible", {}), "signal_faible", ["lien", "titre", "lieu", "texte", "pourquoi", "pour_funfun", "sources"])
 
     m = n.get("marche", {})
     exige(m, "marche", ["titre", "accroche", "chapo", "figure", "constats", "implications", "lecture", "sources"])
