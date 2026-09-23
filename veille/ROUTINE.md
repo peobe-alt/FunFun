@@ -15,7 +15,7 @@ Règle d'écriture absolue : n'utiliser **jamais** le tiret cadratin (caractère
 | Numéros | `veille/site/numeros/nXX.json` et images dans `veille/site/numeros/nXX/` |
 | Liste des numéros | `veille/site/numeros/index.json` |
 | Registre anti-répétition | `veille/registre.json` |
-| Outils | `veille/outils/images.py`, `veille/outils/verifier.py` |
+| Outils | `veille/outils/images.py`, `veille/outils/verifier.py`, `veille/outils/envoyer.py` |
 | Contexte projet | `README.md` et tout le dossier `docs/` (étude de marché, règlements de cimetières...) |
 
 ## 1. Préparer
@@ -126,6 +126,8 @@ Puis contrôler le rendu : servir `veille/site` en local (`npx --no-install http
    - lister ses fichiers : action `list`, `scope: "files"`, `url` de la page ;
    - publier : `file_path` = `veille/site/index.html`, `url` = la page, `root` = racine du dépôt, `files` = les nouveaux fichiers et `numeros/index.json`, chacun sous son chemin publié (`numeros/...`) pointant vers `veille/site/numeros/...`.
 3. Si l'outil Artifact n'est pas disponible, le dire clairement dans le message final : le numéro reste enregistré dans le dépôt.
+4. Envoyer l'e-mail aux lecteurs : `python3 veille/outils/envoyer.py XX`. Le script lit `BREVO_API_KEY`, `FUNVEILLE_EXPEDITEUR` et `FUNVEILLE_DESTINATAIRES` dans l'environnement, envoie l'annonce du numéro avec le lien de la page, et note l'envoi dans `veille/envois.json` (il refuse de renvoyer un numéro déjà envoyé). Si une variable manque, le dire dans le message final. Puis commit et push de `veille/envois.json`.
+5. Pour l'image de l'e-mail (facultative) : renseigner `couverture.image_email` avec l'adresse publique d'une photo JPG ou PNG de la source (jamais un fichier de la page, qui n'est pas public).
 
 ## 8. Message final
 
