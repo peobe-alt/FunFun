@@ -56,8 +56,8 @@ Règles de ton :
 - Lentilles sociétales à mobiliser : rapport au temps, à l'intime, au corps, à la foi et à la sécularisation, aux générations, à la technologie, à l'écologie, à la solitude, aux inégalités, à la ville et aux lieux.
 - Sources sociétales utiles : Ifop, Crédoc, SAF (ex-CSNAF), Insee, Eurostat, Fondapol, The Conversation, revues de sciences humaines (Mortality, Death Studies, Geographica Helvetica...), sociologues et anthropologues de la mort, presse culturelle.
 
-### Fil rouge (ouverture)
-- `titre` : une formule qui résume la semaine. `tension` : une phrase courte qui frappe. `texte` : 2 paragraphes qui relient les signaux de la semaine à un mouvement de société, avec au moins un chiffre sociétal sourcé. `sources`.
+### L'édito de la semaine (ouverture, champ `fil_rouge`)
+- Un vrai édito de la rédaction. `titre` : une formule qui résume la semaine. `tension` : une phrase courte qui frappe. `texte` : 2 paragraphes qui relient les signaux de la semaine à un mouvement de société, avec au moins un chiffre sociétal sourcé. `sources`.
 
 ### Inspiration (lecture Nelly Rodi, profondeur de planneur)
 - Une **tendance** nommée d'un mot ou deux, évocateur, jamais générique. `accroche` (une phrase forte).
@@ -84,7 +84,7 @@ Règles de ton :
 - `articles` : références exactes, citations mot pour mot. `listes` facultatives (`type` : `non`, `oui` ou `info`). `impact` : ce que ça change pour FunFun, et ce que ce droit dit de notre rapport aux morts. Sources officielles.
 
 ### Pour finir (note spirituelle)
-- `note_spirituelle` : le numéro se termine par une note plus profonde sur le deuil, hors menu. Une citation **réelle, vérifiée sur la source d'origine** (texte, discours, livre, entretien), qui résonne avec le fil rouge de la semaine.
+- `note_spirituelle` : le numéro se termine par une note plus profonde sur le deuil, hors menu. Une citation **réelle, vérifiée sur la source d'origine** (texte, discours, livre, entretien), qui résonne avec l'édito de la semaine.
 - Varier les horizons d'une semaine à l'autre : littérature, poésie, philosophie, anthropologie, psychologie du deuil, sagesses et spiritualités du monde entier, sans prosélytisme. Jamais deux fois le même auteur à moins de dix numéros d'écart (vérifier dans le registre).
 - Champs : `citation` (sans guillemets, extrait exact ; signaler une coupe par « […] »), `auteur`, `contexte` (œuvre, date), `reflexion` (2 à 3 phrases de la rédaction qui relient la citation à la semaine et au projet FunFun), `source` (`titre`, `url`).
 
@@ -129,7 +129,7 @@ Puis contrôler le rendu : servir `veille/site` en local (`npx --no-install http
 
 ## 8. Message final
 
-Quelques lignes : numéro, fil rouge, tendance, les 4 signaux, le signal faible, le titre marché, la note légale, et le lien de la page.
+Quelques lignes : numéro, édito, tendance, les 4 signaux, le signal faible, le titre marché, la note légale, et le lien de la page.
 
 ## 9. Heure d'été et d'hiver
 
