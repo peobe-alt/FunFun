@@ -1,0 +1,664 @@
+<title>Patine FunFun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+  :root {
+    --ground: #ECEEE9;
+    --paper: #F8F9F6;
+    --ink: #1C2320;
+    --ink-2: #46514C;
+    --muted: #68746E;
+    --line: #CAD1CB;
+    --verdigris: #2C7564;
+    --verdigris-soft: #D6E7E1;
+    --bronze: #93602E;
+    --bronze-soft: #F1E4D5;
+    --bar-track: #DCE2DD;
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #121614;
+      --paper: #1A201D;
+      --ink: #E3E8E4;
+      --ink-2: #B7C1BB;
+      --muted: #8E9A94;
+      --line: #2F3934;
+      --verdigris: #72C3AD;
+      --verdigris-soft: #1D332D;
+      --bronze: #DDA26B;
+      --bronze-soft: #362A1E;
+      --bar-track: #26302B;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #121614;
+    --paper: #1A201D;
+    --ink: #E3E8E4;
+    --ink-2: #B7C1BB;
+    --muted: #8E9A94;
+    --line: #2F3934;
+    --verdigris: #72C3AD;
+    --verdigris-soft: #1D332D;
+    --bronze: #DDA26B;
+    --bronze-soft: #362A1E;
+    --bar-track: #26302B;
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+    padding-inline: 16px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding-block: 40px 72px; display: grid; gap: 56px; }
+  a { color: var(--verdigris); text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--verdigris); outline-offset: 2px; border-radius: 2px; }
+  p { margin: 0; }
+  h1, h2, h3, h4 { margin: 0; text-wrap: balance; }
+
+  .label {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* Masthead */
+  .masthead { display: grid; gap: 18px; }
+  .masthead-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+  .title {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(76px, 18vw, 156px);
+    line-height: 0.86;
+    letter-spacing: -0.05em;
+    color: var(--bronze);
+  }
+  @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+    .title {
+      background: linear-gradient(98deg, var(--bronze) 0%, var(--bronze) 28%, var(--verdigris) 72%, var(--verdigris) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+  .dek { font-size: 21px; line-height: 1.45; color: var(--ink-2); max-width: 36em; font-style: italic; }
+  .notice {
+    font-family: var(--mono); font-size: 12.5px; line-height: 1.55; color: var(--ink-2);
+    background: var(--bronze-soft); padding: 10px 14px; border-radius: 3px;
+  }
+
+  /* Key figures */
+  .kpis { display: grid; gap: 14px; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .kpi { background: var(--paper); padding: 16px 14px 14px; display: grid; gap: 6px; align-content: start; }
+  .kpi-value { font-family: var(--display); font-weight: 600; font-size: 40px; line-height: 1; letter-spacing: -0.02em; color: var(--ink); }
+  .kpi-text { font-size: 14.5px; line-height: 1.4; color: var(--ink-2); }
+  .kpi .label { color: var(--verdigris); }
+  @media (max-width: 680px) { .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+  /* Contents */
+  .toc { display: grid; gap: 0; border-top: 1px solid var(--line); }
+  .toc a { display: grid; grid-template-columns: 9.5em 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); }
+  .toc a:hover .toc-title { color: var(--verdigris); }
+  .toc-title { font-family: var(--display); font-weight: 600; font-size: 18px; line-height: 1.3; }
+  @media (max-width: 520px) { .toc a { grid-template-columns: 1fr; gap: 2px; } }
+
+  /* Sections */
+  section { display: grid; gap: 28px; scroll-margin-top: 16px; }
+  .section-head { display: grid; gap: 12px; border-top: 2px solid var(--ink); padding-top: 14px; }
+  .section-head h2 { font-family: var(--display); font-weight: 600; font-size: clamp(26px, 4.6vw, 34px); line-height: 1.15; letter-spacing: -0.015em; }
+  .lede { font-size: 18.5px; color: var(--ink-2); max-width: 38em; }
+  .method { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+
+  /* Trend board (inspiration) */
+  .trend { display: grid; grid-template-columns: 1.15fr 1fr; gap: 28px; background: var(--paper); border: 1px solid var(--line); padding: 24px; }
+  .trend-name { font-family: var(--display); font-weight: 800; font-size: clamp(48px, 9vw, 72px); line-height: 0.95; letter-spacing: -0.04em; color: var(--verdigris); }
+  .trend-left { display: grid; gap: 14px; align-content: start; }
+  .trend-right { display: grid; gap: 18px; align-content: start; }
+  .swatches { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+  .swatch { display: grid; gap: 6px; }
+  .chip-color { aspect-ratio: 3 / 4; border-radius: 2px; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08); }
+  .swatch span { font-family: var(--mono); font-size: 10.5px; line-height: 1.3; color: var(--ink-2); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-family: var(--mono); font-size: 12px; padding: 3px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-2); }
+  .materials { font-size: 15.5px; color: var(--ink-2); }
+  @media (max-width: 680px) { .trend { grid-template-columns: 1fr; padding: 18px; } }
+
+  .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  @media (max-width: 680px) { .cards { grid-template-columns: 1fr; } }
+  .card { background: var(--paper); border: 1px solid var(--line); display: grid; grid-template-rows: auto 1fr; }
+  .card figure { margin: 0; }
+  .card svg { display: block; width: 100%; height: auto; }
+  .card-body { padding: 16px 18px 18px; display: grid; gap: 10px; align-content: start; }
+  .card-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; align-items: center; }
+  .card h3 { font-family: var(--display); font-weight: 600; font-size: 22px; line-height: 1.2; letter-spacing: -0.01em; }
+  .card p { font-size: 15.5px; line-height: 1.55; }
+  .kind { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; background: var(--verdigris-soft); color: var(--ink); }
+  .maturity { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .dots { display: inline-flex; gap: 3px; }
+  .dots i { width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--verdigris); display: block; }
+  .dots i.on { background: var(--verdigris); }
+  .takeaway { border-top: 1px dashed var(--line); padding-top: 10px; display: grid; gap: 4px; }
+  .takeaway .label { color: var(--bronze); }
+  .takeaway p { color: var(--ink); }
+  .src { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+  .caption { font-family: var(--mono); font-size: 10.5px; color: var(--muted); padding: 6px 18px 0; }
+
+  /* Market */
+  .exhibit { background: var(--paper); border: 1px solid var(--line); padding: 20px; display: grid; gap: 16px; }
+  .exhibit-head { display: grid; gap: 4px; }
+  .exhibit-title { font-family: var(--display); font-weight: 600; font-size: 17px; line-height: 1.3; }
+  .chain { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .stage { border: 1px solid var(--line); border-radius: 3px; padding: 12px; display: grid; gap: 8px; align-content: start; position: relative; background: var(--ground); }
+  .stage.hot { background: var(--verdigris-soft); border-color: var(--verdigris); }
+  .stage-name { font-family: var(--display); font-weight: 600; font-size: 15px; line-height: 1.25; }
+  .stage-who { font-size: 14px; line-height: 1.4; color: var(--ink-2); }
+  .stage-fig { font-family: var(--display); font-weight: 600; font-size: 26px; line-height: 1; letter-spacing: -0.01em; }
+  .stage-fig small { display: block; font-family: var(--serif); font-weight: 400; font-size: 13px; letter-spacing: 0; color: var(--ink-2); margin-top: 4px; line-height: 1.35; }
+  .stage:not(:last-child)::after {
+    content: "\2192"; position: absolute; right: -10px; top: 12px; width: 10px; text-align: center;
+    font-family: var(--mono); font-size: 12px; color: var(--muted);
+  }
+  @media (max-width: 680px) {
+    .chain { grid-template-columns: 1fr; }
+    .stage:not(:last-child)::after { content: "\2193"; right: auto; left: 16px; top: auto; bottom: -11px; }
+  }
+  .bar-block { display: grid; gap: 8px; }
+  .bar { display: flex; height: 22px; gap: 2px; }
+  .bar div { height: 100%; }
+  .bar .base { background: var(--verdigris); border-radius: 4px 0 0 4px; opacity: 0.55; }
+  .bar .add { background: var(--verdigris); border-radius: 0 4px 4px 0; }
+  .bar-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13.5px; color: var(--ink-2); }
+  .bar-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .bar-legend i { width: 10px; height: 10px; border-radius: 2px; background: var(--verdigris); display: inline-block; }
+  .bar-legend i.soft { opacity: 0.55; }
+  .exhibit-foot { font-family: var(--mono); font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+  .findings { display: grid; gap: 16px; }
+  .finding { display: grid; grid-template-columns: 7.2em 1fr; gap: 16px; border-top: 1px solid var(--line); padding-top: 14px; }
+  .finding-fig { font-family: var(--display); font-weight: 600; font-size: 30px; line-height: 1; letter-spacing: -0.02em; color: var(--verdigris); }
+  .finding-fig small { display: block; font-family: var(--mono); font-weight: 400; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-top: 6px; line-height: 1.35; }
+  .finding h3 { font-family: var(--display); font-weight: 600; font-size: 18px; line-height: 1.3; margin-bottom: 4px; }
+  .finding p { font-size: 16px; color: var(--ink-2); }
+  @media (max-width: 520px) { .finding { grid-template-columns: 1fr; gap: 6px; } }
+
+  .sowhat { background: var(--verdigris-soft); padding: 20px 22px; border-radius: 3px; display: grid; gap: 12px; }
+  .sowhat h3 { font-family: var(--display); font-weight: 600; font-size: 20px; }
+  .sowhat ul { margin: 0; padding-left: 1.1em; display: grid; gap: 8px; }
+  .sowhat li { font-size: 16px; }
+  .watch { font-size: 16px; color: var(--ink-2); }
+  .watch strong { color: var(--ink); font-weight: 500; }
+
+  /* Legal */
+  .legal { background: var(--paper); border: 1px solid var(--line); padding: 24px; display: grid; gap: 20px; }
+  .article { display: grid; gap: 6px; }
+  .article-ref { font-family: var(--mono); font-size: 12px; color: var(--bronze); letter-spacing: 0.04em; }
+  .article blockquote { margin: 0; font-style: italic; font-size: 18px; line-height: 1.5; color: var(--ink); padding-left: 18px; border-left: 1px solid var(--line); }
+  .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .rules h4 { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 8px; }
+  .rules ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .rules li { display: grid; grid-template-columns: 1.3em 1fr; font-size: 15.5px; line-height: 1.45; }
+  .rules li b { font-family: var(--mono); font-weight: 500; }
+  .no b { color: var(--bronze); }
+  .yes b { color: var(--verdigris); }
+  @media (max-width: 600px) { .rules { grid-template-columns: 1fr; } .legal { padding: 18px; } }
+  .legal-impact { background: var(--bronze-soft); padding: 18px 20px; border-radius: 3px; display: grid; gap: 8px; }
+  .legal-impact h3 { font-family: var(--display); font-weight: 600; font-size: 19px; }
+  .legal-impact p { font-size: 16px; }
+  .disclaimer { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+
+  .sources { display: grid; gap: 6px; }
+  .sources ul { margin: 0; padding-left: 1.1em; display: grid; gap: 3px; }
+  .sources li { font-size: 14px; color: var(--ink-2); }
+
+  /* Registry */
+  .registry { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; }
+  .registry h2 { font-family: var(--display); font-weight: 600; font-size: 22px; }
+  .registry p { font-size: 16px; color: var(--ink-2); max-width: 40em; }
+  .reg-table { overflow-x: auto; }
+  .reg-table table { border-collapse: collapse; width: 100%; font-size: 14.5px; min-width: 460px; }
+  .reg-table th, .reg-table td { text-align: left; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .reg-table th { font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .reg-table td:first-child { font-family: var(--mono); font-size: 12.5px; color: var(--verdigris); white-space: nowrap; }
+  .colophon { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; border-top: 1px solid var(--line); padding-top: 14px; }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="masthead-top">
+      <span class="label">FunFun · Veille hebdomadaire</span>
+      <span class="label">Numéro zéro · Semaine 39 · 23 septembre 2026</span>
+    </div>
+    <h1 class="title">Patine</h1>
+    <p class="dek">Ce qui bouge autour de la mort, du deuil et de la mémoire en Europe. Une tendance, une lecture du marché, une note légale. Chaque lundi, jamais deux fois la même chose.</p>
+    <p class="notice">Maquette de la routine. Les informations sont réelles et sourcées ; les visuels sont des illustrations de maquette, remplacés par les photos des sources dans la version finale.</p>
+  </header>
+
+  <div class="kpis">
+    <span class="label">L'essentiel en quatre chiffres</span>
+    <div class="kpi-grid">
+      <div class="kpi">
+        <span class="label">Marché</span>
+        <span class="kpi-value">1 300+</span>
+        <span class="kpi-text">agences OGF après le rachat de Pompes Funèbres de France, finalisé en mai</span>
+      </div>
+      <div class="kpi">
+        <span class="label">Marché</span>
+        <span class="kpi-value">130</span>
+        <span class="kpi-text">crématoriums exploités par Funecap en Europe et en Amérique du Nord</span>
+      </div>
+      <div class="kpi">
+        <span class="label">Inspiration</span>
+        <span class="kpi-value">2,1 M€</span>
+        <span class="kpi-text">levés par Solace Care, plus gros pre-seed européen sur la fin de vie</span>
+      </div>
+      <div class="kpi">
+        <span class="label">Note légale</span>
+        <span class="kpi-value">0</span>
+        <span class="kpi-text">gramme de cendres qu'on peut partager ou garder chez soi en France</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="toc" aria-label="Sommaire">
+    <a href="#inspiration"><span class="label">Inspiration</span><span class="toc-title">Présence : l'objet funéraire sort du placard</span></a>
+    <a href="#marche"><span class="label">Marché</span><span class="toc-title">La consolidation se joue sur les lieux</span></a>
+    <a href="#legal"><span class="label">Note légale</span><span class="toc-title">Les cendres ne se partagent pas</span></a>
+  </nav>
+
+  <!-- ============ INSPIRATION ============ -->
+  <section id="inspiration">
+    <div class="section-head">
+      <span class="label">Inspiration · produits et services</span>
+      <h2>Tendance de la semaine</h2>
+      <p class="method">Lecture cahier de tendances : un nom, un insight, une palette, des signaux, et ce que FunFun peut en faire.</p>
+    </div>
+
+    <div class="trend">
+      <div class="trend-left">
+        <div class="trend-name">Présence</div>
+        <p class="lede">L'objet funéraire quitte le catalogue pour entrer dans la maison. On ne le range plus, on le montre : il éclaire, il est signé par un artiste, il ose la couleur et même l'humour.</p>
+        <p style="font-size:16px;color:var(--ink-2)"><strong style="color:var(--ink);font-weight:500">Insight.</strong> Avec la crémation, le souvenir n'a plus de lieu fixe. Les familles cherchent un objet qui tienne compagnie plutôt qu'un objet qui marque un emplacement.</p>
+      </div>
+      <div class="trend-right">
+        <div class="swatches" role="list" aria-label="Palette de la tendance">
+          <div class="swatch" role="listitem"><div class="chip-color" style="background:#F2B35B"></div><span>Lueur<br>F2B35B</span></div>
+          <div class="swatch" role="listitem"><div class="chip-color" style="background:#B9A58C"></div><span>Grès<br>B9A58C</span></div>
+          <div class="swatch" role="listitem"><div class="chip-color" style="background:#E0457B"></div><span>Aérosol<br>E0457B</span></div>
+          <div class="swatch" role="listitem"><div class="chip-color" style="background:#3E8C7A"></div><span>Vert-de-gris<br>3E8C7A</span></div>
+          <div class="swatch" role="listitem"><div class="chip-color" style="background:#23292C"></div><span>Nuit<br>23292C</span></div>
+        </div>
+        <div>
+          <span class="label">Matières</span>
+          <p class="materials">Grès moucheté, céramique translucide, résine imprimée en 3D, peinture aérosol sur surface lisse.</p>
+        </div>
+        <div class="tags" aria-label="Mots-clés">
+          <span class="tag">exposer plutôt que ranger</span>
+          <span class="tag">lumière</span>
+          <span class="tag">pièce d'auteur</span>
+          <span class="tag">humour tendre</span>
+          <span class="tag">commande</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+
+      <!-- Urn Studios -->
+      <article class="card">
+        <figure>
+          <svg viewBox="0 0 400 260" role="img" aria-label="Illustration : urne en grès moucheté posée à côté d'une coupelle">
+            <defs>
+              <filter id="speckle" x="0" y="0" width="100%" height="100%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="n"/>
+                <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.25  0 0 0 0 0.2  0 0 0 0 0.16  0 0 0 -2.2 1.35" result="dots"/>
+                <feComposite in="dots" in2="SourceGraphic" operator="in" result="d"/>
+                <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="d"/></feMerge>
+              </filter>
+              <linearGradient id="gresShade" x1="0" x2="1">
+                <stop offset="0" stop-color="#CDBBA2"/><stop offset="0.55" stop-color="#B9A58C"/><stop offset="1" stop-color="#9C876E"/>
+              </linearGradient>
+            </defs>
+            <rect width="400" height="260" fill="#E6E1D9"/>
+            <rect y="206" width="400" height="54" fill="#D8D1C6"/>
+            <g filter="url(#speckle)">
+              <path d="M152 66 L208 66 L212 84 C250 96 262 128 260 154 C258 186 238 204 220 210 L140 210 C122 204 102 186 100 154 C98 128 110 96 148 84 Z" fill="url(#gresShade)"/>
+              <path d="M146 66 C146 52 214 52 214 66 Z" fill="#A99379"/>
+            </g>
+            <circle cx="180" cy="48" r="6" fill="#8F7A62"/>
+            <ellipse cx="310" cy="204" rx="54" ry="11" fill="#C9BBA6"/>
+            <path d="M256 200 C262 214 358 214 364 200" fill="#B4A48D"/>
+            <ellipse cx="310" cy="200" rx="50" ry="8" fill="#DCD2C3"/>
+            <circle cx="300" cy="198" r="7" fill="none" stroke="#B08A3E" stroke-width="2.4"/>
+          </svg>
+          <figcaption class="caption">Illustration de maquette · version finale : photo Urn Studios</figcaption>
+        </figure>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="kind">Produit + plateforme</span>
+            <span class="maturity">En diffusion <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span></span>
+          </div>
+          <span class="label">Urn Studios · Londres · depuis 2024</span>
+          <h3>La galerie qui fait faire des urnes aux artistes</h3>
+          <p>Fondée par Jonathan Hancock et Merel Swart après un deuil vécu comme « daté et impersonnel ». Le principe : inviter des céramistes et plasticiens qui n'avaient jamais fait d'urne, et vendre leurs pièces comme des œuvres à exposer. L'urne en grès de Milo Gibson intègre une coupelle pour un bijou ou une photo. Première collection américaine en août, avec sept artistes.</p>
+          <div class="takeaway">
+            <span class="label">Pour FunFun</span>
+            <p>Le modèle éditeur : une plaque pensée en collection d'auteurs invités (céramistes, typographes), un récit par pièce. Et l'idée de la coupelle : l'objet de mémoire accueille des choses, il ne se contente pas de porter un nom.</p>
+          </div>
+          <span class="src">Wallpaper*, Elle Decoration UK</span>
+        </div>
+      </article>
+
+      <!-- Amara -->
+      <article class="card">
+        <figure>
+          <svg viewBox="0 0 400 260" role="img" aria-label="Illustration : urne lumineuse dans la pénombre">
+            <defs>
+              <radialGradient id="halo" cx="0.5" cy="0.55" r="0.5">
+                <stop offset="0" stop-color="#F2B35B" stop-opacity="0.55"/>
+                <stop offset="0.6" stop-color="#F2B35B" stop-opacity="0.12"/>
+                <stop offset="1" stop-color="#F2B35B" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="core" cx="0.5" cy="0.6" r="0.6">
+                <stop offset="0" stop-color="#FFF3D6"/>
+                <stop offset="0.45" stop-color="#F7CB7E"/>
+                <stop offset="1" stop-color="#C98A3A"/>
+              </radialGradient>
+            </defs>
+            <rect width="400" height="260" fill="#1D2226"/>
+            <rect y="206" width="400" height="54" fill="#171B1E"/>
+            <ellipse cx="200" cy="140" rx="170" ry="120" fill="url(#halo)"/>
+            <ellipse cx="200" cy="210" rx="96" ry="10" fill="#F2B35B" opacity="0.22"/>
+            <path d="M200 58 C246 58 272 100 272 146 C272 186 244 210 200 210 C156 210 128 186 128 146 C128 100 154 58 200 58 Z" fill="url(#core)"/>
+            <path d="M168 84 C176 70 190 64 202 64" stroke="#FFF8E8" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+            <path d="M170 60 C166 44 178 36 186 44 M230 60 C234 44 222 36 214 44" stroke="#C98A3A" stroke-width="7" fill="none" stroke-linecap="round"/>
+          </svg>
+          <figcaption class="caption">Illustration de maquette · version finale : photo Amara</figcaption>
+        </figure>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="kind">Produit</span>
+            <span class="maturity">Émergent <span class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></span></span>
+          </div>
+          <span class="label">Amara · Pöttsching, Autriche · fondée en septembre 2025</span>
+          <h3>L'urne qui s'allume</h3>
+          <p>Urnes sculptures à lumière intégrée, animales et humaines, faites à la main en Autriche à partir de céramique et de pièces imprimées en 3D. L'idée est née devant une urne « très triste » posée sur une table. Le fondateur, Markus Bareuther, a commencé par l'animal de compagnie ; premier client, une pompe funèbre du Burgenland.</p>
+          <div class="takeaway">
+            <span class="label">Pour FunFun</span>
+            <p>La lumière comme matière : une plaque qui capte ou restitue la lumière (verre coulé, émail translucide) change la visite du soir. Et l'animal comme terrain d'essai : un marché moins encadré pour prototyper vite.</p>
+          </div>
+          <span class="src">Brutkasten, BVZ, meinbezirk.at</span>
+        </div>
+      </article>
+
+      <!-- Bestattung Wien -->
+      <article class="card">
+        <figure>
+          <svg viewBox="0 0 400 260" role="img" aria-label="Illustration : urne sombre couverte de traits de peinture aérosol colorés">
+            <defs>
+              <clipPath id="urnClip">
+                <path d="M172 66 L228 66 L232 84 C270 96 282 128 280 154 C278 186 258 204 240 210 L160 210 C142 204 122 186 120 154 C118 128 130 96 168 84 Z"/>
+              </clipPath>
+            </defs>
+            <rect width="400" height="260" fill="#D9DBD8"/>
+            <rect y="206" width="400" height="54" fill="#C6C9C5"/>
+            <path d="M172 66 L228 66 L232 84 C270 96 282 128 280 154 C278 186 258 204 240 210 L160 210 C142 204 122 186 120 154 C118 128 130 96 168 84 Z" fill="#262B2E"/>
+            <g clip-path="url(#urnClip)" fill="none" stroke-linecap="round">
+              <path d="M110 120 C160 96 220 150 290 110" stroke="#E0457B" stroke-width="16"/>
+              <path d="M110 168 C170 140 210 196 292 158" stroke="#F2C230" stroke-width="12"/>
+              <path d="M130 96 C180 118 230 80 280 100" stroke="#3A7BD5" stroke-width="8"/>
+              <path d="M120 196 C170 180 230 206 290 188" stroke="#3E8C7A" stroke-width="10"/>
+              <path d="M150 128 L150 150 M206 136 L206 164 M246 118 L246 134" stroke="#E0457B" stroke-width="3"/>
+            </g>
+            <path d="M166 66 C166 52 234 52 234 66 Z" fill="#1A1E20"/>
+            <circle cx="200" cy="48" r="6" fill="#1A1E20"/>
+            <text x="256" y="70" transform="rotate(-8 256 70)" font-family="Bricolage Grotesque, Arial, sans-serif" font-weight="800" font-size="22" fill="#E0457B">sche woa's</text>
+          </svg>
+          <figcaption class="caption">Illustration de maquette · version finale : photo Bestattung Wien</figcaption>
+        </figure>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="kind">Service</span>
+            <span class="maturity">En diffusion <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span></span>
+          </div>
+          <span class="label">Bestattung Wien · Vienne · opérateur public</span>
+          <h3>Le service funéraire municipal qui commande des graffitis</h3>
+          <p>Après des cercueils graffés, l'opérateur funéraire de la Ville de Vienne a lancé un défi à cinq artistes : dessiner une urne. Jury mixte (Bestattung Wien, cimetières de Vienne, Université des arts appliqués, un graffeur). Lauréates ex aequo : Manuela Hageneder et Luky Vete. Une pièce porte « Sche woa's », « c'était beau » en viennois. Les cinq artistes rejoignent un pool pour des commandes sur mesure.</p>
+          <div class="takeaway">
+            <span class="label">Pour FunFun</span>
+            <p>Quand une institution publique ose la couleur et l'humour, le décalage devient légitime : un précédent à citer pour défendre le nom FunFun. Le pool d'artistes est aussi un format de service : la commande personnalisée sans atelier en propre.</p>
+          </div>
+          <span class="src">ORF Wien, Vienna.at, Wiener Bezirksblatt</span>
+        </div>
+      </article>
+
+      <!-- Solace Care -->
+      <article class="card">
+        <figure>
+          <svg viewBox="0 0 400 260" role="img" aria-label="Illustration : trois écrans d'application qui se suivent, préparer, transmettre, traverser">
+            <rect width="400" height="260" fill="#D6E7E1"/>
+            <g font-family="IBM Plex Mono, Menlo, monospace" font-size="10" fill="#2C4A42">
+              <rect x="52" y="44" width="92" height="170" rx="12" fill="#F8F9F6" stroke="#9FC2B6"/>
+              <rect x="154" y="34" width="92" height="180" rx="12" fill="#F8F9F6" stroke="#2C7564" stroke-width="1.6"/>
+              <rect x="256" y="44" width="92" height="170" rx="12" fill="#F8F9F6" stroke="#9FC2B6"/>
+              <text x="64" y="70">PRÉPARER</text>
+              <text x="166" y="60">TRANSMETTRE</text>
+              <text x="268" y="70">TRAVERSER</text>
+              <rect x="64" y="82" width="64" height="6" rx="3" fill="#B7D2C8"/>
+              <rect x="64" y="96" width="50" height="6" rx="3" fill="#B7D2C8"/>
+              <rect x="64" y="118" width="68" height="40" rx="6" fill="#E3EEEA"/>
+              <rect x="166" y="72" width="68" height="6" rx="3" fill="#2C7564"/>
+              <rect x="166" y="86" width="44" height="6" rx="3" fill="#B7D2C8"/>
+              <circle cx="178" cy="120" r="9" fill="#E3EEEA" stroke="#2C7564"/>
+              <circle cx="200" cy="120" r="9" fill="#E3EEEA" stroke="#2C7564"/>
+              <circle cx="222" cy="120" r="9" fill="#E3EEEA" stroke="#2C7564"/>
+              <rect x="166" y="148" width="68" height="18" rx="9" fill="#2C7564"/>
+              <rect x="268" y="82" width="60" height="6" rx="3" fill="#B7D2C8"/>
+              <rect x="268" y="104" width="68" height="24" rx="6" fill="#E3EEEA"/>
+              <rect x="268" y="134" width="68" height="24" rx="6" fill="#E3EEEA"/>
+            </g>
+          </svg>
+          <figcaption class="caption">Illustration de maquette · version finale : visuel Solace Care</figcaption>
+        </figure>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="kind">Service</span>
+            <span class="maturity">Émergent <span class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></span></span>
+          </div>
+          <span class="label">Solace Care · Stockholm · levée d'août 2026</span>
+          <h3>La fin de vie traitée comme un parcours de soin</h3>
+          <p>Plateforme qui aide à mettre ses affaires en ordre de son vivant, puis guide les proches dans le pratique et l'émotionnel après le décès. 2,1 M€ levés auprès de Spintop Ventures, Plug and Play et de dirigeants de l'assurance nordique. Les fondateurs viennent de Mindler, la santé mentale en ligne.</p>
+          <div class="takeaway">
+            <span class="label">Pour FunFun</span>
+            <p>Les assureurs financent l'anticipation. Un contrat obsèques qui inclurait « concevoir son objet de mémoire » serait un canal pour la piste Anticipation du projet, sans passer par la pompe funèbre.</p>
+          </div>
+          <span class="src">EU-Startups, ArcticStartup, Fintech Global</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ MARCHÉ ============ -->
+  <section id="marche">
+    <div class="section-head">
+      <span class="label">Marché · Europe</span>
+      <h2>La consolidation se joue sur les lieux : les deux premiers groupes français tiennent désormais les deux points de vente de la plaque, l'agence et le crématorium</h2>
+      <p class="lede">Le marché européen des pompes funèbres pèse 18,3 Md$ en 2025 et pourrait atteindre 31,2 Md$ en 2035 (+5,5 % par an). La croissance se capte en rachetant des lieux : agences, funérariums, crématoriums.</p>
+    </div>
+
+    <figure class="exhibit" style="margin:0">
+      <div class="exhibit-head">
+        <span class="label">Figure 1</span>
+        <span class="exhibit-title">Qui tient quoi dans la chaîne de valeur de la plaque, France 2026</span>
+      </div>
+      <div class="chain">
+        <div class="stage">
+          <span class="label">Fabrication</span>
+          <span class="stage-name">Fabricants de plaques</span>
+          <span class="stage-who">France Funéraire, Granimond, artisans. Fragmenté, pas de consolidateur.</span>
+        </div>
+        <div class="stage hot">
+          <span class="label">Point de vente</span>
+          <span class="stage-name">Agences et funérariums</span>
+          <span class="stage-fig">1 300+<small>agences OGF et 650 funérariums</small></span>
+        </div>
+        <div class="stage hot">
+          <span class="label">Lieu cinéraire</span>
+          <span class="stage-name">Crématoriums et columbariums</span>
+          <span class="stage-fig">130<small>crématoriums Funecap, plus 25 pour animaux</small></span>
+        </div>
+        <div class="stage">
+          <span class="label">Usage</span>
+          <span class="stage-name">Familles</span>
+          <span class="stage-who">650 000 familles accompagnées par an par Funecap, tous pays.</span>
+        </div>
+      </div>
+      <div class="bar-block">
+        <span class="label">Réseau OGF, en agences</span>
+        <div class="bar" role="img" aria-label="Réseau OGF : environ 1 200 agences existantes plus environ 100 agences Pompes Funèbres de France, soit plus de 1 300">
+          <div class="base" style="width:92%"></div>
+          <div class="add" style="width:8%"></div>
+        </div>
+        <div class="bar-legend">
+          <span><i class="soft"></i>≈ 1 200 agences avant mai 2026</span>
+          <span><i></i>≈ 100 agences Pompes Funèbres de France</span>
+        </div>
+      </div>
+      <figcaption class="exhibit-foot">Sources : OGF (communiqués avril et mai 2026), Funecap (chiffres clés, février 2026), Nova One Advisor. Le partage ≈ 1 200 / ≈ 100 est une estimation à partir du total annoncé.</figcaption>
+    </figure>
+
+    <div class="findings">
+      <div class="finding">
+        <div class="finding-fig">+100<small>agences en un rachat</small></div>
+        <div>
+          <h3>OGF densifie l'aval</h3>
+          <p>Rachat de Pompes Funèbres de France, réseau d'une centaine d'agences en franchise, finalisé en mai, après la fusion d'Atger Pompes Funèbres à Anduze en mars. Le leader français dépasse 1 300 agences.</p>
+        </div>
+      </div>
+      <div class="finding">
+        <div class="finding-fig">≈ 1 Md€<small>investis en rachats</small></div>
+        <div>
+          <h3>Funecap verrouille l'infrastructure</h3>
+          <p>Porté par Charterhouse, le groupe a investi environ un milliard d'euros en acquisitions. Il exploite 130 crématoriums dans six pays européens et en Amérique du Nord, et emploie plus de 5 000 personnes.</p>
+        </div>
+      </div>
+      <div class="finding">
+        <div class="finding-fig">15 M€<small>de capital-risque</small></div>
+        <div>
+          <h3>Même le digital rachète du physique</h3>
+          <p>Mymoria, la pompe funèbre en ligne berlinoise, achète des maisons traditionnelles depuis 2021. Le lieu reste l'actif qui capte la famille, y compris pour les nouveaux entrants.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sowhat">
+      <h3>Ce que ça veut dire pour FunFun</h3>
+      <ul>
+        <li><strong>Le crématorium est la porte du cinéraire</strong>, le segment qui porte la plaque de columbarium. Un accord avec un exploitant ouvre des dizaines de sites d'un coup.</li>
+        <li><strong>Séquencer le référencement</strong> : prouver avec 5 à 10 indépendants qui cherchent à se distinguer des réseaux, puis arriver chez un groupe avec des chiffres de vente.</li>
+        <li><strong>Question à instruire</strong> : qui choisit les objets proposés dans un crématorium Funecap, le site, la région ou une centrale d'achat ?</li>
+      </ul>
+    </div>
+
+    <p class="watch"><strong>À suivre.</strong> La question posée par The European Correspondent : quand le capital privé détient les crématoriums, qui finance les services non rentables ? Aucun gouvernement européen n'y a encore répondu clairement.</p>
+
+    <div class="sources">
+      <span class="label">Sources</span>
+      <ul>
+        <li><a href="https://fr.finance.yahoo.com/actualites/ogf-annonce-%C3%AAtre-entr%C3%A9-n%C3%A9gociations-090000645.html">OGF, négociations exclusives pour Pompes Funèbres de France</a></li>
+        <li><a href="https://gramond-avocats.com/gramond-accompagne-la-cession-des-pompes-funebres-de-france-a-ogf/">Gramond Avocats, cession de Pompes Funèbres de France à OGF</a></li>
+        <li><a href="https://www.funecap.group/groupe/chiffres-cles">Funecap, chiffres clés</a></li>
+        <li><a href="https://europeancorrespondent.com/en/r/who-owns-death">The European Correspondent, Who owns death?</a></li>
+        <li><a href="https://www.novaoneadvisor.com/report/europe-funeral-homes-and-services-market">Nova One Advisor, Europe Funeral Homes and Services Market</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ NOTE LÉGALE ============ -->
+  <section id="legal">
+    <div class="section-head">
+      <span class="label">Note légale · France</span>
+      <h2>Les cendres ne se partagent pas, et ne restent pas à la maison</h2>
+    </div>
+
+    <div class="legal">
+      <div class="article">
+        <span class="article-ref">Code civil, art. 16-1-1 · loi n° 2008-1350 du 19 décembre 2008</span>
+        <blockquote>« Le respect dû au corps humain ne cesse pas avec la mort. Les restes des personnes décédées, y compris les cendres de celles dont le corps a donné lieu à crémation, doivent être traités avec respect, dignité et décence. »</blockquote>
+      </div>
+      <div class="article">
+        <span class="article-ref">CGCT, art. L. 2223-18-1 à L. 2223-18-3</span>
+        <p style="font-size:16.5px">Les cendres sont traitées <em>en leur totalité</em> : conservées dans l'urne, dans une sépulture, une case de columbarium ou scellée sur un monument, à l'intérieur d'un cimetière ou d'un site cinéraire ; ou dispersées dans un jardin du souvenir ou en pleine nature, hors voies publiques, avec déclaration à la mairie du lieu de naissance du défunt. En attendant la décision, l'urne peut rester au crématorium un an au plus.</p>
+      </div>
+      <div class="rules">
+        <div class="no">
+          <h4>Interdit</h4>
+          <ul>
+            <li><b aria-hidden="true">×</b><span>Garder l'urne chez soi au-delà du temps de la décision</span></li>
+            <li><b aria-hidden="true">×</b><span>Répartir les cendres entre plusieurs proches</span></li>
+            <li><b aria-hidden="true">×</b><span>Bijou ou diamant fabriqué à partir de cendres</span></li>
+            <li><b aria-hidden="true">×</b><span>Disperser dans son jardin, même avec l'accord du propriétaire</span></li>
+          </ul>
+        </div>
+        <div class="yes">
+          <h4>Autorisé</h4>
+          <ul>
+            <li><b aria-hidden="true">✓</b><span>Urne en sépulture, en columbarium, en cavurne ou scellée sur un monument</span></li>
+            <li><b aria-hidden="true">✓</b><span>Dispersion au jardin du souvenir ou en pleine nature déclarée</span></li>
+            <li><b aria-hidden="true">✓</b><span>Tout objet de mémoire qui ne contient pas de cendres</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="legal-impact">
+      <h3>Ce que ça change pour FunFun</h3>
+      <p>L'objet double du projet (une pièce sur la sépulture, sa jumelle à la maison) est légal en France à une condition : la pièce domestique ne contient aucune cendre. C'est un objet de mémoire, pas un reliquaire. La contrainte crée même le besoin : la loi retire l'urne du salon, il faut un objet pour y ramener la personne. Une offre européenne devra prévoir deux versions, puisque la Rhénanie-Palatinat autorise désormais le partage des cendres.</p>
+    </div>
+
+    <p class="disclaimer">Note de veille, pas un avis juridique. À faire valider par un juriste avant toute communication commerciale.</p>
+
+    <div class="sources">
+      <span class="label">Sources</span>
+      <ul>
+        <li><a href="https://questions.assemblee-nationale.fr/q15/15-14816QE.htm">Assemblée nationale, question n° 14816 : conservation des cendres des défunts</a></li>
+        <li><a href="https://www.sublimatorium-florian-leclerc.fr/2025/04/01/proprietes-des-cendres-funeraires-que-dit-la-loi/">Sublimatorium, Propriété des cendres funéraires : que dit la loi ?</a></li>
+        <li><a href="https://www.avocat-antebi.fr/urne-cendres-conflits-entre-heritiers-et-legislation-applicable/">Cabinet Antebi, L'urne, les cendres et les conflits entre héritiers</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ REGISTRE ============ -->
+  <section class="registry" aria-labelledby="reg-title">
+    <h2 id="reg-title">Registre anti-répétition</h2>
+    <p>Chaque numéro inscrit ses sujets dans un registre que la routine relit avant d'écrire le suivant. Un acteur, un chiffre ou un texte déjà traité ne revient que s'il y a un fait nouveau, signalé comme « mise à jour ». Le registre part aussi de l'étude de marché, pour ne pas resservir Alessi ou Loop Biotech.</p>
+    <div class="reg-table">
+      <table>
+        <thead><tr><th>Rubrique</th><th>Entrées ajoutées cette semaine</th></tr></thead>
+        <tbody>
+          <tr><td>Inspiration</td><td>Urn Studios, Amara, Bestattung Wien (urnes graffiti), Solace Care · tendance « Présence »</td></tr>
+          <tr><td>Marché</td><td>Rachat PFF par OGF, fusion Atger, Funecap 130 crématoriums, Mymoria rachats, marché Europe 2025 à 2035</td></tr>
+          <tr><td>Note légale</td><td>Code civil 16-1-1, CGCT L. 2223-18-1 à 18-3 (destination des cendres)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="colophon">
+    <span class="label">Patine · la veille de FunFun</span>
+    <span class="label">Prochain numéro : lundi 28 septembre</span>
+  </footer>
+
+</div>
