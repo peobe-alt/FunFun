@@ -21,6 +21,7 @@ import html
 import json
 import os
 import sys
+import urllib.error
 import urllib.request
 
 RACINE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
@@ -93,8 +94,12 @@ def envoyer(sujet, corps, a, bcc):
         payload["bcc"] = [{"email": x} for x in bcc]
     req = urllib.request.Request("https://api.brevo.com/v3/smtp/email", data=json.dumps(payload).encode("utf-8"),
                                  headers={"api-key": cle, "content-type": "application/json", "accept": "application/json"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return r.status, r.read().decode("utf-8", "replace")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return r.status, r.read().decode("utf-8", "replace")
+    except urllib.error.HTTPError as err:
+        print("Brevo a refusé l'envoi (%s) : %s" % (err.code, err.read().decode("utf-8", "replace")))
+        sys.exit(3)
 
 
 def main(args):
