@@ -67,6 +67,10 @@
   @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 
   .panel { border-radius: 22px; overflow: hidden; }
+  p strong { font-weight: 600; color: var(--ink); }
+  .market p strong, .impact p strong, .spirit p strong { color: var(--snow); }
+  .legal p strong { color: var(--bp); }
+  .legal .impact p strong { color: var(--aqua); }
   .label {
     font-family: var(--sans);
     font-size: 11.5px;
@@ -154,7 +158,8 @@
 
   /* ---------- Chiffres clés ---------- */
   .kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .kpi { padding: 22px 22px 24px; min-height: 200px; display: grid; grid-template-rows: auto 1fr auto; gap: 10px; }
+  .kpi { padding: 22px 22px 20px; min-height: 200px; display: grid; grid-template-rows: auto 1fr auto auto; gap: 10px; }
+  .kpi-src { font-size: 11px; line-height: 1.4; letter-spacing: 0.02em; opacity: 0.72; border-top: 1px solid currentColor; border-top-color: rgba(127, 127, 127, 0.35); padding-top: 8px; margin-top: 2px; }
   .kpi-value { font-family: var(--sans); font-weight: 600; font-size: 46px; line-height: 1; letter-spacing: -0.03em; align-self: end; }
   .kpi-text { font-size: 14px; line-height: 1.45; }
   .k1 { background: var(--bp); color: var(--snow); }
@@ -188,16 +193,15 @@
   :root { --chap-inspiration: #FF6038; --chap-marche: #11363E; --chap-legal: #A0C9CB; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --chap-marche: #4E97A3; } }
   :root[data-theme="dark"] { --chap-marche: #4E97A3; }
-  .chap { margin-top: 56px; border-top: 6px solid var(--chap); padding-top: 18px; padding-inline: clamp(6px, 3.4vw, 40px); display: grid; grid-template-columns: 1fr minmax(0, 34ch); gap: 10px 32px; align-items: end; }
+  .chap { margin-top: 56px; border-top: 6px solid var(--chap); padding-top: 18px; padding-inline: clamp(6px, 3.4vw, 40px); display: grid; gap: 10px; }
   .chap-inspiration { --chap: var(--chap-inspiration); }
   .chap-marche { --chap: var(--chap-marche); }
   .chap-legal { --chap: var(--chap-legal); }
   .chap-top { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; }
   .chap-num { font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1; color: var(--ink); }
   .chap-top .label { color: var(--accent-ink); }
-  .chap h2 { font-size: clamp(44px, 6.4vw, 76px); }
-  .chap p { font-size: 13px; line-height: 1.55; color: var(--ink-2); }
-  @media (max-width: 720px) { .chap { grid-template-columns: 1fr; margin-top: 40px; } }
+  .chap h2 { font-size: clamp(34px, 5.6vw, 68px); line-height: 1; }
+  @media (max-width: 720px) { .chap { margin-top: 36px; } }
 
   /* ---------- Inspiration : planche tendance ---------- */
   .trend { background: var(--panel); padding: 36px 36px 38px; display: grid; gap: 30px; }
@@ -405,6 +409,60 @@
   .colophon button { appearance: none; border: 0; background: none; padding: 0; color: var(--link); font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
   .colophon button:disabled { color: var(--muted); text-decoration: none; cursor: default; }
 
+  /* ---------- Version mobile ---------- */
+  @media (max-width: 720px) {
+    body { font-size: 15.5px; }
+    .wrap { padding-block: 0 48px; gap: 22px; }
+    /* Blocs en couleur bord à bord */
+    .panel, .topbar { margin-inline: -16px; border-radius: 0; }
+    .topbar.stuck { border-radius: 0; }
+    .hero { margin-top: -28px; }
+    .hero-caps { font-size: 30px; }
+    .hero-title { font-size: 52px; }
+    .hero-img { aspect-ratio: 4 / 3; }
+    .cover-cap a { font-size: 18px; }
+    .kpi { min-height: 0; padding: 16px 16px 14px; gap: 8px; }
+    .kpi-value { font-size: 34px; }
+    .kpi-text { font-size: 13px; }
+    .edito h2 { font-size: 38px; }
+    .edito-tension { font-size: 22px; }
+    .edito-body p { font-size: 15.5px; }
+    .trend { padding: 22px 20px 26px; gap: 22px; }
+    .trend-name { font-size: 54px; }
+    .trend-lede { font-size: 21px; }
+    .insight-box blockquote { font-size: 24px; }
+    /* Focus de tendance : carrousel horizontal */
+    .quad { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; margin-inline: -20px; padding: 0 20px 6px; scrollbar-width: none; }
+    .quad::-webkit-scrollbar { display: none; }
+    .q { flex: 0 0 76%; scroll-snap-align: start; }
+    .feature { min-height: 0; }
+    .fimg { aspect-ratio: 16 / 11; }
+    .img-title { left: 18px; top: 16px; right: 18px; }
+    .img-title a { font-size: 28px; }
+    .ftext { padding: 18px 20px 22px; gap: 12px; }
+    .ftext h3 { font-size: 28px; }
+    .ftext p { font-size: 15px; }
+    .weak h3 { font-size: 32px; }
+    .weak-bridge { font-size: 19px; }
+    .market, .legal { padding: 26px 20px 30px; gap: 26px; }
+    .market h2 { font-size: 36px; }
+    .kicker { font-size: 21px; }
+    .chain { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .stage { padding: 12px; }
+    .stage:not(:last-child)::after { display: none; }
+    .stage-fig { font-size: 28px; }
+    .findings { gap: 18px; }
+    .finding-fig { font-size: 38px; }
+    .sowhat, .impact { padding: 20px 18px; border-radius: 14px; }
+    .sowhat h3, .impact h3 { font-size: 26px; }
+    .soc-read p { font-size: 20px; }
+    .legal h2 { font-size: 32px; }
+    .article blockquote { font-size: 20px; }
+    .spirit { padding: 36px 20px 32px; }
+    .spirit blockquote { font-size: 28px; }
+    .outro { font-size: 20px; }
+  }
+
   .state { min-height: 60vh; display: grid; place-items: center; text-align: center; color: var(--ink-2); padding: 40px 0; }
   .state strong { display: block; font-family: var(--serif); font-size: 34px; color: var(--ink); font-weight: 400; margin-bottom: 8px; }
 </style>
@@ -427,6 +485,7 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
   };
+  var rich = function (s) { return esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"); };
   var url = function (u) { return /^(https?:)?\/\//.test(u) || /^[\w./-]+$/.test(u) ? esc(u) : "#"; };
   var pad = function (v) { var x = String(parseInt(v, 10) || 0); return x.length < 2 ? "0" + x : x; };
   var join = function (arr, fn) { return (arr || []).map(fn).join(""); };
@@ -491,7 +550,7 @@
   function kpis(list) {
     return '<div class="kpis panel" aria-label="L\'essentiel en quatre chiffres">' +
       join(list, function (k, i) {
-        return '<div class="kpi k' + ((i % 4) + 1) + '"><span class="label">' + ico(k.rubrique) + esc(k.rubrique) + '</span><span class="kpi-value">' + esc(k.valeur) + '</span><span class="kpi-text">' + esc(k.texte) + "</span></div>";
+        return '<div class="kpi k' + ((i % 4) + 1) + '"><span class="label">' + ico(k.rubrique) + esc(k.rubrique) + '</span><span class="kpi-value">' + esc(k.valeur) + '</span><span class="kpi-text">' + esc(k.texte) + "</span>" + (k.source ? '<span class="kpi-src">Source : ' + esc(k.source) + "</span>" : "") + "</div>";
       }) + "</div>";
   }
 
@@ -500,7 +559,7 @@
     return '<section id="edito"><div class="edito">' +
       '<div class="edito-head"><span class="label">' + ico("societe") + "L'édito de la semaine</span><h2>" + esc(f.titre) + "</h2>" +
         (f.tension ? '<p class="edito-tension">' + esc(f.tension) + "</p>" : "") + "</div>" +
-      '<div class="edito-body">' + join(f.texte, function (t) { return "<p>" + esc(t) + "</p>"; }) + sources(f.sources) + "</div>" +
+      '<div class="edito-body">' + join(f.texte, function (t) { return "<p>" + rich(t) + "</p>"; }) + sources(f.sources) + "</div>" +
     "</div></section>";
   }
 
@@ -510,9 +569,9 @@
       (w.lien ? '<p class="weak-bridge">' + esc(w.lien) + "</p>" : "") +
       '<div class="weak-head"><span class="label">' + ico("signal") + "Signal faible</span><h3>" + esc(w.titre) + "</h3>" +
         (w.lieu ? '<span class="weak-where">' + esc(w.lieu) + "</span>" : "") + "</div>" +
-      '<div class="weak-body"><p>' + esc(w.texte) + "</p>" +
+      '<div class="weak-body"><p>' + rich(w.texte) + "</p>" +
         '<div class="weak-side">' + (w.pourquoi ? '<p class="weak-why">' + esc(w.pourquoi) + "</p>" : "") +
-        (w.pour_funfun ? '<div class="weak-ff"><span class="label">Pour FunFun</span><p>' + esc(w.pour_funfun) + "</p></div>" : "") + "</div>" +
+        (w.pour_funfun ? '<div class="weak-ff"><span class="label">Pour FunFun</span><p>' + rich(w.pour_funfun) + "</p></div>" : "") + "</div>" +
         sources(w.sources) + "</div>" +
     "</div></section>";
   }
@@ -524,13 +583,13 @@
       "<blockquote>" + esc(s.citation) + " »</blockquote>" +
       '<div class="spirit-who"><strong>' + esc(s.auteur) + "</strong>" + (s.contexte ? "<span>" + esc(s.contexte) + "</span>" : "") +
         (s.source && s.source.url ? '<a href="' + url(s.source.url) + '" target="_blank" rel="noopener">' + esc(s.source.titre || "Source") + "</a>" : "") + "</div>" +
-      (s.reflexion ? '<p class="spirit-reflex">' + esc(s.reflexion) + "</p>" : "") +
+      (s.reflexion ? '<p class="spirit-reflex">' + rich(s.reflexion) + "</p>" : "") +
     "</div></section>";
   }
 
-  function chapter(key, num, name, title, desc) {
+  function chapter(key, num, name, title) {
     return '<div class="chap chap-' + key + '"><div class="chap-top"><span class="chap-num">Chapitre ' + num + '</span><span class="label">' + ico(key) + name + "</span></div>" +
-      '<h2 class="caps">' + title + "</h2><p>" + desc + "</p></div>";
+      '<h2 class="caps">' + title + "</h2></div>";
   }
 
   function dots(n) {
@@ -571,14 +630,14 @@
           '<div class="fmeta"><span class="kind">' + esc(s.type) + '</span><span class="maturity">' + esc(maturityLabel[s.maturite] || "") + ' <span class="dots" aria-hidden="true">' + dots(s.maturite) + "</span></span></div>" +
           (s.rubrique ? '<span class="label kicker-rub">' + esc(s.rubrique) + "</span>" : "") +
           "<h3>" + esc(s.titre) + "</h3>" +
-          "<p>" + esc(s.texte) + "</p>" +
-          '<div class="takeaway"><span class="label">Pour FunFun</span><p>' + esc(s.pour_funfun) + "</p></div>" +
+          "<p>" + rich(s.texte) + "</p>" +
+          '<div class="takeaway"><span class="label">Pour FunFun</span><p>' + rich(s.pour_funfun) + "</p></div>" +
           (s.sources ? '<span class="src">Sources : ' + esc(s.sources) + "</span>" : "") +
         "</div>" +
       "</article>";
     });
     return '<section id="inspiration">' +
-      chapter("inspiration", "01", "Inspiration · produits et services", "Tendance<br>de la semaine", "Lecture cahier de tendances : un nom, un insight, une couleur, une matière, une forme, une citation, puis des signaux classés par maturité, et ce que FunFun peut en faire.") +
+      chapter("inspiration", "01", "Inspiration · produits et services", "Tendance de la semaine") +
       '<div class="trend panel">' +
         '<div class="trend-head">' +
           '<div class="trend-name">' + esc(t.nom) + "<sup>✳</sup></div>" +
@@ -589,7 +648,7 @@
         "</div>" +
         ((t.insight || t.lecture) ? '<div class="trend-deep">' +
           (t.insight ? '<div class="insight-box"><span class="label">L\'insight</span><blockquote>« ' + esc(t.insight) + ' »</blockquote><span class="who">Formulé par la rédaction, à partir des signaux de la semaine.</span></div>' : "") +
-          (t.lecture ? '<div class="lecture"><span class="label">Ce que ça dit de nous</span>' + join([].concat(t.lecture), function (x) { return "<p>" + esc(x) + "</p>"; }) + "</div>" : "") +
+          (t.lecture ? '<div class="lecture"><span class="label">Ce que ça dit de nous</span>' + join([].concat(t.lecture), function (x) { return "<p>" + rich(x) + "</p>"; }) + "</div>" : "") +
         "</div>" : "") +
         (quad ? '<div class="quad">' + quad + "</div>" : "") +
         (t.mots_cles ? '<div class="mini"><span class="label">Mots-clés</span><div class="tags">' + join(t.mots_cles, function (m) { return '<span class="tag">' + esc(m) + "</span>"; }) + "</div></div>" : "") +
@@ -624,17 +683,17 @@
   }
 
   function marche(m) {
-    return '<section id="marche">' + chapter("marche", "02", "Marché", "Le marché,<br>chiffres en main", "Lecture McKinsey : une conclusion d'abord, une figure, trois constats, ce que les chiffres disent de nous et ce que ça change pour FunFun.") +
+    return '<section id="marche">' + chapter("marche", "02", "Marché", "Le marché, chiffres en main") +
       '<div class="market panel">' +
-      '<div class="market-head"><span class="label">' + esc(m.zone || "Europe") + "</span><h2>" + esc(m.titre) + '</h2><p class="kicker">' + esc(m.accroche) + '</p><p class="market-lede">' + esc(m.chapo) + "</p></div>" +
+      '<div class="market-head"><span class="label">' + esc(m.zone || "Europe") + "</span><h2>" + esc(m.titre) + '</h2><p class="kicker">' + esc(m.accroche) + '</p><p class="market-lede">' + rich(m.chapo) + "</p></div>" +
       figure(m.figure) +
       '<div class="findings">' + join(m.constats, function (c) {
-        return '<div class="finding"><span class="finding-fig">' + esc(c.chiffre) + "</span><h3>" + esc(c.titre) + "</h3><p>" + esc(c.texte) + "</p></div>";
+        return '<div class="finding"><span class="finding-fig">' + esc(c.chiffre) + "</span><h3>" + esc(c.titre) + "</h3><p>" + rich(c.texte) + "</p></div>";
       }) + "</div>" +
       '<div class="sowhat"><h3>Ce que ça veut dire pour FunFun</h3><ul>' + join(m.implications, function (x) {
         return "<li><span><strong>" + esc(x.gras) + "</strong>" + esc(x.texte) + "</span></li>";
       }) + "</ul></div>" +
-      (m.lecture ? '<div class="soc-read"><span class="label">' + ico("societe") + "Ce que les chiffres disent de nous</span><p>" + esc(m.lecture) + "</p></div>" : "") +
+      (m.lecture ? '<div class="soc-read"><span class="label">' + ico("societe") + "Ce que les chiffres disent de nous</span><p>" + rich(m.lecture) + "</p></div>" : "") +
       (m.a_suivre ? '<p class="watch"><strong>À suivre.</strong> ' + esc(m.a_suivre) + "</p>" : "") +
       sources(m.sources) +
     "</div></section>";
@@ -642,21 +701,21 @@
 
   function legal(l) {
     var glyph = { non: "×", oui: "✓", info: "•" };
-    return '<section id="legal">' + chapter("legal", "03", "Juridique", "La note<br>juridique", "Un point de droit par semaine, texte à l'appui : ce qu'il permet, ce qu'il interdit, et l'espace qu'il ouvre à FunFun.") +
+    return '<section id="legal">' + chapter("legal", "03", "Juridique", "La note juridique") +
       '<div class="legal panel">' +
       '<span class="label">' + esc(l.pays) + "</span>" +
       "<h2>" + esc(l.titre) + "</h2>" +
       '<div class="legal-grid"><div class="articles">' + join(l.articles, function (a) {
         return '<div class="article"><span class="label">' + esc(a.ref) + "</span>" +
           (a.citation ? "<blockquote>« " + esc(a.citation) + " »</blockquote>" : "") +
-          (a.texte ? "<p>" + esc(a.texte) + "</p>" : "") + "</div>";
+          (a.texte ? "<p>" + rich(a.texte) + "</p>" : "") + "</div>";
       }) + "</div>" +
       '<div class="rules">' + join(l.listes, function (li) {
         return '<div class="' + esc(li.type) + '"><h4>' + esc(li.titre) + "</h4><ul>" + join(li.items, function (it) {
           return '<li><b aria-hidden="true">' + (glyph[li.type] || "•") + "</b><span>" + esc(it) + "</span></li>";
         }) + "</ul></div>";
       }) + "</div></div>" +
-      '<div class="impact"><h3>Ce que ça change pour FunFun</h3><p>' + esc(l.impact) + "</p></div>" +
+      '<div class="impact"><h3>Ce que ça change pour FunFun</h3><p>' + rich(l.impact) + "</p></div>" +
       '<p class="disclaimer">Note de veille, pas un avis juridique. À faire valider par un juriste avant toute communication commerciale.</p>' +
       sources(l.sources) +
     "</div></section>";

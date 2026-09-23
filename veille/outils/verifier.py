@@ -72,6 +72,10 @@ def main(num):
     image({"src": c.get("image"), "alt": c.get("alt"), "credit": c.get("credit")}, "couverture")
     if len(n.get("chiffres", [])) != 4:
         err("Il faut exactement 4 chiffres clés")
+    for i, k in enumerate(n.get("chiffres", [])):
+        exige(k, "chiffres[%d]" % i, ["rubrique", "valeur", "texte", "source"])
+    if brut.count("**") % 2:
+        err("Un passage en gras (**...**) n'est pas refermé")
 
     ins = n.get("inspiration", {})
     exige(ins, "inspiration", ["tendance", "signaux"])

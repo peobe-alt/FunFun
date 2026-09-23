@@ -50,6 +50,7 @@ La FunVeille n'est pas une revue de presse. C'est une lecture de la société à
 5. **Le « et alors ? »** pour FunFun : concret, actionnable, jamais générique.
 
 Règles de ton :
+- **Gras** : dans chaque bloc de texte, mettre en gras (`**passage**`) un ou deux passages clés, jamais plus : le chiffre qui frappe, la phrase qui révèle. Le gras sert à lire en diagonale.
 - Titres courts, avec une idée ou un jeu de mots, jamais descriptifs (« L'urne passe en galerie », « Les morts ne tiennent plus en place »).
 - Phrases courtes, verbes forts, pas de jargon de consultant. Une chute avec de l'esprit est bienvenue.
 - On parle de la mort : l'humour est tendre, jamais moqueur envers les personnes en deuil.
@@ -89,7 +90,7 @@ Règles de ton :
 - Champs : `citation` (sans guillemets, extrait exact ; signaler une coupe par « […] »), `auteur`, `contexte` (œuvre, date), `reflexion` (2 à 3 phrases de la rédaction qui relient la citation à la semaine et au projet FunFun), `source` (`titre`, `url`).
 
 ### Le reste
-- `chiffres` : exactement 4 chiffres clés tirés du numéro, dont un chiffre de société (rubriques possibles : Marché, Société, Inspiration, Juridique).
+- `chiffres` : exactement 4 chiffres clés tirés du numéro, dont un chiffre de société (rubriques possibles : Marché, Société, Inspiration, Juridique). Chacun a sa `source` courte (« Ifop, 2023 »), affichée en bas du bloc.
 - `couverture` : l'image la plus forte des signaux, avec `titre` et `ancre` (= `id` du signal).
 - `mot_de_la_fin` : une phrase de clôture, légère, différente chaque semaine, affichée après la note spirituelle.
 - `registre` : résumé par rubrique des sujets ajoutés.
