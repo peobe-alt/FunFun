@@ -58,6 +58,16 @@ def construire(n):
     sp = n.get("note_spirituelle", {})
     cov = n.get("couverture", {})
 
+    sujets = [("01", "Inspiration", ins.get("sommaire") or t.get("nom")),
+              ("02", "Marché", m.get("sommaire") or m.get("titre")),
+              ("03", "Juridique", l.get("sommaire") or l.get("titre"))]
+    au_sommaire = "".join(
+        '<tr><td valign="top" style="padding:12px 14px 12px 0;border-top:1px solid %s;font-family:%s;font-size:12px;letter-spacing:1px;color:%s;white-space:nowrap;">%s</td>'
+        '<td style="padding:12px 0;border-top:1px solid %s;"><div style="font-family:%s;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:%s;">%s</div>'
+        '<a href="%s" style="font-family:%s;font-size:18px;line-height:1.3;color:%s;text-decoration:none;">%s</a></td></tr>'
+        % (BX, SANS, CORAL, no, BX, SANS, AQUA, e(rub), e(lien), SERIF, SNOW, e(txt))
+        for no, rub, txt in sujets if txt)
+
     sujet = "La FunVeille #%s · %s" % (num, ed.get("titre", t.get("nom", "")))
     accroche = ed.get("tension") or t.get("accroche", "")
 
@@ -73,12 +83,15 @@ def construire(n):
   <div style="font-family:%(sans)s;font-size:42px;line-height:1;font-weight:bold;letter-spacing:-1.5px;color:%(snow)s;margin-top:16px;">
     <span style="font-family:%(serif)s;font-style:italic;font-weight:normal;color:%(coral)s;">La</span> FunVeille<span style="font-size:17px;color:%(coral)s;vertical-align:top;"> #%(num)s</span></div>
   <p style="font-family:%(serif)s;font-size:20px;line-height:1.35;color:%(snow)s;margin:22px 0 26px;">Le numéro de la semaine est en ligne : <em style="color:%(eau)s;">%(ed_titre)s</em>.<br><span style="font-size:16px;color:%(eau)s;">%(preheader)s</span></p>
+  <div style="font-family:%(sans)s;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:%(coral)s;margin:0 0 4px;">Au sommaire</div>
+  <table role="presentation" width="100%%" cellpadding="0" cellspacing="0" style="margin:0 0 28px;">%(au_sommaire)s</table>
   <a href="%(lien)s" style="display:inline-block;background:%(coral)s;color:%(bp)s;font-family:%(sans)s;font-size:14px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;text-decoration:none;padding:15px 26px;border-radius:999px;">Ouvrir La FunVeille</a>
 </td></tr>
 <tr><td style="padding:16px 8px;font-family:%(sans)s;font-size:11px;line-height:1.6;color:#7A6A66;">La FunVeille, la veille hebdomadaire du projet FunFun.</td></tr>
 </table></td></tr></table></body></html>""" % {
         "sujet": e(sujet), "preheader": e(accroche), "snow": SNOW, "bp": BP, "coral": CORAL, "eau": EAU, "sans": SANS, "serif": SERIF,
         "semaine": e(n.get("semaine")), "date": e(n.get("date_label")), "num": num, "ed_titre": e(ed.get("titre")), "lien": e(lien),
+        "au_sommaire": au_sommaire,
     }
     return sujet, corps
 
