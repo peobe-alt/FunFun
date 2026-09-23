@@ -127,7 +127,29 @@ Ces règles étrangères vont dans le sens de FunFun : **elles interdisent préc
 
 ---
 
-## 6. Limites et prochaines étapes
+## 6. Le cas des plaques d'hommage (« À notre mère », « À mon oncle »)
+
+Ce sont les plaques offertes par les proches et posées sur la tombe, souvent à l'enterrement puis à la Toussaint. Ce sont les moins encadrées de toutes, mais trois niveaux de règles s'appliquent quand même.
+
+| Qui décide | Règle | En pratique |
+| --- | --- | --- |
+| **Le maire** | Toute inscription placée sur une tombe est soumise à son approbation (art. R2223-8 du CGCT). Il ne peut refuser que pour **atteinte à l'ordre public ou à la dignité du défunt** (Conseil d'État, 1949, Dame Moulis). Il ne peut réglementer **ni la forme, ni le contenu** au-delà (réponse ministérielle au Sénat, 2022). Depuis novembre 2015, **son silence vaut accord** | Personne ne demande d'approbation pour une plaque « À notre mère ». Le texte vise plutôt les gravures sur le monument, et son application aux plaques posées est discutée |
+| **Le titulaire de la concession** | Le monument est sa propriété privée. Une plaque posée par un tiers (un neveu, des amis, des collègues) **sans son accord peut être retirée par lui** | En cas de conflit familial, c'est le titulaire qui tranche |
+| **Le règlement du cimetière** | Plaque dans les **limites de la concession**, **stable**, rien dans les allées. Plaques abîmées **retirées par la commune sans préavis** (gardées 3 mois). Nettoyage après la Toussaint | Les plaques posées à plat, non fixées, basculent, glissent ou disparaissent |
+| **Columbarium** | Souvent **interdites** (rien au pied du columbarium à Joué-lès-Tours, aucun ornement à Voisins-le-Bretonneux, rien de fixé à Strasbourg). Parfois tolérées sur une tablette prévue (Nanterre) | La plaque d'hommage n'a quasiment pas de place dans le cinéraire |
+| **Jardin du souvenir** | **Interdites** (Strasbourg, Geaune, Bédée) | |
+
+**Ce que ça veut dire pour FunFun :**
+
+- **C'est la catégorie la plus libre du marché** : n'importe quel proche peut l'acheter, sans démarche, et le texte est libre. C'est là que l'achat multiple et le pic de la Toussaint se jouent. C'est aussi le meilleur produit d'entrée pour tester des formes et des matières.
+- **Contraintes de conception propres** : elle est posée, pas fixée. Elle doit tenir au vent et à la pluie sans basculer, ne pas abîmer le monument, rester dans l'emprise de la tombe, et être assez légère pour être déplacée lors d'un nettoyage.
+- **Elle est précaire par nature** : le titulaire ou la commune peuvent la retirer. Un objet pensé pour être repris et gardé (la plaque qui rentre à la maison) transforme cette précarité en usage.
+- **La crémation la fait disparaître** : sans tombe, pas de plaque d'hommage. Le geste d'offrir reste pourtant. Il faut lui trouver un nouveau support : un petit objet compatible avec la tablette d'un columbarium quand elle existe, un objet pour la maison, ou un hommage rattaché au dispositif collectif du jardin du souvenir.
+- **Le texte lui-même est à réinventer** : « À notre mère », « Regrets », « À mon oncle » sont des formules de catalogue. Rien n'empêche une phrase, une écriture manuscrite, un mot de la personne.
+
+---
+
+## 7. Limites et prochaines étapes
 
 **Limites.** Les pages des mairies n'étaient pas accessibles directement depuis l'environnement de recherche. Les règles ci-dessus viennent d'extraits obtenus par moteur de recherche. **Chaque chiffre doit être vérifié dans le PDF d'origine** (liens fournis) avant de figer des cotes de fabrication. L'échantillon penche vers les communes qui publient leur règlement en ligne.
 
@@ -151,4 +173,8 @@ Ces règles étrangères vont dans le sens de FunFun : **elles interdisent préc
 - [Sénat, Réglementation relative aux monuments funéraires (2022)](https://www.senat.fr/questions/base/2022/qSEQ221204492.html)
 - [Sénat, Équipement d'un jardin du souvenir d'une commune de moins de 2 000 habitants (2025)](https://www.senat.fr/questions/base/2025/qSEQ250705859.html)
 - [Légibase, Qui finance les plaques nominatives dans un jardin du souvenir ?](https://etat-civil.collectivites.legibase.fr/point-de-vue-expert/qui-finance-les-plaques-nominatives-dans-un-jardin-du-souvenir-27541)
+- [Sénat, Inscription sur une pierre tombale (2022)](https://www.senat.fr/questions/base/2022/qSEQ221204163.html)
+- [Résonance Funéraire, Inscriptions tombales : la vigilance des communes recommandée](https://www.resonance-funeraire.com/reglementation/5373-inscriptions-tombales-la-vigilance-des-communes-recommandee)
+- [FNF, Travaux et gravure sur un monument : pas d'autorisation du maire](https://federation-fnf.fr/les-travaux-et-la-gravure-sur-un-monument-construit-sur-une-concession-ne-sont-pas-soumis-a-lautorisation-du-maire/)
+- [Vitro Souvenir, Peut-on enlever une plaque funéraire d'une tombe ?](https://vitro-souvenir.com/fr/reglementation/enlever-plaque-funeraire-tombe/)
 - [Hellopro, Règles d'un columbarium](https://conseils.hellopro.fr/quelles-sont-les-regles-regissant-un-columbarium-3911.html)
