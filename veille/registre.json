@@ -612,6 +612,12 @@
       "rubrique": "inspiration",
       "type": "acteur",
       "sujet": "Vienne, la schöne Leich et le musée funéraire de Bestattung Wien"
+    },
+    {
+      "numero": 1,
+      "rubrique": "societe",
+      "type": "citation",
+      "sujet": "Jean d'Ormesson : la présence des absents dans la mémoire des vivants (1974)"
     }
   ]
 }

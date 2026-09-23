@@ -62,8 +62,9 @@ def main(num):
         err("Tiret long ou demi-long présent dans le numéro : remplacer par une virgule, deux-points ou parenthèses")
     n = json.loads(brut)
 
-    exige(n, "numero", ["numero", "annee", "semaine", "date", "date_label", "couverture", "chiffres", "fil_rouge", "inspiration", "marche", "legal", "mot_de_la_fin", "registre"])
+    exige(n, "numero", ["numero", "annee", "semaine", "date", "date_label", "couverture", "chiffres", "fil_rouge", "inspiration", "marche", "legal", "note_spirituelle", "mot_de_la_fin", "registre"])
     exige(n.get("fil_rouge", {}), "fil_rouge", ["titre", "tension", "texte", "sources"])
+    exige(n.get("note_spirituelle", {}), "note_spirituelle", ["citation", "auteur", "contexte", "reflexion", "source"])
     if n.get("numero") != num:
         err("Le champ numero (%s) ne correspond pas au fichier (%s)" % (n.get("numero"), num))
     c = n.get("couverture", {})
