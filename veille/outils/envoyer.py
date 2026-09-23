@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Envoie l'e-mail de La FunVeille (annonce du numéro + lien vers la page).
+"""Envoie l'e-mail de La FunVeille : une annonce courte avec le lien vers la page.
 
   python3 veille/outils/envoyer.py <numero> --apercu <fichier.html>
       Écrit l'e-mail dans un fichier HTML, sans rien envoyer.
@@ -60,82 +60,24 @@ def construire(n):
     sujet = "La FunVeille #%s · %s" % (num, ed.get("titre", t.get("nom", "")))
     accroche = ed.get("tension") or t.get("accroche", "")
 
-    signaux = "".join(
-        '<tr><td style="padding:10px 0;border-top:1px solid #D5D5C3;">'
-        '<div style="font-family:%s;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:%s;">%s · %s</div>'
-        '<div style="font-family:%s;font-size:19px;line-height:1.25;color:%s;margin-top:3px;">%s</div></td></tr>'
-        % (SANS, BX, e(s.get("rubrique", s.get("type"))), e(s.get("nom")), SERIF, BP, e(s.get("titre")))
-        for s in ins.get("signaux", []))
-
-    image = ""
-    if cov.get("image_email"):
-        image = ('<tr><td style="padding:0;"><img src="%s" width="600" alt="%s" style="display:block;width:100%%;max-width:600px;height:auto;border:0;"></td></tr>'
-                 % (e(cov["image_email"]), e(cov.get("alt"))))
-
-    premier = (ed.get("texte") or [""])[0]
     corps = """<!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light only"><title>%(sujet)s</title></head>
 <body style="margin:0;padding:0;background:%(snow)s;">
 <div style="display:none;max-height:0;overflow:hidden;">%(preheader)s</div>
 <table role="presentation" width="100%%" cellpadding="0" cellspacing="0" style="background:%(snow)s;"><tr><td align="center" style="padding:24px 12px;">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%%;max-width:600px;background:%(snow)s;">
-
-<tr><td style="background:%(bp)s;padding:28px 32px 30px;border-radius:18px 18px 0 0;">
+<table role="presentation" width="560" cellpadding="0" cellspacing="0" style="width:100%%;max-width:560px;">
+<tr><td style="background:%(bp)s;padding:30px 32px 34px;border-radius:18px;">
   <div style="font-family:%(sans)s;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:%(eau)s;">Semaine %(semaine)s · %(date)s</div>
-  <div style="font-family:%(sans)s;font-size:46px;line-height:1;font-weight:bold;letter-spacing:-1.5px;color:%(snow)s;margin-top:18px;">
-    <span style="font-family:%(serif)s;font-style:italic;font-weight:normal;color:%(coral)s;">La</span> FunVeille<span style="font-size:18px;color:%(coral)s;vertical-align:top;"> #%(num)s</span></div>
-  <div style="font-family:%(sans)s;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:%(eau)s;margin-top:14px;line-height:1.6;">Veille hebdomadaire du funéraire</div>
+  <div style="font-family:%(sans)s;font-size:42px;line-height:1;font-weight:bold;letter-spacing:-1.5px;color:%(snow)s;margin-top:16px;">
+    <span style="font-family:%(serif)s;font-style:italic;font-weight:normal;color:%(coral)s;">La</span> FunVeille<span style="font-size:17px;color:%(coral)s;vertical-align:top;"> #%(num)s</span></div>
+  <p style="font-family:%(serif)s;font-size:20px;line-height:1.35;color:%(snow)s;margin:22px 0 26px;">Le numéro de la semaine est en ligne : <em style="color:%(eau)s;">%(ed_titre)s</em>.<br><span style="font-size:16px;color:%(eau)s;">%(preheader)s</span></p>
+  <a href="%(lien)s" style="display:inline-block;background:%(coral)s;color:%(bp)s;font-family:%(sans)s;font-size:14px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;text-decoration:none;padding:15px 26px;border-radius:999px;">Ouvrir La FunVeille</a>
 </td></tr>
-%(image)s
-<tr><td style="padding:30px 32px 8px;">
-  %(lab_edito)s
-  <div style="font-family:%(serif)s;font-size:32px;line-height:1.08;color:%(bp)s;">%(ed_titre)s</div>
-  <div style="font-family:%(serif)s;font-style:italic;font-size:20px;line-height:1.3;color:%(bx)s;margin-top:10px;">%(accroche)s</div>
-  <p style="font-family:%(sans)s;font-size:15px;line-height:1.65;color:#5A4644;margin:16px 0 0;">%(premier)s</p>
-</td></tr>
-
-<tr><td style="padding:22px 32px 6px;">
-  <div style="border-top:5px solid %(coral)s;padding-top:14px;">%(lab_insp)s
-  <div style="font-family:%(sans)s;font-size:34px;font-weight:bold;letter-spacing:-1px;color:%(bp)s;">%(tendance)s</div>
-  <p style="font-family:%(serif)s;font-size:17px;line-height:1.4;color:%(bp)s;margin:8px 0 12px;">%(t_accroche)s</p>
-  <table role="presentation" width="100%%" cellpadding="0" cellspacing="0">%(signaux)s</table></div>
-</td></tr>
-
-<tr><td style="padding:22px 32px 6px;">
-  <div style="border-top:5px solid %(canard)s;padding-top:14px;">%(lab_marche)s
-  <div style="font-family:%(sans)s;font-size:22px;font-weight:bold;line-height:1.2;color:%(bp)s;">%(m_titre)s</div>
-  <p style="font-family:%(sans)s;font-size:15px;line-height:1.6;color:#5A4644;margin:8px 0 0;">%(m_accroche)s</p></div>
-</td></tr>
-
-<tr><td style="padding:22px 32px 6px;">
-  <div style="border-top:5px solid %(aqua)s;padding-top:14px;">%(lab_legal)s
-  <div style="font-family:%(sans)s;font-size:22px;font-weight:bold;line-height:1.2;color:%(bp)s;">%(l_titre)s</div></div>
-</td></tr>
-
-<tr><td align="left" style="padding:28px 32px 30px;">
-  <a href="%(lien)s" style="display:inline-block;background:%(bp)s;color:%(snow)s;font-family:%(sans)s;font-size:14px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;text-decoration:none;padding:15px 26px;border-radius:999px;">Lire La FunVeille #%(num)s</a>
-</td></tr>
-
-<tr><td style="background:%(bp)s;padding:28px 32px;border-radius:0 0 18px 18px;">
-  %(lab_fin)s
-  <div style="font-family:%(serif)s;font-style:italic;font-size:21px;line-height:1.3;color:%(snow)s;">« %(citation)s »</div>
-  <div style="font-family:%(sans)s;font-size:13px;color:%(eau)s;margin-top:10px;">%(auteur)s</div>
-</td></tr>
-
-<tr><td style="padding:18px 32px 8px;font-family:%(sans)s;font-size:11px;line-height:1.6;color:#7A6A66;">
-  La FunVeille, la veille hebdomadaire du projet FunFun. Chaque lundi, jamais deux fois la même chose.<br>
-  Pour ne plus la recevoir, répondez simplement à cet e-mail.
-</td></tr>
+<tr><td style="padding:16px 8px;font-family:%(sans)s;font-size:11px;line-height:1.6;color:#7A6A66;">La FunVeille, la veille hebdomadaire du projet FunFun.</td></tr>
 </table></td></tr></table></body></html>""" % {
-        "sujet": e(sujet), "preheader": e(accroche), "snow": SNOW, "bp": BP, "bx": BX, "coral": CORAL, "canard": CANARD,
-        "aqua": AQUA, "eau": EAU, "sans": SANS, "serif": SERIF, "semaine": e(n.get("semaine")), "date": e(n.get("date_label")),
-        "num": num, "image": image,
-        "lab_edito": label("L'édito de la semaine"), "ed_titre": e(ed.get("titre")), "accroche": e(accroche), "premier": e(premier),
-        "lab_insp": label("Chapitre 01 · Inspiration"), "tendance": e(t.get("nom")), "t_accroche": e(t.get("accroche")), "signaux": signaux,
-        "lab_marche": label("Chapitre 02 · Marché"), "m_titre": e(m.get("titre")), "m_accroche": e(m.get("accroche")),
-        "lab_legal": label("Chapitre 03 · Juridique"), "l_titre": e(l.get("titre")),
-        "lien": e(lien), "lab_fin": label("Pour finir", AQUA), "citation": e(sp.get("citation")), "auteur": e(sp.get("auteur")),
+        "sujet": e(sujet), "preheader": e(accroche), "snow": SNOW, "bp": BP, "coral": CORAL, "eau": EAU, "sans": SANS, "serif": SERIF,
+        "semaine": e(n.get("semaine")), "date": e(n.get("date_label")), "num": num, "ed_titre": e(ed.get("titre")), "lien": e(lien),
     }
     return sujet, corps
 
