@@ -1,0 +1,569 @@
+{
+  "regle": "Un acteur, un chiffre, un texte de loi ou un élément de tendance déjà présent ici ne revient pas, sauf fait nouveau : il faut alors ajouter l'entrée avec \"mise_a_jour\": true et le signaler dans le numéro. Le numéro 0 correspond aux études du dossier docs/ (étude de marché, règlements de cimetières).",
+  "entrees": [
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Alessi, The Last Pot"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Capsula Mundi"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Loop Biotech"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Nurn"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Studio Nienke Hoogvliet"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Urnique"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Die Holzurne"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Kohleurne"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Glasstone"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Lettering Arts Trust"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Mymoria"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "November"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Meine Erde (Reerdigung)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Junimond"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "plan b. (Ratisbonne)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Farewill"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Advitam"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Simplifia"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Testamento"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Les Arbres de Mémoire"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Forêt Sanctuaire"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Taffo"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "France Funéraire"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Granimond"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Granit Ouest"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Sardeco"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Artis Funéraire"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Fleurs de Cœur"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Petit Vallauris"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Le Coq Funéraire"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "QR Plaque"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Souvenir QR"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "FriedWald"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "RuheForst"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Monuta"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "DELA"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "German Design Council, Design fürs Danach"
+    },
+    {
+      "numero": 0,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Exposition Designing Death"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Décès UE 4,86 millions (2023)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Décès France 646 000 (2024), 700 000 prévus en 2030"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Crémation France 46 % (2024)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Décès Allemagne 1 003 000 (2025), crémation 78 %"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Crémation Espagne 50 % (2024)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Crémation Danemark, Suisse, Slovénie 87 à 88 %"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Crémation moyenne européenne 55 à 60 %"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Marché Europe 17,3 Md$ (2024), 23,7 Md$ en 2030 (Grand View Research)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Marché France environ 3 Md€ (2025)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Parts de marché France : OGF 25 %, Funecap 11 %, indépendants 60 %"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Marché Royaume-Uni 3,1 Md£ (2025), crémation directe 15 %"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Marché Allemagne 2,3 à 3,6 Md€"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Marché Espagne 1,7 Md$ (2025), Mémora 13 %"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Coût moyen des obsèques France 4 730 €"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Prix des plaques funéraires France 40 à plus de 500 €"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Estimation marché des plaques France 50 à 390 M€"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Loop Biotech environ 995 €, 2 500 cercueils vendus"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Rachat de Farewill par Dignity 12,9 M£ (2024)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Forêts funéraires Allemagne environ 200 sites"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Règlements de cimetière fixés par chaque mairie (CGCT)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Lettres de 3 cm maximum dans les jardins du souvenir"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Loi funéraire de Rhénanie-Palatinat 2025 (urne à domicile, partage des cendres, inhumation en rivière)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Humusation et terramation interdites en France, expérimentation prévue"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "CGCT art. R2223-8 (inscriptions soumises à l'approbation du maire)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Conseil d'État, 18 février 1972 (le maire ne peut pas réglementer l'esthétique)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Conseil d'État, 1949, Dame Moulis (refus d'inscription limité)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "CGCT art. L2223-1 et L2223-2 (site cinéraire obligatoire dès 2 000 habitants)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "CGCT art. L2223-12 (plaque d'hommage sans autorisation)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Loi du 19 décembre 2008 (statut des cendres, esthétique des cimetières)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Financement des plaques nominatives du jardin du souvenir"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Columbarium : modèle de plaque imposé par la commune"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Règlements de cimetières relevés : Metz, Paris, Strasbourg, Nanterre, Bordeaux, Voisins-le-Bretonneux, La Salvetat-Peyralès, Colembert, Bédée, Joué-lès-Tours, Dalhunden, Geaune"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Bordeaux Métropole : concessions réduites de 30 à 10 ans"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Espaces funéraires écologiques : Paris Ivry, Niort Souché"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Allemagne : règles de forme des cimetières (Gestaltungsvorschriften, Munich, Nuremberg, Francfort, Hanovre)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Royaume-Uni : granit noir poli interdit dans les cimetières paroissiaux"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Plaques du jardin du souvenir facturées 50 à 100 € aux familles"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Formats de plaques de columbarium : 10 × 6, 24 × 8, 20 × 15, 25 × 20 cm"
+    },
+    {
+      "numero": 1,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Urn Studios"
+    },
+    {
+      "numero": 1,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Amara (urnes lumineuses)"
+    },
+    {
+      "numero": 1,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Bestattung Wien, défi des urnes graffiti"
+    },
+    {
+      "numero": 1,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Solace Care"
+    },
+    {
+      "numero": 1,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "PK Ceramics (Philip Kupferschmidt)"
+    },
+    {
+      "numero": 1,
+      "rubrique": "inspiration",
+      "type": "tendance",
+      "sujet": "Tendance Présence"
+    },
+    {
+      "numero": 1,
+      "rubrique": "inspiration",
+      "type": "tendance",
+      "sujet": "Couleur Lueur EBC696"
+    },
+    {
+      "numero": 1,
+      "rubrique": "inspiration",
+      "type": "tendance",
+      "sujet": "Matière : l'émail en coulures"
+    },
+    {
+      "numero": 1,
+      "rubrique": "inspiration",
+      "type": "tendance",
+      "sujet": "Forme : le corps enroulé"
+    },
+    {
+      "numero": 1,
+      "rubrique": "inspiration",
+      "type": "tendance",
+      "sujet": "Citation : Sche woa's"
+    },
+    {
+      "numero": 1,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "OGF rachète Pompes Funèbres de France (mai 2026), plus de 1 300 agences et 650 funérariums"
+    },
+    {
+      "numero": 1,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "OGF fusionne avec Atger Pompes Funèbres Anduze (mars 2026)"
+    },
+    {
+      "numero": 1,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Funecap 130 crématoriums, 25 pour animaux, 650 000 familles par an, plus de 5 000 salariés"
+    },
+    {
+      "numero": 1,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Funecap environ 1 Md€ investi en acquisitions"
+    },
+    {
+      "numero": 1,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Mymoria rachète des pompes funèbres traditionnelles, 15 M€ de capital-risque"
+    },
+    {
+      "numero": 1,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Marché Europe 18,3 Md$ (2025), 31,2 Md$ en 2035 (Nova One Advisor)"
+    },
+    {
+      "numero": 1,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Code civil art. 16-1-1 (respect dû aux cendres)"
+    },
+    {
+      "numero": 1,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "CGCT art. L. 2223-18-1 à L. 2223-18-3 (destination des cendres, pas de partage, pas d'urne à domicile)"
+    }
+  ]
+}
