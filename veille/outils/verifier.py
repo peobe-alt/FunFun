@@ -102,6 +102,9 @@ def main(num):
         image(s.get("image"), "signaux[%d].image" % i)
 
     exige(ins.get("signal_faible", {}), "signal_faible", ["lien", "titre", "lieu", "texte", "pourquoi", "pour_funfun", "sources"])
+    nb = len(ins.get("signal_faible", {}).get("texte", "").replace("**", "").split())
+    if nb > 70:
+        err("Le signal faible est une note : 40 à 60 mots (actuellement %d)" % nb)
 
     m = n.get("marche", {})
     exige(m, "marche", ["titre", "accroche", "chapo", "figure", "constats", "implications", "lecture", "sources"])
