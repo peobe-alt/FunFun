@@ -564,6 +564,54 @@
       "rubrique": "legal",
       "type": "texte",
       "sujet": "CGCT art. L. 2223-18-1 à L. 2223-18-3 (destination des cendres, pas de partage, pas d'urne à domicile)"
+    },
+    {
+      "numero": 1,
+      "rubrique": "societe",
+      "type": "chiffre",
+      "sujet": "Ifop 2023 : obsèques religieuses souhaitées de 55 % à 40 % en 15 ans, 29 % sans cérémonie"
+    },
+    {
+      "numero": 1,
+      "rubrique": "societe",
+      "type": "chiffre",
+      "sujet": "Ifop 2023 : 50 % préfèrent la crémation, 29 % l'inhumation"
+    },
+    {
+      "numero": 1,
+      "rubrique": "societe",
+      "type": "chiffre",
+      "sujet": "Ifop 2023 : réincarnation de 22 % à 32 %, 43 % des moins de 35 ans"
+    },
+    {
+      "numero": 1,
+      "rubrique": "societe",
+      "type": "chiffre",
+      "sujet": "Ifop 2023 : 88 % des Français angoissés par la mort, surtout celle des proches"
+    },
+    {
+      "numero": 1,
+      "rubrique": "societe",
+      "type": "chiffre",
+      "sujet": "CSNAF-Crédoc : la moitié des partisans de la crémation choisiraient la dispersion, dont 70 % dans la nature"
+    },
+    {
+      "numero": 1,
+      "rubrique": "societe",
+      "type": "concept",
+      "sujet": "Continuing Bonds (Klass, Silverman et Nickman, 1996)"
+    },
+    {
+      "numero": 1,
+      "rubrique": "inspiration",
+      "type": "signal faible",
+      "sujet": "Recherche-création Bak et Thiollière (ENSAG) sur la dispersion des cendres hors des cimetières"
+    },
+    {
+      "numero": 1,
+      "rubrique": "inspiration",
+      "type": "acteur",
+      "sujet": "Vienne, la schöne Leich et le musée funéraire de Bestattung Wien"
     }
   ]
 }

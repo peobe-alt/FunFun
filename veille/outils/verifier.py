@@ -62,7 +62,8 @@ def main(num):
         err("Tiret long ou demi-long présent dans le numéro : remplacer par une virgule, deux-points ou parenthèses")
     n = json.loads(brut)
 
-    exige(n, "numero", ["numero", "annee", "semaine", "date", "date_label", "couverture", "chiffres", "inspiration", "marche", "legal", "registre"])
+    exige(n, "numero", ["numero", "annee", "semaine", "date", "date_label", "couverture", "chiffres", "fil_rouge", "inspiration", "marche", "legal", "mot_de_la_fin", "registre"])
+    exige(n.get("fil_rouge", {}), "fil_rouge", ["titre", "tension", "texte", "sources"])
     if n.get("numero") != num:
         err("Le champ numero (%s) ne correspond pas au fichier (%s)" % (n.get("numero"), num))
     c = n.get("couverture", {})
@@ -74,7 +75,7 @@ def main(num):
     ins = n.get("inspiration", {})
     exige(ins, "inspiration", ["tendance", "signaux"])
     t = ins.get("tendance", {})
-    exige(t, "tendance", ["nom", "accroche", "insight", "couleur", "matiere", "forme", "citation", "mots_cles"])
+    exige(t, "tendance", ["nom", "accroche", "tension", "insight", "lecture", "couleur", "matiere", "forme", "citation", "mots_cles"])
     if not re.fullmatch(r"[0-9A-Fa-f]{6}", str(t.get("couleur", {}).get("hex", ""))):
         err("tendance.couleur.hex doit être un code HEX à 6 caractères")
     exige(t.get("citation", {}), "tendance.citation", ["texte", "auteur"])
@@ -90,13 +91,15 @@ def main(num):
     if c.get("ancre") not in ids:
         err("couverture.ancre doit reprendre l'id d'un signal")
     for i, s in enumerate(signaux):
-        exige(s, "signaux[%d]" % i, ["id", "nom", "url", "lieu", "type", "maturite", "titre", "texte", "pour_funfun", "sources", "image"])
+        exige(s, "signaux[%d]" % i, ["id", "nom", "url", "lieu", "type", "maturite", "rubrique", "titre", "texte", "pour_funfun", "sources", "image"])
         if s.get("maturite") not in (1, 2, 3):
             err("signaux[%d].maturite doit valoir 1, 2 ou 3" % i)
         image(s.get("image"), "signaux[%d].image" % i)
 
+    exige(ins.get("signal_faible", {}), "signal_faible", ["titre", "lieu", "texte", "pourquoi", "pour_funfun", "sources"])
+
     m = n.get("marche", {})
-    exige(m, "marche", ["titre", "accroche", "chapo", "figure", "constats", "implications", "sources"])
+    exige(m, "marche", ["titre", "accroche", "chapo", "figure", "constats", "implications", "lecture", "sources"])
     f = m.get("figure", {})
     if not any(k in f for k in ("chaine", "empile", "barres")):
         err("marche.figure doit contenir chaine, empile ou barres")

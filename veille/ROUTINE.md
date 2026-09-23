@@ -39,29 +39,54 @@ Règle d'écriture absolue : n'utiliser **jamais** le tiret cadratin (caractère
 
 Créer `veille/site/numeros/nXX.json` (XX sur deux chiffres) en reprenant **exactement** la structure de `n01.json`.
 
-### Inspiration (lecture Nelly Rodi)
-- Une **tendance** nommée d'un mot ou deux, évocateur, jamais générique. `accroche` (une phrase forte), `insight` (le besoin humain derrière).
+### La posture : écrire comme un planneur stratégique
+
+La FunVeille n'est pas une revue de presse. C'est une lecture de la société à travers la mort, le deuil et la mémoire, écrite comme le ferait un planneur stratégique d'agence (référence de ton : « La TrendRoom du Planning » de Lonsdale). Chaque sujet suit la même mécanique :
+
+1. **L'accroche** : une observation culturelle ou une question qui donne envie de lire (« Et si l'urne devenait la dernière pièce de design qu'on achète pour quelqu'un ? »).
+2. **Le fait** : précis, daté, chiffré, sourcé. Qui, quoi, où, combien.
+3. **Ce que ça révèle** : le déplacement de société derrière le fait (« le deuil entre dans le registre du goût »). C'est la partie la plus importante : sans elle, le sujet n'a pas sa place.
+4. **La tension** : ce qui frotte. Un besoin contrarié, une contradiction entre ce que les gens font et ce que les institutions proposent.
+5. **Le « et alors ? »** pour FunFun : concret, actionnable, jamais générique.
+
+Règles de ton :
+- Titres courts, avec une idée ou un jeu de mots, jamais descriptifs (« L'urne passe en galerie », « Les morts ne tiennent plus en place »).
+- Phrases courtes, verbes forts, pas de jargon de consultant. Une chute avec de l'esprit est bienvenue.
+- On parle de la mort : l'humour est tendre, jamais moqueur envers les personnes en deuil.
+- Lentilles sociétales à mobiliser : rapport au temps, à l'intime, au corps, à la foi et à la sécularisation, aux générations, à la technologie, à l'écologie, à la solitude, aux inégalités, à la ville et aux lieux.
+- Sources sociétales utiles : Ifop, Crédoc, SAF (ex-CSNAF), Insee, Eurostat, Fondapol, The Conversation, revues de sciences humaines (Mortality, Death Studies, Geographica Helvetica...), sociologues et anthropologues de la mort, presse culturelle.
+
+### Fil rouge (ouverture)
+- `titre` : une formule qui résume la semaine. `tension` : une phrase courte qui frappe. `texte` : 2 paragraphes qui relient les signaux de la semaine à un mouvement de société, avec au moins un chiffre sociétal sourcé. `sources`.
+
+### Inspiration (lecture Nelly Rodi, profondeur de planneur)
+- Une **tendance** nommée d'un mot ou deux, évocateur, jamais générique. `accroche` (une phrase forte).
+- `tension` : la contradiction culturelle qui fait naître la tendance.
+- `insight` : une vérité humaine formulée **à la première personne**, comme un planneur (« Je n'ai pas besoin d'un endroit où aller le voir. J'ai besoin d'une façon de le garder avec moi. »). La page précise qu'il est formulé par la rédaction : ne jamais le présenter comme une vraie citation.
+- `lecture` : « Ce que ça dit de nous », 1 ou 2 paragraphes qui ancrent la tendance dans la société (chiffres, théorie, histoire), sourcés.
 - Quatre focus, chacun avec **sa propre image** forte et inspirante (`image` : `src`, `alt`, `credit`), souvent un détail recadré dans une photo de la semaine :
   - `couleur` : nom poétique, code HEX **relevé sur une image de la semaine** (pas inventé), une phrase ;
   - `matiere` : une matière précise vue cette semaine, une phrase sensorielle ;
   - `forme` : une forme précise vue cette semaine, une phrase ;
   - `citation` : une citation **réelle et vérifiable**, avec son auteur et son contexte.
 - 3 à 5 `mots_cles`.
-- **4 signaux**, dont au moins un produit et au moins un service. Pour chacun : `id` (minuscules, tirets), `nom`, `url`, `lieu` (« Ville / date »), `type` (Produit, Service, Produit + service, Produit + plateforme...), `maturite` (1 émergent, 2 en diffusion, 3 installé), `titre` (une phrase qui dit ce qui est nouveau), `texte` (60 à 90 mots, faits précis), `pour_funfun` (ce que FunFun peut en tirer, concret), `sources`, `image`.
+- **4 signaux**, dont au moins un produit et au moins un service. Pour chacun : `id` (minuscules, tirets), `nom`, `url`, `lieu` (« Ville / date »), `type` (Produit, Service, Produit + service, Produit + plateforme...), `maturite` (1 émergent, 2 en diffusion, 3 installé), `rubrique` (un mot qui qualifie le signal : Objet d'auteur, Lumière, Institution, Service, Rituel, Numérique, Lieu, Matière...), `titre` (une idée, pas une description), `texte` (100 à 130 mots, suivant la mécanique accroche, fait, révélation), `pour_funfun`, `sources`, `image`.
+- Un **signal faible** (`signal_faible`) : quelque chose de petit, de précoce ou d'étrange, encore peu visible, mais relié à un mouvement de fond (une recherche, une pratique marginale, une niche, un usage détourné, une initiative locale). `titre`, `lieu`, `texte` (le fait, précis), `pourquoi` (pourquoi ça pourrait compter demain, une phrase forte), `pour_funfun`, `sources`. Jamais une tendance déjà installée.
 
 ### Marché (lecture McKinsey)
 - `titre` : la conclusion, pas le sujet. `accroche` : le « so what » en une phrase. `chapo` : le contexte chiffré.
 - Une `figure` honnête, à l'échelle : `chaine` (chaîne de valeur), `empile` (barre empilée en %), ou `barres` (liste `{label, valeur, affiche, accent}`). Toujours une `note` de sources.
-- 3 `constats`, chacun avec un chiffre. 3 `implications` pour FunFun (`gras` + `texte`). Un point `a_suivre`. `sources` avec liens.
+- 3 `constats`, chacun avec un chiffre. `lecture` : « Ce que les chiffres disent de nous », une ou deux phrases de lecture sociétale du marché. 3 `implications` pour FunFun (`gras` + `texte`). Un point `a_suivre`. `sources` avec liens.
 - S'il n'y a pas d'actualité, approfondir un segment non encore traité (un pays, la crémation, les prix, l'assurance obsèques, les cimetières, les columbariums...) avec des chiffres datés et sourcés absents du registre.
 
 ### Note légale
 - Un seul point de droit utile à FunFun, absent du registre et des documents de `docs/`. France en priorité, sinon un autre pays européen ou l'UE, avec la comparaison France si pertinent.
-- `articles` : références exactes, citations mot pour mot. `listes` facultatives (`type` : `non`, `oui` ou `info`). `impact` : ce que ça change pour FunFun. Sources officielles.
+- `articles` : références exactes, citations mot pour mot. `listes` facultatives (`type` : `non`, `oui` ou `info`). `impact` : ce que ça change pour FunFun, et ce que ce droit dit de notre rapport aux morts. Sources officielles.
 
 ### Le reste
-- `chiffres` : exactement 4 chiffres clés tirés du numéro (marché, inspiration, légal).
+- `chiffres` : exactement 4 chiffres clés tirés du numéro, dont un chiffre de société (rubriques possibles : Marché, Société, Inspiration, Note légale).
 - `couverture` : l'image la plus forte des signaux, avec `titre` et `ancre` (= `id` du signal).
+- `mot_de_la_fin` : une phrase de clôture, légère, différente chaque semaine.
 - `registre` : résumé par rubrique des sujets ajoutés.
 - `maquette` : `false`.
 
@@ -79,7 +104,7 @@ Chaque numéro a 9 images réelles : couverture, 4 images des focus de tendance 
 
 ## 5. Registre anti-répétition
 
-- Ajouter dans `veille/registre.json` une entrée par acteur, chiffre, texte et élément de tendance du numéro : `{"numero": XX, "rubrique": "inspiration|marche|legal", "type": "acteur|chiffre|texte|tendance", "sujet": "..."}`.
+- Ajouter dans `veille/registre.json` une entrée par acteur, chiffre, texte, concept, signal faible et élément de tendance du numéro : `{"numero": XX, "rubrique": "societe|inspiration|marche|legal", "type": "acteur|chiffre|texte|concept|signal faible|tendance", "sujet": "..."}`.
 - Un sujet déjà présent ne revient que s'il y a un fait nouveau : ajouter `"mise_a_jour": true` et commencer le texte concerné par « Mise à jour : ».
 - Ajouter le numéro à `veille/site/numeros/index.json` : `{"numero", "fichier", "annee", "semaine", "date", "titre"}` (titre = nom de la tendance).
 
@@ -99,7 +124,7 @@ Puis contrôler le rendu : servir `veille/site` en local (`npx --no-install http
 
 ## 8. Message final
 
-Quelques lignes : numéro, tendance, les 4 signaux, le titre marché, la note légale, et le lien de la page.
+Quelques lignes : numéro, fil rouge, tendance, les 4 signaux, le signal faible, le titre marché, la note légale, et le lien de la page.
 
 ## 9. Heure d'été et d'hiver
 
