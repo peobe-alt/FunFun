@@ -2,7 +2,7 @@
 
 Ce fichier est lu par la routine chaque lundi à 8 h 15 (heure de Paris). Il décrit, dans l'ordre, comment produire et publier un nouveau numéro. Le numéro 1 (`veille/site/numeros/n01.json`) sert de modèle de référence pour le ton, la longueur et la structure.
 
-Règle d'écriture absolue : n'utiliser **jamais** le tiret long « — » ni le tiret demi-long « – ». Les remplacer par une virgule, deux-points ou des parenthèses.
+Règle d'écriture absolue : n'utiliser **jamais** le tiret cadratin (caractère Unicode U+2014) ni le tiret demi-cadratin (U+2013). Les remplacer par une virgule, deux-points ou des parenthèses. Le script de vérification les détecte.
 
 ## Repères
 
@@ -16,13 +16,13 @@ Règle d'écriture absolue : n'utiliser **jamais** le tiret long « — » ni le
 | Liste des numéros | `veille/site/numeros/index.json` |
 | Registre anti-répétition | `veille/registre.json` |
 | Outils | `veille/outils/images.py`, `veille/outils/verifier.py` |
-| Contexte projet | `README.md`, `docs/01-etude-de-marche-europe.md` |
+| Contexte projet | `README.md` et tout le dossier `docs/` (étude de marché, règlements de cimetières...) |
 
 ## 1. Préparer
 
 1. Se placer sur la branche, à jour : `git fetch origin claude/funfun-plaques-funeraires-5sjxbx && git checkout claude/funfun-plaques-funeraires-5sjxbx && git pull`.
 2. Installer Pillow si besoin : `pip install -q pillow`.
-3. Lire `README.md` et l'étude de marché pour le contexte FunFun (plaques funéraires et objets de mémoire, design formel et sensoriel).
+3. Lire `README.md` et les documents de `docs/` pour le contexte FunFun (plaques funéraires et objets de mémoire, design formel et sensoriel).
 4. Lire `veille/registre.json` en entier : tout ce qui y figure est **interdit** cette semaine, sauf fait nouveau.
 5. Lire le dernier numéro publié pour garder le même niveau d'exigence.
 6. Numéro du jour = dernier numéro de `numeros/index.json` + 1. Semaine ISO et date du jour (format « 28 septembre 2026 »).
@@ -57,7 +57,7 @@ Créer `veille/site/numeros/nXX.json` (XX sur deux chiffres) en reprenant **exac
 - S'il n'y a pas d'actualité, approfondir un segment non encore traité (un pays, la crémation, les prix, l'assurance obsèques, les cimetières, les columbariums...) avec des chiffres datés et sourcés absents du registre.
 
 ### Note légale
-- Un seul point de droit utile à FunFun. France en priorité, sinon un autre pays européen ou l'UE, avec la comparaison France si pertinent.
+- Un seul point de droit utile à FunFun, absent du registre et des documents de `docs/`. France en priorité, sinon un autre pays européen ou l'UE, avec la comparaison France si pertinent.
 - `articles` : références exactes, citations mot pour mot. `listes` facultatives (`type` : `non`, `oui` ou `info`). `impact` : ce que ça change pour FunFun. Sources officielles.
 
 ### Le reste

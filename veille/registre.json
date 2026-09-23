@@ -1,5 +1,5 @@
 {
-  "regle": "Un acteur, un chiffre, un texte de loi ou un élément de tendance déjà présent ici ne revient pas, sauf fait nouveau : il faut alors ajouter l'entrée avec \"mise_a_jour\": true et le signaler dans le numéro. Le numéro 0 correspond à l'étude de marché.",
+  "regle": "Un acteur, un chiffre, un texte de loi ou un élément de tendance déjà présent ici ne revient pas, sauf fait nouveau : il faut alors ajouter l'entrée avec \"mise_a_jour\": true et le signaler dans le numéro. Le numéro 0 correspond aux études du dossier docs/ (étude de marché, règlements de cimetières).",
   "entrees": [
     {
       "numero": 0,
@@ -366,6 +366,96 @@
       "rubrique": "legal",
       "type": "texte",
       "sujet": "Humusation et terramation interdites en France, expérimentation prévue"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "CGCT art. R2223-8 (inscriptions soumises à l'approbation du maire)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Conseil d'État, 18 février 1972 (le maire ne peut pas réglementer l'esthétique)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Conseil d'État, 1949, Dame Moulis (refus d'inscription limité)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "CGCT art. L2223-1 et L2223-2 (site cinéraire obligatoire dès 2 000 habitants)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "CGCT art. L2223-12 (plaque d'hommage sans autorisation)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Loi du 19 décembre 2008 (statut des cendres, esthétique des cimetières)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Financement des plaques nominatives du jardin du souvenir"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Columbarium : modèle de plaque imposé par la commune"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Règlements de cimetières relevés : Metz, Paris, Strasbourg, Nanterre, Bordeaux, Voisins-le-Bretonneux, La Salvetat-Peyralès, Colembert, Bédée, Joué-lès-Tours, Dalhunden, Geaune"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Bordeaux Métropole : concessions réduites de 30 à 10 ans"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Espaces funéraires écologiques : Paris Ivry, Niort Souché"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Allemagne : règles de forme des cimetières (Gestaltungsvorschriften, Munich, Nuremberg, Francfort, Hanovre)"
+    },
+    {
+      "numero": 0,
+      "rubrique": "legal",
+      "type": "texte",
+      "sujet": "Royaume-Uni : granit noir poli interdit dans les cimetières paroissiaux"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Plaques du jardin du souvenir facturées 50 à 100 € aux familles"
+    },
+    {
+      "numero": 0,
+      "rubrique": "marche",
+      "type": "chiffre",
+      "sujet": "Formats de plaques de columbarium : 10 × 6, 24 × 8, 20 × 15, 25 × 20 cm"
     },
     {
       "numero": 1,

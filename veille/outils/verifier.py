@@ -58,7 +58,7 @@ def main(num):
         print("Introuvable : %s" % fichier)
         return 1
     brut = open(fichier, encoding="utf-8").read()
-    if "—" in brut or "–" in brut:
+    if "\u2014" in brut or "\u2013" in brut:
         err("Tiret long ou demi-long présent dans le numéro : remplacer par une virgule, deux-points ou parenthèses")
     n = json.loads(brut)
 
