@@ -26,7 +26,7 @@ import urllib.request
 
 RACINE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 SITE = os.path.join(RACINE, "site")
-PAGE = "https://claude.ai/artifact/GjJtYLJvA6AaNui3kNTVSK"
+PAGE = "https://veilleff.netlify.app/"
 JOURNAL = os.path.join(RACINE, "envois.json")
 
 BP, BX, CORAL, CANARD, AQUA, EAU, SNOW = "#361E1C", "#733635", "#FF6038", "#11363E", "#A0C9CB", "#EBECDC", "#F6F5ED"

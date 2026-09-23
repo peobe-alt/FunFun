@@ -10,7 +10,7 @@ Règle d'écriture absolue : n'utiliser **jamais** le tiret cadratin (caractère
 | --- | --- |
 | Dépôt | `peobe-alt/FunFun` |
 | Branche | `claude/funfun-plaques-funeraires-5sjxbx` (branche par défaut) |
-| Page publiée | https://claude.ai/artifact/GjJtYLJvA6AaNui3kNTVSK |
+| Page publiée | https://veilleff.netlify.app/ |
 | Gabarit (ne pas modifier sans demande) | `veille/site/index.html` |
 | Numéros | `veille/site/numeros/nXX.json` et images dans `veille/site/numeros/nXX/` |
 | Liste des numéros | `veille/site/numeros/index.json` |
@@ -122,12 +122,10 @@ Puis contrôler le rendu : servir `veille/site` en local (`npx --no-install http
 ## 7. Publier
 
 1. `git add veille && git commit -m "La FunVeille, numéro XX : <tendance>"`, puis `git push -u origin claude/funfun-plaques-funeraires-5sjxbx`.
-2. Mettre à jour la page publiée (outil Artifact) :
-   - lister ses fichiers : action `list`, `scope: "files"`, `url` de la page ;
-   - publier : `file_path` = `veille/site/index.html`, `url` = la page, `root` = racine du dépôt, `files` = les nouveaux fichiers et `numeros/index.json`, chacun sous son chemin publié (`numeros/...`) pointant vers `veille/site/numeros/...`.
-3. Si l'outil Artifact n'est pas disponible, le dire clairement dans le message final : le numéro reste enregistré dans le dépôt.
+2. La page publiée (https://veilleff.netlify.app/) est hébergée sur Netlify, qui publie automatiquement le dossier `veille/site` à chaque push sur la branche. Attendre une à deux minutes, puis vérifier que `https://veilleff.netlify.app/numeros/nXX.json` répond (code 200) avant d'envoyer l'e-mail.
+3. Si la page ne se met pas à jour, le dire clairement dans le message final et ne pas envoyer l'e-mail : le numéro reste enregistré dans le dépôt.
 4. Envoyer l'e-mail aux lecteurs : `python3 veille/outils/envoyer.py XX`. Le script lit `BREVO_API_KEY`, `FUNVEILLE_EXPEDITEUR` et `FUNVEILLE_DESTINATAIRES` dans l'environnement, envoie l'annonce du numéro avec le lien de la page, et note l'envoi dans `veille/envois.json` (il refuse de renvoyer un numéro déjà envoyé). Si une variable manque, le dire dans le message final. Puis commit et push de `veille/envois.json`.
-5. Pour l'image de l'e-mail (facultative) : renseigner `couverture.image_email` avec l'adresse publique d'une photo JPG ou PNG de la source (jamais un fichier de la page, qui n'est pas public).
+5. Pour l'image de l'e-mail (facultative) : renseigner `couverture.image_email` avec l'adresse publique d'une photo JPG ou PNG de la source (ou l'image du numéro sur la page publique : `https://veilleff.netlify.app/numeros/nXX/...`).
 
 ## 8. Message final
 
