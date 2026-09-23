@@ -4,11 +4,11 @@
   "semaine": 39,
   "date": "2026-09-23",
   "date_label": "23 septembre 2026",
-  "maquette": true,
+  "maquette": false,
   "couverture": {
-    "image": "numeros/n01/amara-couverture.svg",
-    "alt": "Urne lumineuse en forme d'animal, dans la pénombre",
-    "credit": "Illustration de maquette",
+    "image": "numeros/n01/couverture-amara.jpg",
+    "alt": "Urne blanche ajourée en forme de chat endormi, éclairée de l'intérieur, posée sur une cheminée",
+    "credit": "Photo : Amara",
     "titre": "L'urne qui s'allume",
     "ancre": "amara"
   },
@@ -39,42 +39,35 @@
     "tendance": {
       "nom": "Présence",
       "accroche": "L'objet funéraire quitte le catalogue pour entrer dans la maison. On ne le range plus, on le montre.",
-      "texte": "Il éclaire, il est signé par un artiste, il ose la couleur et même l'humour.",
       "insight": "Avec la crémation, le souvenir n'a plus de lieu fixe. Les familles cherchent un objet qui tienne compagnie plutôt qu'un objet qui marque un emplacement.",
-      "matieres": "Grès moucheté, céramique translucide, résine imprimée en 3D, peinture aérosol sur surface lisse.",
+      "image": {
+        "src": "numeros/n01/tendance-pk-ceramics.jpg",
+        "alt": "Urnes en céramique couvertes de coulures d'émail colorées, bleu, rose, jaune, vert et bleu nuit",
+        "credit": "Philip Kupferschmidt (PK Ceramics) pour Urn Studios · photo via Wallpaper*"
+      },
+      "couleur": {
+        "nom": "Lueur",
+        "hex": "EBC696",
+        "texte": "La lumière chaude qui sort des urnes Amara, relevée sur la photo : la couleur d'une veilleuse, pas d'un cierge."
+      },
+      "matiere": {
+        "nom": "L'émail en coulures",
+        "texte": "Chez PK Ceramics, l'émail coule puis se fige en gouttes : la matière garde la trace du geste et du feu. L'inverse du granit poli, une surface qu'on a envie de toucher."
+      },
+      "forme": {
+        "nom": "Le corps enroulé",
+        "texte": "Les urnes d'Amara prennent la forme d'un animal endormi, lové sur lui-même. Une forme qui dit le repos plutôt que la fin, et qui se pose au lieu de se fixer."
+      },
+      "citation": {
+        "texte": "Sche woa's",
+        "auteur": "Inscription peinte par Manuela Hageneder sur son urne, lauréate du défi graffiti de Bestattung Wien. En viennois : « c'était beau »."
+      },
       "mots_cles": [
         "exposer plutôt que ranger",
         "lumière",
         "pièce d'auteur",
         "humour tendre",
         "commande"
-      ],
-      "palette": [
-        {
-          "nom": "Lueur",
-          "hex": "F2B35B",
-          "note": "Lumière des urnes Amara"
-        },
-        {
-          "nom": "Grès",
-          "hex": "B9A58C",
-          "note": "Céramique d'Urn Studios"
-        },
-        {
-          "nom": "Aérosol",
-          "hex": "E0457B",
-          "note": "Graffitis de Bestattung Wien"
-        },
-        {
-          "nom": "Vert-de-gris",
-          "hex": "3E8C7A",
-          "note": "Patine du bronze, piste FunFun"
-        },
-        {
-          "nom": "Nuit",
-          "hex": "23292C",
-          "note": "La visite du soir"
-        }
       ]
     },
     "signaux": [
@@ -90,9 +83,9 @@
         "pour_funfun": "Le modèle éditeur : une plaque pensée en collection d'auteurs invités (céramistes, typographes), un récit par pièce. Et l'idée de la coupelle : l'objet de mémoire accueille des choses, il ne se contente pas de porter un nom.",
         "sources": "Wallpaper*, Elle Decoration UK",
         "image": {
-          "src": "numeros/n01/urn-studios.svg",
-          "alt": "Urne en grès aqua sur un socle, coupelle bordeaux avec une bague",
-          "credit": "Illustration de maquette"
+          "src": "numeros/n01/urn-studios.jpg",
+          "alt": "Urne blanche surmontée d'une bougie, posée sur un livre, collection américaine d'Urn Studios",
+          "credit": "Photo : Urn Studios · via Wallpaper*"
         }
       },
       {
@@ -107,9 +100,9 @@
         "pour_funfun": "La lumière comme matière : une plaque qui capte ou restitue la lumière (verre coulé, émail translucide) change la visite du soir. Et l'animal comme terrain d'essai : un marché moins encadré pour prototyper vite.",
         "sources": "Brutkasten, BVZ, meinbezirk.at",
         "image": {
-          "src": "numeros/n01/amara.svg",
-          "alt": "Gros plan sur une urne lumineuse en forme d'animal",
-          "credit": "Illustration de maquette"
+          "src": "numeros/n01/amara.jpg",
+          "alt": "Urne ajourée couleur cuivre en forme de chat endormi, éclairée de l'intérieur",
+          "credit": "Photo : Amara"
         }
       },
       {
@@ -124,9 +117,9 @@
         "pour_funfun": "Quand une institution publique ose la couleur et l'humour, le décalage devient légitime : un précédent à citer pour défendre le nom FunFun. Le pool d'artistes est aussi un format de service : la commande personnalisée sans atelier en propre.",
         "sources": "ORF Wien, Vienna.at, Wiener Bezirksblatt",
         "image": {
-          "src": "numeros/n01/bestattung-wien.svg",
-          "alt": "Urne bordeaux couverte de graffitis devant un mur tagué",
-          "credit": "Illustration de maquette"
+          "src": "numeros/n01/bestattung-wien.jpg",
+          "alt": "Manuela Hageneder tient son urne graffiti où l'on lit « sche woa's »",
+          "credit": "Photo : Bestattung Wien · via Wiener Bezirksblatt"
         }
       },
       {
@@ -141,9 +134,9 @@
         "pour_funfun": "Les assureurs financent l'anticipation. Un contrat obsèques qui inclurait « concevoir son objet de mémoire » serait un canal pour la piste Anticipation du projet, sans passer par la pompe funèbre.",
         "sources": "EU-Startups, ArcticStartup, Fintech Global",
         "image": {
-          "src": "numeros/n01/solace-care.svg",
-          "alt": "Deux téléphones affichant les étapes préparer et transmettre",
-          "credit": "Illustration de maquette"
+          "src": "numeros/n01/solace-care.jpg",
+          "alt": "Un couple assis de dos regarde un ciel nuageux",
+          "credit": "Photo : Solace Care"
         }
       }
     ]
