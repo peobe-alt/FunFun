@@ -69,6 +69,7 @@ accompagnées. Extensions possibles :
 
 - [Étude de marché et benchmark européen](docs/01-etude-de-marche-europe.md)
 - [Règlements de cimetières : ce que la plaque a le droit de faire](docs/02-reglements-cimetieres.md)
+- [Produits funéraires et cadre légal en France (document partagé)](https://claude.ai/code/artifact/e883841b-6a99-490a-b987-647a538ef8f8)
 
 ## Prochaines étapes
 

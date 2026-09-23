@@ -133,6 +133,7 @@ Ce sont les plaques offertes par les proches et posées sur la tombe, souvent à
 
 | Qui décide | Règle | En pratique |
 | --- | --- | --- |
+| **La loi** | Art. L2223-12 du CGCT : « tout particulier peut, sans autorisation, faire placer sur la fosse d'un parent ou d'un ami une pierre sépulcrale ou autre signe indicatif de sépulture » | C'est la base légale de la plaque d'hommage : aucune démarche n'est requise pour la poser |
 | **Le maire** | Toute inscription placée sur une tombe est soumise à son approbation (art. R2223-8 du CGCT). Il ne peut refuser que pour **atteinte à l'ordre public ou à la dignité du défunt** (Conseil d'État, 1949, Dame Moulis). Il ne peut réglementer **ni la forme, ni le contenu** au-delà (réponse ministérielle au Sénat, 2022). Depuis novembre 2015, **son silence vaut accord** | Personne ne demande d'approbation pour une plaque « À notre mère ». Le texte vise plutôt les gravures sur le monument, et son application aux plaques posées est discutée |
 | **Le titulaire de la concession** | Le monument est sa propriété privée. Une plaque posée par un tiers (un neveu, des amis, des collègues) **sans son accord peut être retirée par lui** | En cas de conflit familial, c'est le titulaire qui tranche |
 | **Le règlement du cimetière** | Plaque dans les **limites de la concession**, **stable**, rien dans les allées. Plaques abîmées **retirées par la commune sans préavis** (gardées 3 mois). Nettoyage après la Toussaint | Les plaques posées à plat, non fixées, basculent, glissent ou disparaissent |
@@ -173,6 +174,7 @@ Ce sont les plaques offertes par les proches et posées sur la tombe, souvent à
 - [Sénat, Réglementation relative aux monuments funéraires (2022)](https://www.senat.fr/questions/base/2022/qSEQ221204492.html)
 - [Sénat, Équipement d'un jardin du souvenir d'une commune de moins de 2 000 habitants (2025)](https://www.senat.fr/questions/base/2025/qSEQ250705859.html)
 - [Légibase, Qui finance les plaques nominatives dans un jardin du souvenir ?](https://etat-civil.collectivites.legibase.fr/point-de-vue-expert/qui-finance-les-plaques-nominatives-dans-un-jardin-du-souvenir-27541)
+- [Art. L2223-12 du CGCT](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006390285)
 - [Sénat, Inscription sur une pierre tombale (2022)](https://www.senat.fr/questions/base/2022/qSEQ221204163.html)
 - [Résonance Funéraire, Inscriptions tombales : la vigilance des communes recommandée](https://www.resonance-funeraire.com/reglementation/5373-inscriptions-tombales-la-vigilance-des-communes-recommandee)
 - [FNF, Travaux et gravure sur un monument : pas d'autorisation du maire](https://federation-fnf.fr/les-travaux-et-la-gravure-sur-un-monument-construit-sur-une-concession-ne-sont-pas-soumis-a-lautorisation-du-maire/)
