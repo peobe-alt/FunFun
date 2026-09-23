@@ -19,9 +19,9 @@
       "texte": "agences OGF après le rachat de Pompes Funèbres de France, finalisé en mai"
     },
     {
-      "rubrique": "Marché",
-      "valeur": "130",
-      "texte": "crématoriums exploités par Funecap en Europe et en Amérique du Nord"
+      "rubrique": "Société",
+      "valeur": "29 %",
+      "texte": "des Français ne veulent aucune cérémonie pour leurs obsèques, contre 19 % en 2008 (Ifop)"
     },
     {
       "rubrique": "Inspiration",
@@ -34,12 +34,35 @@
       "texte": "gramme de cendres qu'on peut partager ou garder chez soi en France"
     }
   ],
+  "fil_rouge": {
+    "titre": "Les morts ne tiennent plus en place",
+    "tension": "Moins de rites, pas moins de liens.",
+    "texte": [
+      "En quinze ans, la part des Français qui souhaitent des obsèques religieuses est passée de 55 % à 40 %, et près de trois sur dix ne veulent plus de cérémonie du tout (Ifop, 2023). La moitié préfère la crémation ; parmi eux, un sur deux imagine ses cendres dispersées, le plus souvent dans la nature (CSNAF-Crédoc). Le rite recule, le lieu aussi.",
+      "Le besoin de présence, lui, ne recule pas : 88 % des Français se disent angoissés par la mort, et ce qu'ils redoutent d'abord, c'est celle de leurs proches. Cette semaine, tout le raconte : des urnes qui s'allument, qui s'exposent, qui se couvrent de graffitis ; des start-up qui font du deuil un parcours ; des groupes qui rachètent les lieux que les familles désertent. La question n'est plus « où met-on nos morts ? », mais « comment vit-on avec eux ? »."
+    ],
+    "sources": [
+      {
+        "titre": "Ifop, Le rapport des Français à la mort et aux obsèques au travers de leurs croyances (2023)",
+        "url": "https://www.ifopgroup.com/article/le-rapport-des-francais-a-la-mort-et-aux-obseques-au-travers-de-leurs-croyances/"
+      },
+      {
+        "titre": "Bak et Thiollière, Imaginaires et gestes de la mort en cendres, Geographica Helvetica (2026)",
+        "url": "https://gh.copernicus.org/articles/81/35/2026/"
+      }
+    ]
+  },
   "inspiration": {
     "sommaire": "Présence : l'objet funéraire sort du placard",
     "tendance": {
       "nom": "Présence",
       "accroche": "L'objet funéraire quitte le catalogue pour entrer dans la maison. On ne le range plus, on le montre.",
-      "insight": "Avec la crémation, le souvenir n'a plus de lieu fixe. Les familles cherchent un objet qui tienne compagnie plutôt qu'un objet qui marque un emplacement.",
+      "tension": "Nous avons sorti les morts de nos maisons, et nous cherchons maintenant à les y faire revenir.",
+      "insight": "Je n'ai pas besoin d'un endroit où aller le voir. J'ai besoin d'une façon de le garder avec moi.",
+      "lecture": [
+        "Le rite recule, le besoin de lien reste. Depuis Continuing Bonds (Klass, Silverman et Nickman, 1996), la psychologie a cessé de voir le deuil comme un détachement : on ne « fait » pas son deuil, on apprend à vivre avec un lien qui continue. Les objets de cette semaine en sont la version matérielle.",
+        "Les croyances suivent le même chemin. La réincarnation est la seule croyance qui progresse en France (de 22 % à 32 % en vingt ans, 43 % chez les moins de 35 ans), quand le paradis et la résurrection reculent (Ifop, 2023). Une spiritualité à la carte, qui cherche ses supports hors des églises : une lueur, une pièce d'artiste, un mot peint sur une urne."
+      ],
       "couleur": {
         "nom": "Lueur",
         "hex": "EBC696",
@@ -93,8 +116,9 @@
         "lieu": "Londres / depuis 2024",
         "type": "Produit + plateforme",
         "maturite": 2,
-        "titre": "La galerie qui fait faire des urnes aux artistes",
-        "texte": "Fondée par Jonathan Hancock et Merel Swart après un deuil vécu comme « daté et impersonnel ». Le principe : inviter des céramistes et plasticiens qui n'avaient jamais fait d'urne, et vendre leurs pièces comme des œuvres à exposer. L'urne en grès de Milo Gibson intègre une coupelle pour un bijou ou une photo. Première collection américaine en août, avec sept artistes.",
+        "rubrique": "Objet d'auteur",
+        "titre": "L'urne passe en galerie",
+        "texte": "Et si l'urne devenait la dernière pièce de design qu'on achète pour quelqu'un ? Urn Studios est né d'un deuil vécu comme « daté et impersonnel » : Jonathan Hancock cherche une urne pour sa grand-mère et ne trouve rien qui lui ressemble. Avec Merel Swart, il invite des céramistes et plasticiens qui n'avaient jamais fait d'urne, et vend leurs pièces comme des œuvres. Celle de Milo Gibson intègre une coupelle pour un bijou ou une photo. En août, première collection américaine, avec sept artistes. Le déplacement est net : l'urne n'est plus un contenant qu'on cache, c'est un objet qu'on assume au salon, au rang d'une céramique de galerie. Le deuil entre dans le registre du goût.",
         "pour_funfun": "Le modèle éditeur : une plaque pensée en collection d'auteurs invités (céramistes, typographes), un récit par pièce. Et l'idée de la coupelle : l'objet de mémoire accueille des choses, il ne se contente pas de porter un nom.",
         "sources": "Wallpaper*, Elle Decoration UK",
         "image": {
@@ -110,8 +134,9 @@
         "lieu": "Pöttsching, Autriche / 2025",
         "type": "Produit",
         "maturite": 1,
-        "titre": "L'urne qui s'allume",
-        "texte": "Urnes sculptures à lumière intégrée, animales et humaines, faites à la main en Autriche à partir de céramique et de pièces imprimées en 3D. L'idée est née devant une urne « très triste » posée sur une table. Le fondateur, Markus Bareuther, a commencé par l'animal de compagnie ; premier client, une pompe funèbre du Burgenland.",
+        "rubrique": "Lumière",
+        "titre": "Laisser une lumière allumée",
+        "texte": "On laisse une lumière allumée pour ceux qu'on attend. Dans le Burgenland, Markus Bareuther en a fait un produit : des urnes sculptures, animales et humaines, qui s'éclairent de l'intérieur, faites à la main en céramique et en pièces imprimées en 3D. L'idée est née devant une urne « très triste » posée sur une table ; la société a été fondée en septembre 2025, avec une pompe funèbre locale pour premier client. Deux signaux en un. La veilleuse remplace la bougie de la Toussaint : un rituel quotidien plutôt qu'annuel. Et l'animal de compagnie ouvre la voie : longtemps moqué, le deuil animal sert de laboratoire à des formes plus libres, loin des conventions du cimetière.",
         "pour_funfun": "La lumière comme matière : une plaque qui capte ou restitue la lumière (verre coulé, émail translucide) change la visite du soir. Et l'animal comme terrain d'essai : un marché moins encadré pour prototyper vite.",
         "sources": "Brutkasten, BVZ, meinbezirk.at",
         "image": {
@@ -127,8 +152,9 @@
         "lieu": "Vienne / opérateur public",
         "type": "Service",
         "maturite": 2,
-        "titre": "Le service funéraire municipal qui commande des graffitis",
-        "texte": "Après des cercueils graffés, l'opérateur funéraire de la Ville de Vienne a lancé un défi à cinq artistes : dessiner une urne. Jury mixte (Bestattung Wien, cimetières de Vienne, Université des arts appliqués, un graffeur). Lauréates ex aequo : Manuela Hageneder et Luky Vete. Une pièce porte « Sche woa's », « c'était beau » en viennois. Les cinq artistes rejoignent un pool pour des commandes sur mesure.",
+        "rubrique": "Institution",
+        "titre": "Vienne graffe ses urnes, et c'est le service public",
+        "texte": "Vienne a toujours eu un rapport singulier à la mort : c'est la ville de la « schöne Leich », les belles funérailles, et de son propre musée funéraire. Son opérateur municipal, Bestattung Wien, va plus loin. Après des cercueils graffés, il a lancé un défi à cinq artistes : dessiner une urne. Le jury mêle l'institution, les cimetières de la ville, l'Université des arts appliqués et un graffeur. Lauréates ex aequo : Manuela Hageneder et Luky Vete ; la première a peint « Sche woa's », « c'était beau » en viennois. Les cinq artistes rejoignent un pool pour des commandes sur mesure. Quand c'est le service public qui ose la couleur et l'humour, le décalage cesse d'être une provocation : il devient une offre.",
         "pour_funfun": "Quand une institution publique ose la couleur et l'humour, le décalage devient légitime : un précédent à citer pour défendre le nom FunFun. Le pool d'artistes est aussi un format de service : la commande personnalisée sans atelier en propre.",
         "sources": "ORF Wien, Vienna.at, Wiener Bezirksblatt",
         "image": {
@@ -144,8 +170,9 @@
         "lieu": "Stockholm / août 2026",
         "type": "Service",
         "maturite": 1,
-        "titre": "La fin de vie traitée comme un parcours de soin",
-        "texte": "Plateforme qui aide à mettre ses affaires en ordre de son vivant, puis guide les proches dans le pratique et l'émotionnel après le décès. 2,1 M€ levés auprès de Spintop Ventures, Plug and Play et de dirigeants de l'assurance nordique. Les fondateurs viennent de Mindler, la santé mentale en ligne.",
+        "rubrique": "Service",
+        "titre": "Le deuil a désormais un parcours client",
+        "texte": "À Stockholm, Solace Care propose de mettre ses affaires en ordre de son vivant, puis de guider les proches, dans le pratique comme dans l'émotionnel, après le décès. Ses fondateurs viennent de Mindler, la santé mentale en ligne ; ils ont levé 2,1 M€ en août, le plus gros pre-seed européen du secteur, auprès de Spintop Ventures, Plug and Play et de dirigeants de l'assurance nordique. Le signal est moins technologique que culturel : la fin de vie quitte le registre du rite pour celui du soin, et trouve un financeur naturel, l'assureur. Reste une question que personne ne tranche encore : peut-on designer un deuil comme on designe une application de méditation ?",
         "pour_funfun": "Les assureurs financent l'anticipation. Un contrat obsèques qui inclurait « concevoir son objet de mémoire » serait un canal pour la piste Anticipation du projet, sans passer par la pompe funèbre.",
         "sources": "EU-Startups, ArcticStartup, Fintech Global",
         "image": {
@@ -154,7 +181,20 @@
           "credit": "Photo : Solace Care"
         }
       }
-    ]
+    ],
+    "signal_faible": {
+      "titre": "Les cendres prennent la clé des champs",
+      "lieu": "Grenoble / Geographica Helvetica, 2026",
+      "texte": "Deux chercheurs de l'école d'architecture de Grenoble (ENSAG, laboratoire AAU-Cresson), Bak et Thiollière, enquêtent sur une pratique presque invisible : la dispersion des cendres hors des cimetières. Invisible, parce qu'elle n'a pas de lieu assigné et que la déclaration en mairie, obligatoire depuis 2008, est souvent oubliée. Pour la saisir, ils collectent en ligne des micro-récits anonymes de dispersion, puis les rejouent en atelier. Leur constat sur l'offre actuelle est sévère : des équipements cinéraires qui évoquent « des boîtes aux lettres d'immeuble », des lieux « inhospitaliers au recueillement ».",
+      "pourquoi": "Le prochain lieu de mémoire n'est peut-être pas un lieu, mais un geste et un paysage. Une mémoire sans adresse, donc sans règlement de cimetière, et pour l'instant sans objet.",
+      "pour_funfun": "Concevoir pour le geste plutôt que pour l'emplacement : un objet qui accompagne la dispersion, puis garde à la maison la trace du paysage choisi. Et lire les micro-récits collectés par les chercheurs : c'est une étude d'usage toute prête.",
+      "sources": [
+        {
+          "titre": "Bak et Thiollière, Imaginaires et gestes de la mort en cendres, Geographica Helvetica 81 (2026)",
+          "url": "https://gh.copernicus.org/articles/81/35/2026/"
+        }
+      ]
+    }
   },
   "marche": {
     "sommaire": "La consolidation se joue sur les lieux",
@@ -237,6 +277,7 @@
         "texte": " : qui choisit les objets proposés dans un crématorium Funecap, le site, la région ou une centrale d'achat ?"
       }
     ],
+    "lecture": "La mort devient une infrastructure : des lieux, des flux, des contrats. Les groupes consolident précisément ce que les familles désertent, le rite institutionnel, pendant que la valeur émotionnelle migre vers l'intime et le domestique. Ceux qui tiennent les lieux ne tiennent pas forcément le lien : c'est l'espace d'une marque comme FunFun.",
     "a_suivre": "La question posée par The European Correspondent : quand le capital privé détient les crématoriums, qui finance les services non rentables ? Aucun gouvernement européen n'y a encore répondu clairement.",
     "sources": [
       {
@@ -296,7 +337,7 @@
         ]
       }
     ],
-    "impact": "L'objet double du projet (une pièce sur la sépulture, sa jumelle à la maison) est légal en France à une condition : la pièce domestique ne contient aucune cendre. C'est un objet de mémoire, pas un reliquaire. La contrainte crée même le besoin : la loi retire l'urne du salon, il faut un objet pour y ramener la personne. Une offre européenne devra prévoir deux versions, puisque la Rhénanie-Palatinat autorise désormais le partage des cendres.",
+    "impact": "L'objet double du projet (une pièce sur la sépulture, sa jumelle à la maison) est légal en France à une condition : la pièce domestique ne contient aucune cendre. C'est un objet de mémoire, pas un reliquaire. La contrainte crée même le besoin : la loi retire l'urne du salon, il faut un objet pour y ramener la personne. Une offre européenne devra prévoir deux versions, puisque la Rhénanie-Palatinat autorise désormais le partage des cendres. Au fond, le droit protège les morts de l'appropriation privée quand les familles, elles, cherchent à se les réapproprier : l'écart entre la loi et les usages (dispersions non déclarées, urnes gardées « le temps de décider ») est un espace de design.",
     "sources": [
       {
         "titre": "Assemblée nationale, question n° 14816 : conservation des cendres des défunts",
@@ -314,8 +355,12 @@
   },
   "registre": [
     {
+      "rubrique": "Fil rouge",
+      "entrees": "Recul des obsèques religieuses et des cérémonies (Ifop 2023), dispersion des cendres dans la nature"
+    },
+    {
       "rubrique": "Inspiration",
-      "entrees": "Urn Studios, Amara, Bestattung Wien (urnes graffiti), Solace Care · tendance « Présence »"
+      "entrees": "Tendance « Présence », Urn Studios, Amara, Bestattung Wien, Solace Care · signal faible : la dispersion hors des cimetières (ENSAG)"
     },
     {
       "rubrique": "Marché",
@@ -325,5 +370,6 @@
       "rubrique": "Note légale",
       "entrees": "Code civil 16-1-1, CGCT L. 2223-18-1 à 18-3 (destination des cendres)"
     }
-  ]
+  ],
+  "mot_de_la_fin": "C'est tout pour cette semaine. Rendez-vous lundi, même heure, même lueur."
 }
