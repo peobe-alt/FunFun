@@ -65,9 +65,13 @@ accompagnées. Extensions possibles :
 - Quelles contraintes des cimetières (règlements municipaux, tenue aux intempéries) ?
 - Quel ton pour la marque : le nom FunFun assume un décalage, jusqu'où le pousser ?
 
+## Documents
+
+- [Étude de marché et benchmark européen](docs/01-etude-de-marche-europe.md)
+
 ## Prochaines étapes
 
-- [ ] Benchmark de l'offre actuelle et des initiatives de design funéraire existantes
+- [x] Benchmark de l'offre actuelle et des initiatives de design funéraire existantes
 - [ ] Entretiens avec des familles, marbriers, pompes funèbres
 - [ ] Planche de tendances matières et formes
 - [ ] Trois premiers prototypes de plaques
