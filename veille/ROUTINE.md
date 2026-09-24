@@ -18,7 +18,8 @@ Règle d'écriture absolue : n'utiliser **jamais** le tiret cadratin (caractère
 | Liste des numéros | `veille/site/numeros/index.json` |
 | Registre anti-répétition | `veille/registre.json` |
 | Outils | `veille/outils/images.py`, `veille/outils/verifier.py`, `veille/outils/envoyer.py` |
-| Contexte projet | `README.md` et tout le dossier `docs/` (étude de marché, règlements de cimetières...) |
+| Contexte projet | `README.md` et tout le dossier `docs/` (étude de marché, règlements de cimetières, veille matériaux...) |
+| Veille matériaux | `docs/03-veille-materiaux.md` (matières et ateliers à suivre) |
 
 ## 1. Préparer
 
@@ -34,6 +35,7 @@ Règle d'écriture absolue : n'utiliser **jamais** le tiret cadratin (caractère
 - Période : les 7 derniers jours en priorité, 30 jours au maximum. La note légale peut porter sur un texte plus ancien s'il n'a jamais été traité.
 - Échelle : Europe d'abord. Un signal hors Europe est accepté s'il est vraiment fort pour FunFun.
 - Langues : français, anglais, allemand, italien, espagnol, néerlandais.
+- Veille matériaux : passer en revue les pistes de `docs/03-veille-materiaux.md` (site, réalisations, actualités). Une nouveauté d'une piste peut devenir un signal ou le focus `matiere`, en respectant le registre anti-répétition. Toute nouvelle matière ou tout nouvel atelier utile à FunFun repéré pendant la recherche s'ajoute à ce fichier, sur le même modèle (dans le même commit que le numéro).
 - Sources fiables : presse design (Dezeen, Wallpaper*, Designboom, Frame, AD), presse économique, presse funéraire (Résonance Funéraire, Funeral Service Times, Bestattungskultur), sites officiels (Légifrance, EUR-Lex, Eurostat, Insee, Destatis), sites des marques.
 - Chaque fait, chiffre ou citation doit être vérifié sur au moins une source consultée (pas seulement un résumé de recherche). Aucun chiffre ni citation inventé ou approximé sans le dire.
 - **Tout ce qui est cité a sa source avec un lien externe** vers la page d'origine : chiffres clés (`source` + `source_url`), édito, tendance (`sources`), chacun des quatre focus (`source`), signaux, signal faible, marché, articles de loi (`url` vers Légifrance ou EUR-Lex) et note spirituelle. Les listes de sources sont au format `[{"titre": "...", "url": "https://..."}]`. Préférer la page d'origine (article, rapport, texte officiel) à une reprise. La vérification bloque tout élément cité sans lien.
