@@ -82,11 +82,26 @@ La **plaque à poser** est la plaque d'hommage offerte par un proche (« À notr
 | **[Fleurs de Cœur](https://www.fleursdecoeur.fr/)** | Atelier en Alsace | **Inox 316L et fleurs en céramique** cuite à plus de 1 250 °C, modelées à la main, 14 coloris. Cœurs, champs de fleurs, soliflores | 119 à 299 € (soliflores dès 49 €) | Posé sur le monument ou adhésif sans perçage | **Le concurrent le plus proche en prix et en intention** (« une autre approche de la plaque funéraire »). 4,9/5 sur 106 avis. Sur-mesure jusqu'à 10 semaines. Reste dans le registre floral |
 | **[Petit Vallauris](https://petitvallauris.fr/202-plaque-funeraire-et-mortuaire-en-ceramique-avec-gravure-personnalisee)** | Var, atelier de 51 ans | Céramique émaillée peinte main : lavande, anges, dauphins, montagnes. 12 × 12 à 20 × 33 cm | 32 à 145 € | Support céramique, adhésif, vis | Artisanal mais iconographie provençale traditionnelle. 10 à 20 jours |
 | **[Atelier du Crépuscule](https://www.atelierducrepuscule.fr/product-page/collection-galet-personnalis%C3%A9)** | France | **Galet noir 10 × 8 cm** posé sur petits pieds en caoutchouc, gravé, symboles au choix | **35 €** | Posé | Assume la patine (« la matière se patine avec le temps ») et la couleur. **Le discours le plus proche de FunFun**, avec un produit très simple |
-| **[L'Atelier Inspiré](https://www.latelierinspire.fr/)** | Rhône-Alpes (Laetitia) | Galets en pierre reconstituée, pierre naturelle, ardoise, basalte, travertin, de 3 à 20 cm | Non relevé | Posé | **5 383 ventes, 1 038 avis.** Positionnement émotionnel : « doux, rond, et apaisant ». Vend aussi par Instagram |
+| **[L'Atelier Inspiré](https://www.latelierinspire.fr/)** | Rhône-Alpes, Laetitia Gomot, graphiste de formation. Lancé après 2020, d'abord sur Etsy (« L'Atelier Souvenir ») | 56 objets à poser : galets de 10 cm, trio de galets de 3 à 6 cm, ardoise ronde de 20 cm, ardoise sur basalte, tranche de pierre, métal et pierre. Pierre reconstituée, pierre naturelle, ardoise, basalte, travertin | Non affichés | Posé, ou sur chevalet à la maison | **5 383 ventes, 1 038 avis.** Positionnement émotionnel : « doux, rond, et apaisant ». **Le concurrent le plus proche de FunFun** (voir le zoom ci-dessous) |
 | **[Inspiration Gravure](https://inspirationgravure.com/funeraire/)** | Deux-Sèvres | Galets de Dordogne, ardoise, lauze violette | Galets 30 à 60 €, ardoise 60 à 150 € | Posé | Distribué aussi par une agence de pompes funèbres locale : **l'artisan peut entrer par le réseau** |
 | **[Gravure François](https://www.latelierdefrancois.fr/creation-galet-funeraire-w1.html)** | Bordeaux, graveur depuis 1962 | Galets naturels gravés, gravure en relief | Sur devis | Posé | Le galet entre dans l'offre des graveurs traditionnels |
 | **[Debilly](https://www.debilly-sculpture.com/galets/)** | Villefranche-sur-Saône, sculpteur | Galets sculptés en pierre dorée ou marbre, bas-reliefs (fougère, hérisson, chouette) | Sur devis | Posé | **Le seul vrai galet d'auteur relevé, mais la production est à l'arrêt** : le sculpteur indique ne plus pouvoir en faire. Demande non servie |
 | **[Lost Funéraire](https://boutique-lost-funeraire.com/categorie-produit/ceramiques/)** | Béziers, distributeur | Céramiques florales (roses, pensées), cœurs, croix, couronnes | 75 à 457 € | Posé | La céramique funéraire « de tradition », chère et chargée |
+
+#### Zoom : L'Atelier Inspiré, le concurrent le plus proche
+
+- **Qui** : Laetitia Gomot, graphiste de formation, 16 ans de salariat puis des objets personnalisés pour l'événementiel. Elle s'est tournée vers le funéraire pendant le confinement, après la mort de son père, avec le constat d'un secteur qui « manquait de chaleur et de modernité » ([Groupe NAD](https://groupe-nad.fr/latelier-souvenir-un-galet-reconfortant/)).
+- **Parcours** : lancement sur Etsy sous le nom [« lateliersouvenir »](https://www.etsy.com/fr/shop/lateliersouvenir) (galets gravés, mouchoirs, bougies, cartes de remerciement), puis site en propre et [Instagram](https://www.instagram.com/latelierinspire.fr/), où elle se présente comme « créatrice de souvenirs ».
+- **Gamme** : 56 produits, tous à poser, sans pieds. Chaque pièce porte un nom poétique plutôt qu'une référence : « Grain de Souvenir » (galet de 10 cm), « Trio Minéral » (3 galets de 3 à 6 cm), « Ronde de Souvenirs » (ardoise gravée de 20 cm), « Rocher du Refuge » (ardoise et basalte), « Galette de Pierre » (tranche naturelle), « Ode à la Mémoire » (métal et pierre).
+- **Usages visés** : tombe, jardin du souvenir, crémation, deuil périnatal, et maison (galet sur chevalet). Un même objet couvre la sépulture et le domicile.
+- **Service** : texte et motif au choix (olivier, cœur), fabrication artisanale en Rhône-Alpes, livraison en 5 à 7 jours.
+- **Ton** : « trouver un peu de réconfort dans un objet symbolique, doux, rond, et apaisant », « faire un dernier cadeau personnalisé et d'apaiser ainsi un chagrin ».
+
+**Ce qu'elle prouve** : il existe une demande réelle (plus de 5 000 ventes) pour un objet funéraire posé, sans pieds, au ton doux et moderne, lancé seul depuis Etsy et Instagram, porté par une histoire personnelle.
+
+**Ce qu'elle laisse libre** : la forme n'est pas dessinée (galet standard gravé d'un texte et d'un motif), une partie des matières est reconstituée, les formats sont petits (3 à 20 cm, un cadeau de proche plus qu'une pièce forte), et ni le toucher, ni le vieillissement, ni la typographie ne sont des arguments.
+
+**Pour FunFun** : se distinguer par une forme dessinée, une vraie matière avec une origine, une écriture (typographie ou manuscrite) et une pièce forte à 150 à 350 € en plus des petits formats. L'inclure dans les achats test de la Toussaint (un galet de 10 cm) pour juger qualité, poids, emballage et délai réel.
 
 ### Plaques connectées
 
@@ -275,7 +290,7 @@ La période qui s'ouvre (fin septembre à mi-novembre) est la meilleure fenêtre
 - [Fleurs de Cœur](https://www.fleursdecoeur.fr/), [sur-mesure](https://www.fleursdecoeur.fr/sur-mesure-un-adieu-unique-avec-un-ornement-funeraire-personnalise/)
 - [Petit Vallauris](https://petitvallauris.fr/202-plaque-funeraire-et-mortuaire-en-ceramique-avec-gravure-personnalisee)
 - [Atelier du Crépuscule](https://www.atelierducrepuscule.fr/product-page/collection-galet-personnalis%C3%A9)
-- [L'Atelier Inspiré](https://www.latelierinspire.fr/)
+- [L'Atelier Inspiré](https://www.latelierinspire.fr/), [portrait par le Groupe NAD](https://groupe-nad.fr/latelier-souvenir-un-galet-reconfortant/), [boutique Etsy « lateliersouvenir »](https://www.etsy.com/fr/shop/lateliersouvenir)
 - [Inspiration Gravure](https://inspirationgravure.com/funeraire/)
 - [Gravure François](https://www.latelierdefrancois.fr/creation-galet-funeraire-w1.html)
 - [Debilly](https://www.debilly-sculpture.com/galets/)
