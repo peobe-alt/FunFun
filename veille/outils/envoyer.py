@@ -7,6 +7,10 @@
   python3 veille/outils/envoyer.py <numero> --test
       Envoie l'e-mail à l'expéditeur seulement, pour vérifier le rendu.
 
+  python3 veille/outils/envoyer.py <numero> --a <adresse>
+      Envoie un numéro déjà paru à une seule adresse (un nouveau lecteur).
+      Rien n'est noté dans veille/envois.json : le dépôt est public.
+
   python3 veille/outils/envoyer.py <numero>
       Envoie l'e-mail à tous les destinataires (en copie cachée) et note
       l'envoi dans veille/envois.json. Refuse de renvoyer un numéro déjà envoyé.
@@ -141,6 +145,11 @@ def main(args):
     if "--test" in args:
         code, rep = envoyer("[Test] " + sujet, corps, exp, [])
         print("Test envoyé à l'expéditeur (%s) : %s" % (code, rep))
+        return 0
+    if "--a" in args:
+        a = args[args.index("--a") + 1]
+        code, rep = envoyer(sujet, corps, a, [])
+        print("Numéro %d envoyé à %s (%s)." % (num, a, code))
         return 0
     journal = json.load(open(JOURNAL, encoding="utf-8")) if os.path.isfile(JOURNAL) else {"envois": []}
     if any(x.get("numero") == num for x in journal["envois"]):
